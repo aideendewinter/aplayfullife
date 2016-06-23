@@ -1,5 +1,8 @@
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
+package net.aplayfullife.identity;
+
+import java.io.*;
+import javax.servlet.http.*;
+import javax.servlet.*;
 
 @WebServlet("/")
 public class MainServlet extends HttpServlet {
