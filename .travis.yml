@@ -1,6 +1,15 @@
 language: java
 script: mvn package -Popenshift
 jdk:
-  - oraclejdk7
-  - openjdk7
-  - openjdk6
+- oraclejdk7
+- openjdk7
+- openjdk6
+deploy:
+  provider: openshift
+  user: jessewhitworth@gmail.com
+  password:
+    secure: CBTHOFN867vGtM343Q4Rk23yf0v40Lcaw8kO6mFdo0RdPgnIPuf9W/mE0ayQ4hbvoYArlzMifoMwfFZTNOZU5+SIr51i8yad2rRRNKU9M09s2L8WbzQGCph+1JFEeg4lEeTA5cKlcwraaCcyN61rQFc5xLjts7PebIlDT0gABX/WeQCkWF1nw3OUGSDdMDqoW7qfATh2gEufq6ENdLco2XXAUu0bn7Ir2LKWwLG/GBda7ly0nBWumuGmJhsq2YJfCOELu6/IiKZ3FO4c02JC2FG8h/t7rvzs8luajReeAY5ValSGFQNgtvyK85TIJNDC9/TZeLFb3Qux26kKfnZo2QNYneExug/dI+s354IomtljSH6oxGXI9UkJ8ZnBVrslw7eoZsgWS0IKc6pmKIk74QiFwiPC0tAR5/btIu+unLRgE2qAB7EKpjB3ETx+7KZnc5F0nv7Wpbp5r2Vs9W69YWPe1iofnByjDzHlIS6BUP6pzF8+CMKZQi9M3IRSRiqF4kPwRy0pk17BIIFJwmsbTpQWOlY7RQA1MixXH1U0PQX2SYir5YvnKu406lhwMaCol1gI/Vnh5S74ftqlEr12fl1SmpVM5PZEGd6aizqtmdZkPMle8/0eTRKpyAu4Qz8rH1mi9SY4D460bZTsrB6+VzyibktUF6haE7sINZ+9Jok=
+  app: aplayfullife
+  domain: ravenhearte
+  on:
+    repo: jesswhitworth/aplayfullife
