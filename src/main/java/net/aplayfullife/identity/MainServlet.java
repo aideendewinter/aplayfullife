@@ -3,6 +3,7 @@ package net.aplayfullife.identity;
 import java.io.*;
 import javax.servlet.http.*;
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 
 @WebServlet("/")
 public class MainServlet extends HttpServlet {
