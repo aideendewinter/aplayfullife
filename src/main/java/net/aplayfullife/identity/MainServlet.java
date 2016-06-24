@@ -13,9 +13,9 @@ public class MainServlet extends HttpServlet {
     ServletContext context = getServletContext();
     InputStream resourceContent = context.getResourceAsStream("/resources/templates/identity_main.html");
     StringWriter writer = new StringWriter();
-    IOUtils.copy(inputStream, writer, "UTF-8");
+    IOUtils.copy(resourceContent, writer, "UTF-8");
     String template = writer.toString();
-    IOUtils.closeQuietly(inputStream);
+    IOUtils.closeQuietly(resourceContent);
     response.setContentType("text/html; charset=UTF-8");
     response.getOutputStream().print(template);
   }
