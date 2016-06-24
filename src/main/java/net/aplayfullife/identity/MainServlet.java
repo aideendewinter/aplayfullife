@@ -11,7 +11,7 @@ public class MainServlet extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
     ServletContext context = getServletContext();
-    InputStream resourceContent = context.getResourceAsStream("/resources/templates/identity_main.html");
+    InputStream resourceContent = context.getResourceAsStream("/templates/identity_main.html");
     StringWriter writer = new StringWriter();
     IOUtils.copy(resourceContent, writer, "UTF-8");
     String template = writer.toString();
