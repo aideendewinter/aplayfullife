@@ -18,7 +18,7 @@ public class MainServlet extends HttpServlet {
     IOUtils.closeQuietly(resourceContent);
     resourceContent = context.getResourceAsStream("/WEB-INF/templates/identity_header.html");
     IOUtils.copy(resourceContent, writer, "UTF-8");
-    template.replace("{site_header}", writer.toString());
+    template = template.replace("{site_header}", writer.toString());
     IOUtils.closeQuietly(resourceContent);
     response.setContentType("text/html; charset=UTF-8");
     response.getOutputStream().print(template);
