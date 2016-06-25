@@ -1,9 +1,16 @@
+body {
+  background: darkgrey;
+  color: white;
+  line-height: 1.33;
+}
 header {
+  font-family: 'Monsieur La Doulaise', cursive;
   background: white;
+  color: black;
+  padding: 16px 32px;
+  font-size: 3em;
+  text-align: right;
 }
 header h1 {
-  text-align: center;
-}
-body {
-  background: navy;
+  display: inline-block;
 }
