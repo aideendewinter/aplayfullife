@@ -23,13 +23,19 @@ public class MainServlet extends HttpServlet {
     template = template.replace("{site_header}", writer.toString());
     IOUtils.closeQuietly(resourceContent);
     // Page Content
-    resourceContent = context.getResourceAsStream("/WEB-INF/content/home_main.xml");
+    resourceContent = context.getResourceAsStream("/WEB-INF/content/home_main.txt");
     writer.getBuffer().setLength(0);
     IOUtils.copy(resourceContent, writer, "UTF-8");
-    template = template.replace("{page_body}", writer.toString());
+    String content = parseBlocks(writer.toString())
     IOUtils.closeQuietly(resourceContent);
     // Output
+    template = template.replace("{page_body}", content);
     response.setContentType("text/html; charset=UTF-8");
     response.getOutputStream().print(template);
+  }
+  
+  protected String parseBlocks(String src) {
+    String[] blockIds = src.split(" ");
+    return src;
   }
 }
