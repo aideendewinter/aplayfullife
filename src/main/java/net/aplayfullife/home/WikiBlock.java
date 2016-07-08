@@ -11,5 +11,6 @@ public class WikiBlock implements ContentBlock {
     
   }
   public String GetHTML() {
+    return "";
   }
 }
