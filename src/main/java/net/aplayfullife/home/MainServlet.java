@@ -26,7 +26,7 @@ public class MainServlet extends HttpServlet {
     resourceContent = context.getResourceAsStream("/content/home_main.txt");
     writer.getBuffer().setLength(0);
     IOUtils.copy(resourceContent, writer, "UTF-8");
-    String content = parseBlocks(writer.toString())
+    String content = parseBlocks(writer.toString());
     IOUtils.closeQuietly(resourceContent);
     // Output
     template = template.replace("{page_body}", content);
