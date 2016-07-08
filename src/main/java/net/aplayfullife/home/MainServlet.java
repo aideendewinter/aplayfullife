@@ -23,7 +23,7 @@ public class MainServlet extends HttpServlet {
     template = template.replace("{site_header}", writer.toString());
     IOUtils.closeQuietly(resourceContent);
     // Page Content
-    resourceContent = context.getResourceAsStream("/WEB-INF/content/home_main.txt");
+    resourceContent = context.getResourceAsStream("/content/home_main.txt");
     writer.getBuffer().setLength(0);
     IOUtils.copy(resourceContent, writer, "UTF-8");
     String content = parseBlocks(writer.toString())
