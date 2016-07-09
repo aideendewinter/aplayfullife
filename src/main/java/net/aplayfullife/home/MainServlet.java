@@ -23,7 +23,7 @@ public class MainServlet extends HttpServlet {
     template = template.replace("{site_header}", writer.toString());
     IOUtils.closeQuietly(resourceContent);
     // Page Content
-    ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+    ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
     resourceContent = classLoader.getResourceAsStream("/content/home_main.txt");
     writer.getBuffer().setLength(0);
     IOUtils.copy(resourceContent, writer, "UTF-8");
