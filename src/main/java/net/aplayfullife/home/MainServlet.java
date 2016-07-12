@@ -37,7 +37,7 @@ public class MainServlet extends HttpServlet {
   
   protected String parseBlocks(String src) {
     String[] blockIds = src.split(" ");
-    for(String blockId in blockIds) {
+    for(String blockId : blockIds) {
       ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
       InputStream resourceContent = classLoader.getResourceAsStream("/content/home-blocks/" + blockId);
       StringWriter writer = new StringWriter();
