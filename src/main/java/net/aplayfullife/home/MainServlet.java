@@ -24,7 +24,7 @@ public class MainServlet extends HttpServlet {
     IOUtils.closeQuietly(resourceContent);
     // Page Content
     ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-    resourceContent = classLoader.getResourceAsStream("/content/home_main.txt");
+    resourceContent = classLoader.getResourceAsStream("/content/home_main");
     writer.getBuffer().setLength(0);
     IOUtils.copy(resourceContent, writer, "UTF-8");
     String content = parseBlocks(writer.toString());
@@ -37,6 +37,20 @@ public class MainServlet extends HttpServlet {
   
   protected String parseBlocks(String src) {
     String[] blockIds = src.split(" ");
+    for(String blockId in blockIds) {
+      ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+      InputStream resourceContent = classLoader.getResourceAsStream("/content/home-blocks/" + blockId);
+      StringWriter writer = new StringWriter();
+      IOUtils.copy(resourceContent, writer, "UTF-8");
+      String blockContent = writer.toString();
+      IOUtils.closeQuietly(resourceContent);
+      if (blockId.contains("text")) {
+        return blockContent;
+      } else if (blockId.contains("wiki")) {
+        WikiBlock wBlock = new WikiBlock(blockContent);
+        return wBlock.GetHTML();
+      }
+    }
     return src;
   }
 }
