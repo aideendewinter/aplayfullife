@@ -47,8 +47,11 @@ public class MainServlet extends HttpServlet {
       if (blockId.contains("text")) {
         return blockContent;
       } else if (blockId.contains("wiki")) {
-        WikiBlock wBlock = new WikiBlock(blockContent);
-        return wBlock.GetHTML();
+        try {
+          WikiBlock wBlock = new WikiBlock(blockContent);
+          return wBlock.GetHTML();
+        }
+        catch (IOException e) {}
       }
     }
     return src;
