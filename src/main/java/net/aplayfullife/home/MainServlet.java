@@ -41,8 +41,11 @@ public class MainServlet extends HttpServlet {
       ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
       InputStream resourceContent = classLoader.getResourceAsStream("/content/home-blocks/" + blockId);
       StringWriter writer = new StringWriter();
-      IOUtils.copy(resourceContent, writer, "UTF-8");
-      String blockContent = writer.toString();
+      try {
+        IOUtils.copy(resourceContent, writer, "UTF-8");
+        String blockContent = writer.toString();
+      }
+      catch (IOException e) {}
       IOUtils.closeQuietly(resourceContent);
       if (blockId.contains("text")) {
         return blockContent;
