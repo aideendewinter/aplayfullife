@@ -1182,7 +1182,7 @@ public class Wiki implements Serializable
      *  @throws IOException if a network error occurs
      *  @since 0.14
      */
-    protected String parseAndCleanup(String in) throws IOException
+    public String parseAndCleanup(String in) throws IOException
     {
         String output = parse(in);
         output = output.replace("<p>", "").replace("</p>", ""); // remove paragraph tags
