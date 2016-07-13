@@ -44,18 +44,18 @@ public class MainServlet extends HttpServlet {
       try {
         IOUtils.copy(resourceContent, writer, "UTF-8");
         String blockContent = writer.toString();
+        if (blockId.contains("text")) {
+          return blockContent;
+        } else if (blockId.contains("wiki")) {
+          try {
+            WikiBlock wBlock = new WikiBlock(blockContent);
+            return wBlock.GetHTML();
+          }
+          catch (IOException e) {}
+        }
       }
       catch (IOException e) {}
       IOUtils.closeQuietly(resourceContent);
-      if (blockId.contains("text")) {
-        return blockContent;
-      } else if (blockId.contains("wiki")) {
-        try {
-          WikiBlock wBlock = new WikiBlock(blockContent);
-          return wBlock.GetHTML();
-        }
-        catch (IOException e) {}
-      }
     }
     return src;
   }
