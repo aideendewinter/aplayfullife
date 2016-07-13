@@ -15,7 +15,7 @@ public class WikiBlock implements ContentBlock {
     this.title = title;
   }
   public String GetHTML() throws IOException {
-    String intro = wiki.getSectionText(title, 0);
+    String intro = wiki.parse(wiki.getSectionText(title, 0));
     return intro;
   }
 }
