@@ -32,7 +32,7 @@ public class MainServlet extends HttpServlet {
     // Output
     template = template.replace("{page_body}", content);
     response.setContentType("text/html; charset=UTF-8");
-    response.getOutputStream().print(template);
+    response.getWriter().print(template);
   }
   
   protected String parseBlocks(String src) {
