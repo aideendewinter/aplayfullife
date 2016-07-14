@@ -57,8 +57,8 @@ public class MainServlet extends HttpServlet {
           }
         }
       }
-      catch (IOException e) {
-        blockOutput += "<h1>Bad Block<h1>";
+      catch (IOException e | java.lang.NullPointerException ex) {
+        blockOutput += "<h1>Bad Block : " + blockId + ".<h1>";
       }
       IOUtils.closeQuietly(resourceContent);
     }
