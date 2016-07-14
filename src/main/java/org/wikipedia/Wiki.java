@@ -1621,7 +1621,7 @@ public class Wiki implements Serializable
      */
     public String getSummaryText(String title) throws IOException
     {
-        String url = query + encode(title, true) + "&prop=extracts&exintro=&explaintext=";
+        String url = query + "&prop=extracts&exintro=&explaintext=&title=" + encode(title, true);
         String temp = fetch(url, "getPageText");
         log(Level.INFO, "getPageText", "Successfully retrieved text of " + title);
         return temp;
