@@ -39,6 +39,7 @@ public class MainServlet extends HttpServlet {
     String[] blockIds = src.split(" ");
     String blockOutput = "";
     for(String blockId : blockIds) {
+      blockId = blockId.trim();
       ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
       InputStream resourceContent = classLoader.getResourceAsStream("/content/home-blocks/" + blockId);
       StringWriter writer = new StringWriter();
