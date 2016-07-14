@@ -1617,6 +1617,17 @@ public class Wiki implements Serializable
     }
 
     /**
+     *  TODO: fill this in
+     */
+    public String getSummaryText(String title) throws IOException
+    {
+        String url = query + encode(title, true) + "&prop=extracts&exintro=&explaintext=";
+        String temp = fetch(url, "getPageText");
+        log(Level.INFO, "getPageText", "Successfully retrieved text of " + title);
+        return temp;
+    }
+
+    /**
      *  Gets the text of a specific section. Useful for section editing.
      *  @param title the title of the relevant page
      *  @param number the section number of the section to retrieve text for
