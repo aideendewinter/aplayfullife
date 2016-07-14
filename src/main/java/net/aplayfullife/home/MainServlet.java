@@ -47,11 +47,11 @@ public class MainServlet extends HttpServlet {
         IOUtils.copy(resourceContent, writer, "UTF-8");
         String blockContent = writer.toString();
         if (blockId.contains("text")) {
-          blockOutput += blockContent;
+          blockOutput += '<p class="block text">' + blockContent + '</p>';
         } else if (blockId.contains("wiki")) {
           try {
             WikiBlock wBlock = new WikiBlock(blockContent);
-            blockOutput += wBlock.GetHTML();
+            blockOutput += '<p class="block wiki">' + blockContent + '</p>';
           }
           catch (IOException e) {
             blockOutput += "<h1>Bad Wiki Block<h1>";
@@ -59,7 +59,7 @@ public class MainServlet extends HttpServlet {
         }
       }
       catch (IOException | java.lang.NullPointerException ex) {
-        blockOutput += "<h1>Bad Block : " + blockId + ".<h1>";
+        blockOutput += "Bad Block : " + blockId + ".";
       }
       IOUtils.closeQuietly(resourceContent);
     }
