@@ -51,7 +51,7 @@ public class MainServlet extends HttpServlet {
         } else if (blockId.contains("wiki")) {
           try {
             WikiBlock wBlock = new WikiBlock(blockContent);
-            blockOutput += "<p class=\"block wiki\">" + blockContent + "</p>";
+            blockOutput += "<p class=\"block wiki\">" + wBlock.getHTML() + "</p>";
           }
           catch (IOException e) {
             blockOutput += "<h1>Bad Wiki Block<h1>";
