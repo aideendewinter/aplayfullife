@@ -14,3 +14,19 @@ header {
 header h1 {
   display: inline-block;
 }
+p {
+  margin: 24px;
+}
+.wiki {
+  background: #165c91;
+  border: antiquewhite solid 2px;
+  margin: 26px;
+  padding: 8px 16px;
+  font-size: .8em;
+  text-indent: 32px;
+  text-align: justify;
+}
+p::first-letter {
+  font-family: 'Princess Sofia', cursive;
+  font-size: 1.5em;
+}
