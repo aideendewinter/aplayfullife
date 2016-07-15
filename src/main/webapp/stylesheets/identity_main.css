@@ -3,14 +3,8 @@ body {
   color: white;
   line-height: 1.33;
 }
-page {
-	position: relative;
-}
-page::after {
-  clear: both;
-}
 header {
-  margin-bottom: 12px;
+  margin: 12px 0;
   padding: 16px 32px;
   background: white;
   color: black;
@@ -20,6 +14,9 @@ header {
 }
 header h1 {
   display: inline-block;
+}
+.page {
+  overflow: auto;
 }
 p {
   margin: 12px;
@@ -48,9 +45,17 @@ p::first-letter {
   font-size: 1.6em;
 }
 .navigation {
-  position: absolute;
-  bottom: 0;
-  width: calc(100% - 48px);
-  padding: 24px;
+  box-sizing: border-box;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  height: 12px;
+  width: 100%;
   background: black;
+  color: black;
+}
+.navigation:hover {
+  height: auto;
+  padding: 24px;
+  color: white;
 }
