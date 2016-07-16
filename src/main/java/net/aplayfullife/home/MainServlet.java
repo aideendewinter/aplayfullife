@@ -22,6 +22,12 @@ public class MainServlet extends HttpServlet {
     IOUtils.copy(resourceContent, writer, "UTF-8");
     template = template.replace("{site_header}", writer.toString());
     IOUtils.closeQuietly(resourceContent);
+    // Header
+    resourceContent = context.getResourceAsStream("/WEB-INF/templates/site_navigation.html");
+    writer.getBuffer().setLength(0);
+    IOUtils.copy(resourceContent, writer, "UTF-8");
+    template = template.replace("{site_navigation}", writer.toString());
+    IOUtils.closeQuietly(resourceContent);
     // Page Content
     ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
     resourceContent = classLoader.getResourceAsStream("/content/home_main");
