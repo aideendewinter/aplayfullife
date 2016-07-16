@@ -56,6 +56,16 @@ p::first-letter {
 }
 .navigation:hover {
   height: auto;
-  padding: 24px;
   color: white;
+}
+.navigation a {
+  padding: 8px;
+  height: 100%;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+.navigation a:hover {
+  background: white;
+  color: black;
 }
