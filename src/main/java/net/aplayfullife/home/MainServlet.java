@@ -42,7 +42,8 @@ public class MainServlet extends HttpServlet {
   }
   
   protected String parseBlocks(String src) {
-    String[] blockIds = src.split(" ");
+    String[] blockIdsArr = src.split(",");
+    List<String> blockIds = Arrays.asList(blockIdsArr);
     String blockOutput = "";
     for(String blockId : blockIds) {
       blockId = blockId.trim();
