@@ -1,6 +1,7 @@
 package net.aplayfullife.home;
 
 import java.io.*;
+import java.util.*;
 import javax.servlet.http.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -33,7 +34,9 @@ public class MainServlet extends HttpServlet {
     resourceContent = classLoader.getResourceAsStream("/content/home_main");
     writer.getBuffer().setLength(0);
     IOUtils.copy(resourceContent, writer, "UTF-8");
-    String content = parseBlocks(writer.toString());
+    List<String> blockIds = Arrays.asList(writer.toString().split(","));
+    template = template.replace("{page_header}", blockIds.Remove(0));
+    String content = parseBlocks(blockIds);
     IOUtils.closeQuietly(resourceContent);
     // Output
     template = template.replace("{page_body}", content);
@@ -41,9 +44,7 @@ public class MainServlet extends HttpServlet {
     response.getWriter().print(template);
   }
   
-  protected String parseBlocks(String src) {
-    String[] blockIdsArr = src.split(",");
-    List<String> blockIds = Arrays.asList(blockIdsArr);
+  protected String parseBlocks(List<String> blockIds) {
     String blockOutput = "";
     for(String blockId : blockIds) {
       blockId = blockId.trim();
