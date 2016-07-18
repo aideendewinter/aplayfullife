@@ -34,7 +34,7 @@ public class MainServlet extends HttpServlet {
     resourceContent = classLoader.getResourceAsStream("/content/home_main");
     writer.getBuffer().setLength(0);
     IOUtils.copy(resourceContent, writer, "UTF-8");
-    ArrayList<String> blockIds = Arrays.asList(writer.toString().split(","));
+    ArrayList<String> blockIds = new ArrayList<String>(Arrays.asList(writer.toString().split(",")));
     template = template.replace("{page_header}", blockIds.remove(0));
     String content = parseBlocks(blockIds);
     IOUtils.closeQuietly(resourceContent);
