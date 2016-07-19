@@ -11,13 +11,24 @@ import org.apache.commons.io.IOUtils;
 public class IdentityTemplate {
   protected String templateName;
   protected HttpServlet myServlet;
+  protected String pageNav, pageHeader, pageContent;
   
   public IdentityTemplate(String name, HttpServlet servlet) {
     templateName = name;
     myServlet = servlet;
   }
   
-  public String GetTemplate() {
+  public void SetPageNavigation(String nav) {
+    pageNav = nav;
+  }
+  public void SetPageHeader(String header) {
+    pageHeader = header;
+  }
+  public void SetPageContent(String content) {
+    pageContent = content;
+  }
+  
+  public String GetPage() {
     ServletContext context = myServlet.getServletContext();
     InputStream resourceContent = context.getResourceAsStream("/WEB-INF/templates/" + name + ".html");
     StringWriter writer = new StringWriter();
@@ -36,5 +47,11 @@ public class IdentityTemplate {
     IOUtils.copy(resourceContent, writer, "UTF-8");
     template = template.replace("{site_navigation}", writer.toString());
     IOUtils.closeQuietly(resourceContent);
+    // Page
+    template = template.replace("{page_navigation}", pageNav);
+    template = template.replace("{page_header}", pageHeader);
+    template = template.replace("{page_body}", pageContent);
+    
+    return template;
   }
 }
