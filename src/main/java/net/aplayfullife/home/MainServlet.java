@@ -23,21 +23,32 @@ public class MainServlet extends HttpServlet {
     IOUtils.copy(resourceContent, writer, "UTF-8");
     template = template.replace("{site_header}", writer.toString());
     IOUtils.closeQuietly(resourceContent);
-    // Header
+    // Navigation
     resourceContent = context.getResourceAsStream("/WEB-INF/templates/site_navigation.html");
     writer.getBuffer().setLength(0);
     IOUtils.copy(resourceContent, writer, "UTF-8");
     template = template.replace("{site_navigation}", writer.toString());
     IOUtils.closeQuietly(resourceContent);
+    // Page Navigation
+    resourceContent = context.getResourceAsStream("/content/home_pages");
+    writer.getBuffer().setLength(0);
+    IOUtils.copy(resourceContent, writer, "UTF-8");
+    ArrayList<String> pages = new ArrayList<String>(Arrays.asList(writer.toString().split("\\r?\\n")));
+    IOUtils.closeQuietly(resourceContent);
+    String pageNav = "";
+    for (String page : pages) {
+      String[] pageInfo = page.split(",");
+      pageNav += "<a href=\"./" + pageInfo[1] + ".html\">" + pageInfo[0] + "</a>";
+    }
     // Page Content
     ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
     resourceContent = classLoader.getResourceAsStream("/content/home_main");
     writer.getBuffer().setLength(0);
     IOUtils.copy(resourceContent, writer, "UTF-8");
     ArrayList<String> blockIds = new ArrayList<String>(Arrays.asList(writer.toString().split(",")));
+    IOUtils.closeQuietly(resourceContent);
     template = template.replace("{page_header}", blockIds.remove(0));
     String content = parseBlocks(blockIds);
-    IOUtils.closeQuietly(resourceContent);
     // Output
     template = template.replace("{page_body}", content);
     response.setContentType("text/html; charset=UTF-8");
