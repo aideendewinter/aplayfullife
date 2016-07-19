@@ -30,7 +30,8 @@ public class MainServlet extends HttpServlet {
     template = template.replace("{site_navigation}", writer.toString());
     IOUtils.closeQuietly(resourceContent);
     // Page Navigation
-    resourceContent = context.getResourceAsStream("/content/home_pages");
+    ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+    resourceContent = classLoader.getResourceAsStream("/content/home_pages");
     writer.getBuffer().setLength(0);
     IOUtils.copy(resourceContent, writer, "UTF-8");
     ArrayList<String> pages = new ArrayList<String>(Arrays.asList(writer.toString().split("\\r?\\n")));
@@ -41,7 +42,6 @@ public class MainServlet extends HttpServlet {
       pageNav += "<a href=\"./" + pageInfo[1] + ".html\">" + pageInfo[0] + "</a>";
     }
     // Page Content
-    ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
     resourceContent = classLoader.getResourceAsStream("/content/home_main");
     writer.getBuffer().setLength(0);
     IOUtils.copy(resourceContent, writer, "UTF-8");
