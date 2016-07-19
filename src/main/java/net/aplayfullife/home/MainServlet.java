@@ -7,7 +7,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import org.apache.commons.io.IOUtils;
 
-@WebServlet("")
+@WebServlet(urlPatterns = {"", "/*"})
 public class MainServlet extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
