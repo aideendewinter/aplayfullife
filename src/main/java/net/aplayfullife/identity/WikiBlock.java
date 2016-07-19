@@ -1,4 +1,4 @@
-package net.aplayfullife.home;
+package net.aplayfullife.identity;
 
 import java.io.*;
 import javax.servlet.http.*;
