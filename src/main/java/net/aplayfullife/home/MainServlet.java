@@ -41,6 +41,7 @@ public class MainServlet extends HttpServlet {
       String[] pageInfo = page.split(",");
       pageNav += "<a href=\"./" + pageInfo[1] + ".html\">" + pageInfo[0] + "</a>";
     }
+    template = template.replace("{page_navigation}", pageNav);
     // Page Content
     resourceContent = classLoader.getResourceAsStream("/content/home_main");
     writer.getBuffer().setLength(0);
