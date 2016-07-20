@@ -14,6 +14,8 @@ public class MainServlet extends HttpServlet {
       throws ServletException, IOException {
     IdentityTemplate template = new IdentityTemplate("home_main", this);
     
+    InputStream resourceContent;
+    StringWriter writer = new StringWriter();
     // Page Navigation
     ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
     resourceContent = classLoader.getResourceAsStream("/content/home_pages");
