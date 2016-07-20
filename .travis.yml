@@ -12,3 +12,6 @@ deploy:
   domain: ravenhearte
   on:
     repo: jesswhitworth/aplayfullife
+notifications:
+  email:
+    on_failure: change
