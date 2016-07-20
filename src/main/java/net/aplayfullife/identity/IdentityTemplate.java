@@ -30,13 +30,13 @@ public class IdentityTemplate {
   
   public String GetPage() {
     ServletContext context = myServlet.getServletContext();
-    InputStream resourceContent = context.getResourceAsStream("/WEB-INF/templates/" + name + ".html");
+    InputStream resourceContent = context.getResourceAsStream("/WEB-INF/templates/" + templateName + ".html");
     StringWriter writer = new StringWriter();
     IOUtils.copy(resourceContent, writer, "UTF-8");
     String template = writer.toString();
     IOUtils.closeQuietly(resourceContent);
     // Header
-    resourceContent = context.getResourceAsStream("/WEB-INF/templates/" + name + "_header.html");
+    resourceContent = context.getResourceAsStream("/WEB-INF/templates/" + templateName + "_header.html");
     writer.getBuffer().setLength(0);
     IOUtils.copy(resourceContent, writer, "UTF-8");
     template = template.replace("{site_header}", writer.toString());
