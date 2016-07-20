@@ -27,7 +27,7 @@ public class IdentityTemplate {
     pageContent = content;
   }
   
-  public String GetPage() {
+  public String GetPage() throws IOException {
     ServletContext context = myServlet.getServletContext();
     InputStream resourceContent = context.getResourceAsStream("/WEB-INF/templates/" + templateName + ".html");
     StringWriter writer = new StringWriter();
