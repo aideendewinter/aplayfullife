@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import net.aplayfullife.identity.*;
 import org.apache.commons.io.IOUtils;
 
-@WebServlet(urlPatterns = {"", "/*"})
+@WebServlet(urlPatterns = {"", "*.html"})
 public class MainServlet extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
