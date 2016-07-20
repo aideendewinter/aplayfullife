@@ -30,25 +30,33 @@ public class MainServlet extends HttpServlet {
     }
     template.SetPageNavigation(pageNav);
     // Page Content
-    resourceContent = classLoader.getResourceAsStream("/content/home_main");
+    String path = request.getPathInfo();
+    if (path == null)
+      resourceContent = classLoader.getResourceAsStream("/content/home_main");
+    else
+      resourceContent = classLoader.getResourceAsStream("/content/" + path);
     writer.getBuffer().setLength(0);
     IOUtils.copy(resourceContent, writer, "UTF-8");
     ArrayList<String> blockIds = new ArrayList<String>(Arrays.asList(writer.toString().split(",")));
     IOUtils.closeQuietly(resourceContent);
     template.SetPageHeader(blockIds.remove(0));
-    String content = parseBlocks(blockIds);
+    String content;
+    if (path == null)
+      content = parseBlocks("home_main", blockIds);
+    else
+      content = parseBlocks(path, blockIds);
     template.SetPageContent(content);
     // Output
     response.setContentType("text/html; charset=UTF-8");
     response.getWriter().print(template.GetPage());
   }
   
-  protected String parseBlocks(List<String> blockIds) {
+  protected String parseBlocks(String page, List<String> blockIds) {
     String blockOutput = "";
     for(String blockId : blockIds) {
       blockId = blockId.trim();
       ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-      InputStream resourceContent = classLoader.getResourceAsStream("/content/home-blocks/" + blockId);
+      InputStream resourceContent = classLoader.getResourceAsStream("/content/"+page+"-blocks/" + blockId);
       StringWriter writer = new StringWriter();
       try {
         IOUtils.copy(resourceContent, writer, "UTF-8");
@@ -63,6 +71,8 @@ public class MainServlet extends HttpServlet {
           catch (IOException e) {
             blockOutput += "<h1>Bad Wiki Block<h1>";
           }
+        } else if (blockId.contains("html")) {
+          blockOutput += "<div class=\"block html\">" + blockContent + "</div>";
         }
       }
       catch (IOException | java.lang.NullPointerException ex) {
