@@ -40,6 +40,7 @@ public class MainServlet extends HttpServlet {
     ArrayList<String> blockIds = new ArrayList<String>(Arrays.asList(writer.toString().split(",")));
     IOUtils.closeQuietly(resourceContent);
     template.SetPageHeader(blockIds.remove(0));
+    template.SetPageHeader(path);
     String content;
     if (path == null)
       content = parseBlocks("home_main", blockIds);
