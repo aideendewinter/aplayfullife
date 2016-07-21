@@ -30,7 +30,7 @@ public class MainServlet extends HttpServlet {
     }
     template.SetPageNavigation(pageNav);
     // Page Content
-    String path = request.getServletPath();
+    String path = request.getServletPath().replace(".html", "");
     if (path == null)
       resourceContent = classLoader.getResourceAsStream("/content/home_main");
     else
