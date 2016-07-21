@@ -40,12 +40,15 @@ public class MainServlet extends HttpServlet {
     ArrayList<String> blockIds = new ArrayList<String>(Arrays.asList(writer.toString().split(",")));
     IOUtils.closeQuietly(resourceContent);
     template.SetPageHeader(blockIds.remove(0));
-    template.SetPageHeader(path);
     String content;
-    if (path == null)
+    if (path == null) {
       content = parseBlocks("home_main", blockIds);
-    else
+      template.SetPageHeader("NULL");
+    }
+    else {
       content = parseBlocks(path, blockIds);
+      template.SetPageHeader(path);
+    }
     template.SetPageContent(content);
     // Output
     response.setContentType("text/html; charset=UTF-8");
