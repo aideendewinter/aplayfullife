@@ -18,6 +18,13 @@ header h1 {
 .page {
   overflow: auto;
 }
+.html {
+  width: 100%;
+}
+.block h1 {
+  text-align: center;
+  font-size: 1.5em;
+}
 p {
   margin: 12px;
   max-width: 452px;
