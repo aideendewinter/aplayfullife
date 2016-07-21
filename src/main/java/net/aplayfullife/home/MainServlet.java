@@ -7,7 +7,6 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import net.aplayfullife.identity.*;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.StringUtils;
 
 @WebServlet(urlPatterns = {"", "*.html"})
 public class MainServlet extends HttpServlet {
