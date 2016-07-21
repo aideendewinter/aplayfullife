@@ -7,6 +7,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import net.aplayfullife.identity.*;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.StringUtils;
 
 @WebServlet(urlPatterns = {"", "*.html"})
 public class MainServlet extends HttpServlet {
@@ -31,23 +32,21 @@ public class MainServlet extends HttpServlet {
     template.SetPageNavigation(pageNav);
     // Page Content
     String path = request.getServletPath().replace(".html", "");
-    if (path == null)
+    if (path == "")
       resourceContent = classLoader.getResourceAsStream("/content/home_main");
     else
-      resourceContent = classLoader.getResourceAsStream("/content/" + path);
+      resourceContent = classLoader.getResourceAsStream("/content" + path);
     writer.getBuffer().setLength(0);
     IOUtils.copy(resourceContent, writer, "UTF-8");
     ArrayList<String> blockIds = new ArrayList<String>(Arrays.asList(writer.toString().split(",")));
     IOUtils.closeQuietly(resourceContent);
     template.SetPageHeader(blockIds.remove(0));
     String content;
-    if (path == null) {
+    if (path == "") {
       content = parseBlocks("home_main", blockIds);
-      template.SetPageHeader("NULL");
     }
     else {
       content = parseBlocks(path, blockIds);
-      template.SetPageHeader(path);
     }
     template.SetPageContent(content);
     // Output
@@ -60,7 +59,7 @@ public class MainServlet extends HttpServlet {
     for(String blockId : blockIds) {
       blockId = blockId.trim();
       ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-      InputStream resourceContent = classLoader.getResourceAsStream("/content/"+page+"-blocks/" + blockId);
+      InputStream resourceContent = classLoader.getResourceAsStream("/content"+page+"-blocks/" + blockId);
       StringWriter writer = new StringWriter();
       try {
         IOUtils.copy(resourceContent, writer, "UTF-8");
