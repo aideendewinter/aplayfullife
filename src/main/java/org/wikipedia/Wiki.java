@@ -1623,11 +1623,11 @@ public class Wiki implements Serializable
     {
         String url = query + "&prop=extracts&exintro=&explaintext=&titles=" + encode(title, true);
         String text = fetch(url, "getSummaryText");
-        if (!text.contains("</rev>"))
+        if (!text.contains("</extract>"))
             return "";
-        int a = text.indexOf("<rev ");
+        int a = text.indexOf("<extract ");
         a = text.indexOf("xml:space=\"preserve\">", a) + 21;
-        int b = text.indexOf("</rev>", a);
+        int b = text.indexOf("</extract>", a);
         return text.substring(a, b);
     }
 
