@@ -17,6 +17,9 @@ public class WikiBlock implements ContentBlock {
   public String GetHTML() throws IOException {
     String intro = (wiki.getSummaryText(title));
     int firstLineBreak = intro.indexOf("\n");
-    return intro.substring(0, firstLineBreak);
+    if (firstLineBreak != -1)
+      return intro.substring(0, firstLineBreak);
+    else
+      return intro;
   }
 }
