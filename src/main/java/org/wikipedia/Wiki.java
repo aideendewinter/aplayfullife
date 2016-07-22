@@ -1622,9 +1622,13 @@ public class Wiki implements Serializable
     public String getSummaryText(String title) throws IOException
     {
         String url = query + "&prop=extracts&exintro=&explaintext=&titles=" + encode(title, true);
-        String temp = fetch(url, "getPageText");
-        log(Level.INFO, "getPageText", "Successfully retrieved text of " + title);
-        return temp;
+        String text = fetch(url, "getSummaryText");
+        if (!text.contains("</rev>"))
+            return "";
+        int a = text.indexOf("<rev ");
+        a = text.indexOf("xml:space=\"preserve\">", a) + 21;
+        int b = text.indexOf("</rev>", a);
+        return text.substring(a, b);
     }
 
     /**
