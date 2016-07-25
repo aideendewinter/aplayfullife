@@ -36,6 +36,20 @@ p::first-letter {
 .block {
   display: inline-block;
 }
+.html h2 {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+ul {
+  text-align: center;
+}
+li {
+  margin: 4px;
+  font-size: 1.2em;
+}
 .wiki {
   float: left;
   max-width: 264px;
