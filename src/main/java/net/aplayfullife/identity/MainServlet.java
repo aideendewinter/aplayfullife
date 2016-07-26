@@ -11,7 +11,7 @@ import org.apache.commons.io.IOUtils;
 public class MainServlet extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
-    IdentityTemplate template = new IdentityTemplate("home_main", this);
+    IdentityTemplate template = new IdentityTemplate("identity_main", this);
     
     InputStream resourceContent;
     StringWriter writer = new StringWriter();
@@ -29,7 +29,7 @@ public class MainServlet extends HttpServlet {
     }
     template.SetPageNavigation(pageNav);
     // Page Content
-    String path = request.getServletPath().replace(".html", "");
+    String path = request.getPathInfo().replace(".html", "");
     if (path == "")
       resourceContent = classLoader.getResourceAsStream("/content/home_main");
     else
