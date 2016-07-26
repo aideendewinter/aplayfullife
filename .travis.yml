@@ -15,3 +15,5 @@ deploy:
 notifications:
   email:
     on_failure: change
+before_deploy: 
+  -  git checkout $TRAVIS_BRANCH
