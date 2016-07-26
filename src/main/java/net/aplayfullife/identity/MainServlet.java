@@ -25,6 +25,8 @@ public class MainServlet extends HttpServlet {
     String pageNav = "";
     for (String page : pages) {
       String[] pageInfo = page.split(",");
+	  if (pageInfo.length < 2)
+		  continue;
       pageNav += "<a href=\"./" + pageInfo[1] + ".html\">" + pageInfo[0] + "</a>";
     }
     template.SetPageNavigation(pageNav);
