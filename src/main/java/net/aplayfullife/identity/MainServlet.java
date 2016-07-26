@@ -17,7 +17,7 @@ public class MainServlet extends HttpServlet {
     StringWriter writer = new StringWriter();
     // Page Navigation
     ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-    resourceContent = classLoader.getResourceAsStream("/content/home_pages");
+    resourceContent = classLoader.getResourceAsStream("/content/identity_pages");
     writer.getBuffer().setLength(0);
     IOUtils.copy(resourceContent, writer, "UTF-8");
     ArrayList<String> pages = new ArrayList<String>(Arrays.asList(writer.toString().split("\\r?\\n")));
@@ -30,8 +30,8 @@ public class MainServlet extends HttpServlet {
     template.SetPageNavigation(pageNav);
     // Page Content
     String path = request.getPathInfo().replace(".html", "");
-    if (path == "")
-      resourceContent = classLoader.getResourceAsStream("/content/home_main");
+    if (path == "/")
+      resourceContent = classLoader.getResourceAsStream("/content/identity_main");
     else
       resourceContent = classLoader.getResourceAsStream("/content" + path);
     writer.getBuffer().setLength(0);
