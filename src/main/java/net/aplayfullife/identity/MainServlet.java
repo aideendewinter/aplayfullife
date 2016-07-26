@@ -34,7 +34,7 @@ public class MainServlet extends HttpServlet {
     String path = request.getPathInfo().replace(".html", "");
     if (path == "/") {
       resourceContent = classLoader.getResourceAsStream("/content/identity_main");
-      path += "What is going on?"
+      path += "What is going on?";
     }
     else
       resourceContent = classLoader.getResourceAsStream("/content" + path);
