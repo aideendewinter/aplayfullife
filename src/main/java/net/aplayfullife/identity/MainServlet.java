@@ -43,7 +43,7 @@ public class MainServlet extends HttpServlet {
     template.SetPageHeader(blockIds.remove(0));
     String content;
     if (path == "") {
-      content = parseBlocks("/home", blockIds);
+      content = parseBlocks("/identity", blockIds);
     }
     else {
       content = parseBlocks(path, blockIds);
