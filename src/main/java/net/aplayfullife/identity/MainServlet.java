@@ -32,9 +32,8 @@ public class MainServlet extends HttpServlet {
     template.SetPageNavigation(pageNav);
     // Page Content
     String path = request.getPathInfo().replace(".html", "");
-    if (path == "/") {
+    if (path.equals("/")) {
       resourceContent = classLoader.getResourceAsStream("/content/identity_main");
-      path += "What is going on?";
     }
     else
       resourceContent = classLoader.getResourceAsStream("/content" + path);
@@ -42,9 +41,9 @@ public class MainServlet extends HttpServlet {
     IOUtils.copy(resourceContent, writer, "UTF-8");
     ArrayList<String> blockIds = new ArrayList<String>(Arrays.asList(writer.toString().split(",")));
     IOUtils.closeQuietly(resourceContent);
-    template.SetPageHeader("\"" + path + "\"");//blockIds.remove(0));
+    template.SetPageHeader(blockIds.remove(0));//"\"" + path + "\"");//
     String content;
-    if (path == "/") {
+    if (path.equals("/")) {
       content = parseBlocks("/identity", blockIds);
     }
     else {
