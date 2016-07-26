@@ -40,7 +40,7 @@ public class MainServlet extends HttpServlet {
     IOUtils.copy(resourceContent, writer, "UTF-8");
     ArrayList<String> blockIds = new ArrayList<String>(Arrays.asList(writer.toString().split(",")));
     IOUtils.closeQuietly(resourceContent);
-    template.SetPageHeader(blockIds.remove(0));
+    template.SetPageHeader("\"" + path + "\"");//blockIds.remove(0));
     String content;
     if (path == "/") {
       content = parseBlocks("/identity", blockIds);
