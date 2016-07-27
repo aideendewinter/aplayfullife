@@ -10,7 +10,7 @@ import org.apache.commons.io.IOUtils;
 public class IdentityTemplate {
   protected String templateName;
   protected HttpServlet myServlet;
-  protected String pageNav, pageHeader, pageContent;
+  protected String pageNav, pageHeader, pageContent, pageLeft, pageRight, stylesheet;
   
   public IdentityTemplate(String name, HttpServlet servlet) {
     templateName = name;
@@ -25,6 +25,15 @@ public class IdentityTemplate {
   }
   public void SetPageContent(String content) {
     pageContent = content;
+  }
+  public void SetPageLeft(String content) {
+    pageLeft = content;
+  }
+  public void SetPageRight(String content) {
+    pageRight = content;
+  }
+  public void SetStyle(String content) {
+    stylesheet = content;
   }
   
   public String GetPage() throws IOException {
@@ -47,9 +56,13 @@ public class IdentityTemplate {
     template = template.replace("{site_navigation}", writer.toString());
     IOUtils.closeQuietly(resourceContent);
     // Page
+    template = template.replace("{stylesheet}", stylesheet);
     template = template.replace("{page_navigation}", pageNav);
+    template = template.replace("{page_title}", pageHeader);
     template = template.replace("{page_header}", pageHeader);
     template = template.replace("{page_body}", pageContent);
+    template = template.replace("{page_left}", pageLeft);
+    template = template.replace("{page_right}", pageRight);
     
     return template;
   }
