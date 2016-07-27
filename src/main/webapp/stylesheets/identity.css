@@ -1,0 +1,92 @@
+body {
+  background: #036;
+  color: white;
+  line-height: 1.33;
+}
+header {
+  margin: 12px 0;
+  padding: 16px 32px;
+  background: white;
+  color: black;
+  text-align: right;
+  font-family: 'Princess Sofia', cursive;
+  font-size: 3em;
+}
+header h1 {
+  display: inline-block;
+}
+.page {
+  overflow: auto;
+}
+.html {
+  width: 100%;
+}
+.block h1 {
+  text-align: center;
+  font-size: 1.5em;
+}
+p {
+  margin: 12px;
+  max-width: 452px;
+}
+p::first-letter {
+  font-family: 'Princess Sofia', cursive;
+  font-size: 1.5em;
+}
+.block {
+  display: inline-block;
+}
+.html h2 {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+ul {
+  text-align: center;
+}
+li {
+  margin: 4px;
+  font-size: 1.2em;
+}
+.wiki {
+  float: left;
+  max-width: 264px;
+  padding: 8px 16px;
+  border: antiquewhite solid 2px;
+  background: #165c91;
+  text-align: justify;
+  text-indent: 32px;
+  font-size: .8em;
+}
+.wiki::after {
+  float: right;
+  content: "-Wikipedia";
+  font-size: 1.6em;
+}
+footer {
+  box-sizing: border-box;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  height: 12px;
+  width: 100%;
+  background: black;
+  color: black;
+}
+footer:hover {
+  height: auto;
+  color: white;
+}
+footer a {
+  padding: 8px;
+  height: 100%;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  background: white;
+  color: black;
+}
