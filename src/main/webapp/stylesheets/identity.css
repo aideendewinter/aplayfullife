@@ -2,6 +2,8 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-size: 14pt;
+  font-family: Georgia;
 }
 body {
   background: #036;
@@ -93,13 +95,15 @@ li {
   background: #165c91;
   color: white;
   text-align: justify;
+  text-align-last: left;
+  font-family: Helvetica;
   text-indent: 3em;
   font-size: .8em;
 }
 .wiki::after {
-  display: inline-block;
-  width: 100%;
-  text-align: right;
-  content: " ~Wikipedia";
+  display: block;
+  text-align-last: right;
+  content: "~Wikipedia";
+  font-family: Georgia;
   font-size: 1.6em;
 }
