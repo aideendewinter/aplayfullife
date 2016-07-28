@@ -42,19 +42,19 @@ public class MainServlet extends HttpServlet {
     template.SetPageHeader(blockIds.remove(0));
     String content;
     if (path == "") {
-      content = parseBlocks("/home", blockIds);
+      parseBlocks("/home", blockIds, template);
     }
     else {
-      content = parseBlocks(path, blockIds);
+      parseBlocks(path, blockIds, template);
     }
-    template.SetPageContent(content);
+    template.SetStyle("/stylesheets/identity.css");
     // Output
     response.setContentType("text/html; charset=UTF-8");
     response.getWriter().print(template.GetPage());
   }
   
-  protected String parseBlocks(String page, List<String> blockIds) {
-    String blockOutput = "";
+  protected void parseBlocks(String page, List<String> blockIds, IdentityTemplate template) {
+    String left = "", right = "", content = "";
     for(String blockId : blockIds) {
       blockId = blockId.trim();
       ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
@@ -64,24 +64,25 @@ public class MainServlet extends HttpServlet {
         IOUtils.copy(resourceContent, writer, "UTF-8");
         String blockContent = writer.toString();
         if (blockId.contains("text")) {
-          blockOutput += "<p class=\"block text\">" + blockContent + "</p>";
+          content += "<p class=\"block text\">" + blockContent + "</p>";
         } else if (blockId.contains("wiki")) {
           try {
             WikiBlock wBlock = new WikiBlock(blockContent);
-            blockOutput += "<p class=\"block wiki\">" + wBlock.GetHTML() + "</p>";
+            left += "<p class=\"block wiki\">" + wBlock.GetHTML() + "</p>";
           }
           catch (IOException e) {
-            blockOutput += "<h1>Bad Wiki Block<h1>";
+            left += "<h1>Bad Wiki Block<h1>";
           }
         } else if (blockId.contains("html")) {
-          blockOutput += "<div class=\"block html\">" + blockContent + "</div>";
+          content += "<div class=\"block html\">" + blockContent + "</div>";
         }
       }
       catch (IOException | java.lang.NullPointerException ex) {
-        blockOutput += "Bad Block : " + blockId + ".";
+        content += "Bad Block : " + blockId + ".";
       }
       IOUtils.closeQuietly(resourceContent);
     }
-    return blockOutput;
+    template.SetPageContent(content);
+    template.SetPageLeft(left);
+    template.SetPageRight("");
   }
-}

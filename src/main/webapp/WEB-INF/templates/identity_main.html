@@ -8,12 +8,14 @@
 		<link href="https://fonts.googleapis.com/css?family=Princess+Sofia" rel="stylesheet">
 	</head>
 	<body>
-		<header>{site_header} ∞ {page_header}</header>
 		<div class=page>
-			<div class=left>{page_left}</div>
-			<div class=middle>{page_body}</div>
-			<div class=right>{page_right}</div>
+			<header>{site_header} ∞ {page_header}</header>
+			<div class=content>
+				<div class=left>{page_left}</div>
+				<div class=middle>{page_body}</div>
+				<div class=right>{page_right}</div>
+			</div>
+			<footer>{site_navigation} ∪ {page_navigation}</footer>
 		</div>
-		<footer>{site_navigation} ∪ {page_navigation}</footer>
 	</body>
 </html>
