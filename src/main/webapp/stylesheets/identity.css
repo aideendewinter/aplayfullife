@@ -30,10 +30,9 @@ header h1 {
 }
 .left {
   flex: 1;
-  align-self: flex-start;
 }
 .middle {
-  flex: 3;
+  flex: 2;
 }
 footer {
   box-sizing: border-box;
@@ -62,6 +61,7 @@ footer a:hover {
   border: orange solid 2px;
   padding: 8px 16px;
   min-width: 276px;
+  max-width: 40em;
   margin: 6px;
   background: #333;
   color: orange;
@@ -93,7 +93,7 @@ li {
   background: #165c91;
   color: white;
   text-align: justify;
-  text-indent: 32px;
+  text-indent: 3em;
   font-size: .8em;
 }
 .wiki::after {
