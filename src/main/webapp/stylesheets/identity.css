@@ -26,7 +26,7 @@ header h1 {
    position: relative;
 }
 .content {
-   padding-bottom: 4em;
+   padding-bottom: 2.83em;
    display: flex;   
    flex-wrap: wrap;
 }
