@@ -85,6 +85,6 @@ public class MainServlet extends HttpServlet {
     }
     template.SetPageContent(content);
     template.SetPageLeft(left);
-    template.SetPageLRight("");
+    template.SetPageRight("");
   }
 }
