@@ -1,10 +1,14 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 body {
   background: #036;
   color: white;
   line-height: 1.33;
 }
 header {
-  margin: 12px 0;
   padding: 16px 32px;
   background: white;
   color: black;
@@ -16,31 +20,65 @@ header h1 {
   display: inline-block;
 }
 .page {
-  overflow: auto;
+   min-height: 100%;
+   position: relative;
 }
-.html {
+.content {
+   padding-bottom: 4em;
+   display: flex;   
+   flex-wrap: wrap;
+}
+.left {
+  flex: 1;
+  align-self: flex-start;
+}
+.middle {
+  flex: 3;
+}
+footer {
+  box-sizing: border-box;
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  height: 2.83em;
   width: 100%;
+  text-align: center;
+  background: black;
+}
+footer a {
+  box-sizing: border-box;
+  padding: .75em .4em;
+  height: 2.83em;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  background: white;
+  color: black;
+}
+.block {
+  box-sizing: border-box;
+  border: orange solid 2px;
+  padding: 8px 16px;
+  min-width: 276px;
+  margin: 6px;
+  background: #333;
+  color: orange;
 }
 .block h1 {
   text-align: center;
   font-size: 1.5em;
-}
-p {
-  margin: 12px;
-  max-width: 452px;
-}
-p::first-letter {
-  font-family: 'Princess Sofia', cursive;
-  font-size: 1.5em;
-}
-.block {
-  display: inline-block;
 }
 .html h2 {
   text-align: center;
   text-transform: uppercase;
   text-decoration: underline;
   font-weight: bold;
+  font-size: 1.5em;
+}
+p::first-letter {
+  font-family: 'Princess Sofia', cursive;
   font-size: 1.5em;
 }
 ul {
@@ -51,42 +89,17 @@ li {
   font-size: 1.2em;
 }
 .wiki {
-  float: left;
-  max-width: 264px;
-  padding: 8px 16px;
   border: antiquewhite solid 2px;
   background: #165c91;
+  color: white;
   text-align: justify;
   text-indent: 32px;
   font-size: .8em;
 }
 .wiki::after {
-  float: right;
-  content: "-Wikipedia";
-  font-size: 1.6em;
-}
-footer {
-  box-sizing: border-box;
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  height: 12px;
-  width: 100%;
-  background: black;
-  color: black;
-}
-footer:hover {
-  height: auto;
-  color: white;
-}
-footer a {
-  padding: 8px;
-  height: 100%;
   display: inline-block;
-  text-decoration: none;
-  color: white;
-}
-footer a:hover {
-  background: white;
-  color: black;
+  width: 100%;
+  text-align: right;
+  content: " ~Wikipedia";
+  font-size: 1.6em;
 }
