@@ -83,7 +83,7 @@ public class MainServlet extends HttpServlet {
       }
       IOUtils.closeQuietly(resourceContent);
     }
-    template.SetContent(content);
-    template.SetLeft(left);
+    template.SetPageContent(content);
+    template.SetPageLeft(left);
   }
 }
