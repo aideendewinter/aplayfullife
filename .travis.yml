@@ -3,9 +3,8 @@ script: mvn package -Popenshift
 jdk:
 - oraclejdk7
 - openjdk7
-before_install:
-- rvm install 2.1.5
 before_deploy: 
+  - rvm install 2.1.5
   -  git checkout $TRAVIS_BRANCH
 deploy:
   provider: openshift
