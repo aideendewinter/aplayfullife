@@ -7,6 +7,8 @@ before_deploy:
   - git checkout $TRAVIS_BRANCH
 deploy:
   provider: openshift
+  edge: true
+  : # rest
   user: jessewhitworth@gmail.com
   password:
     secure: "xXnVp40U9+JboK5TJywIA42W6EQ+/AqZHIrysIvLtkaIMOrcgeZADsr8Kl6pjcy/v8w0Nc/hYaA4WN0KEXOMbjLFJtCl5kObRojkZcLI0H53lkRRemcKMIAi8+GHITNbaTDz828K/gK2wUbhmDP0O9WaViJCWJLQBBcysK/truqmnlDUAX/HSgzOex4ohTDJDWWX6wnqcHKnSYwTJKeYB2SXZiku+VpFw0ESUzaY3q76l8bb2/dXkDN7PIuePqs+wjkskAOC9maB6+RMBmKzZquvDWQWuoqB+LDolQHAdmYdUcbqrH7xGZgshqBbc0zNEN6MxcItS8kmGS8pL0ety9MxgOcjK0z1b8tI7EwEIuIpMvO7R0cbl7523IeEvQPj7hjl9b0b3x5z6WNYHl33nrBwXEtsAnn8OwdbUvKPBFqixoXXWolaTkYxUguBsO+toOaSyLmq4GCZNSHKI/UgATshujph3ZvnVrGN/tNpCePoo6ggdCemOP134BU+9JkU+Df09BOzF6O85UN4F+NOeZEP1Z9wErFcBvOy4c8DoJP0j7r37+Wb7EOdQVc/FadJVb3C0EAzXQRouphquD5urhtIj0Rx9lCeVStrkNdF9vekDfuq69D3lQpVEnJxIxVx95Xdp1376AYg/p3uhjOz49RQDCktJ02WwjCI88tsGBw="
