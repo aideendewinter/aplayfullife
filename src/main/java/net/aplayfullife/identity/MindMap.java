@@ -9,7 +9,7 @@ import org.apache.commons.io.IOUtils;
 
 public class MindMap {
 	
-	public MindMap(String directory, IdentityTemplate template) {
+	public MindMap(String directory, IdentityTemplate template) throws IOException{
 		// Content readers.
 		InputStream resourceContent;
 		StringWriter writer = new StringWriter();
