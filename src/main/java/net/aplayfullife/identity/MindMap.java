@@ -19,7 +19,10 @@ public class MindMap {
 		resourceContent = classLoader.getResourceAsStream("/content/identity-pages");
 		writer.getBuffer().setLength(0);
 		IOUtils.copy(resourceContent, writer, "UTF-8");
-		template.DebugPrintLn(writer.toString());
+		String[] pages = writer.toString().split("\\r?\\n");
+		for(int i=0; i<pages.length; i++) {
+			template.DebugPrintLn(i ": " + pages[i]);
+		}
 		IOUtils.closeQuietly(resourceContent);
 	}
 }
