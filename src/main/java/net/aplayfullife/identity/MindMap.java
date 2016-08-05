@@ -21,7 +21,7 @@ public class MindMap {
 		IOUtils.copy(resourceContent, writer, "UTF-8");
 		String[] pages = writer.toString().split("\\r?\\n");
 		for(int i=0; i<pages.length; i++) {
-			template.DebugPrintLn(i ": " + pages[i]);
+			template.DebugPrintLn(i + ": " + pages[i]);
 		}
 		IOUtils.closeQuietly(resourceContent);
 	}
