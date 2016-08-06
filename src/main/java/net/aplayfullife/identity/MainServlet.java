@@ -49,7 +49,7 @@ public class MainServlet extends HttpServlet {
 		if (path.equals("/")) {
 			parseBlocks("/identity", blockIds, template, mindMap);
 		} else {
-			parseBlocks(path, blockIds, template);
+			parseBlocks(path, blockIds, template, mindMap);
 		}
 		template.SetStyle("/stylesheets/identity.css");
 		
