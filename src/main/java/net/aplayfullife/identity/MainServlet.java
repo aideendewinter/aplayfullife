@@ -47,7 +47,7 @@ public class MainServlet extends HttpServlet {
 		IOUtils.closeQuietly(resourceContent);
 		template.SetPageHeader(blockIds.remove(0));
 		if (path.equals("/")) {
-			parseBlocks("/identity", blockIds, template);
+			parseBlocks("/identity", blockIds, template, mindMap);
 		} else {
 			parseBlocks(path, blockIds, template);
 		}
