@@ -58,7 +58,7 @@ public class MainServlet extends HttpServlet {
 		response.getWriter().print(template.GetPage());
 	}
 	
-	protected void parseBlocks(String page, List<String> blockIds, IdentityTemplate template) {
+	protected void parseBlocks(String page, List<String> blockIds, IdentityTemplate template, MindMap mindMap) {
 		String left = "", right = "", content = "";
 		for(String blockId : blockIds) {
 			blockId = blockId.trim();
