@@ -41,7 +41,7 @@ public class MindMap {
 						
 					}
 				} catch (IOException | java.lang.NullPointerException ex) {
-					content += "Bad Block : " + blockId + ".";
+					
 				}
 				IOUtils.closeQuietly(resourceContent);
 			}
