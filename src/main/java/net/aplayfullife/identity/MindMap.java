@@ -6,7 +6,7 @@ import javax.servlet.http.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 public class MindMap {
 	public int[][] mapMatrix;
@@ -47,7 +47,7 @@ public class MindMap {
 					String blockContent = writer.toString();
 					if (blockId.contains("mindtext")) {
 						for(int j=0; j<pages.length; j++) {
-							mapMatrix[i][j] += StringUtils.CountMatches(blockcontent, pages[j]);
+							mapMatrix[i][j] += StringUtils.CountMatches(blockContent, pages[j]);
 						}
 					}
 				} catch (IOException | java.lang.NullPointerException ex) {
