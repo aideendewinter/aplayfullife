@@ -47,7 +47,7 @@ public class MindMap {
 					String blockContent = writer.toString();
 					if (blockId.contains("mindtext")) {
 						for(int j=0; j<pages.length; j++) {
-							mapMatrix[i][j] += StringUtils.CountMatches(blockContent, pages[j]);
+							mapMatrix[i][j] += StringUtils.countMatches(blockContent, pages[j]);
 						}
 					}
 				} catch (IOException | java.lang.NullPointerException ex) {
