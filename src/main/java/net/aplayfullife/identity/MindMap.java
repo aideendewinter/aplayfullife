@@ -6,8 +6,10 @@ import javax.servlet.http.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang.StringUtils;
 
 public class MindMap {
+	public int[,] mapMatrix = new int[pages.length, pages.length];
 	
 	public MindMap(String directory, IdentityTemplate template) throws IOException{
 		// Content readers.
@@ -21,6 +23,7 @@ public class MindMap {
 		IOUtils.copy(resourceContent, writer, "UTF-8");
 		String[] pages = writer.toString().split("\\r?\\n");
 		IOUtils.closeQuietly(resourceContent);
+		
 		for(int i=0; i<pages.length; i++) {
 			resourceContent = classLoader.getResourceAsStream("/content/identity-pages/" + pages[i]);
 			writer.getBuffer().setLength(0);
@@ -29,6 +32,9 @@ public class MindMap {
 			IOUtils.closeQuietly(resourceContent);
 			blockIds.remove(0);
 			
+			for(int j=0; j<pages.length; j++) {
+				mapMatrix[i, j] = 0;
+			}
 			for(String blockId : blockIds) {
 				blockId = blockId.trim();
 				resourceContent = classLoader.getResourceAsStream("/content/identity-blocks/" + blockId);
@@ -38,7 +44,9 @@ public class MindMap {
 					IOUtils.copy(resourceContent, writer, "UTF-8");
 					String blockContent = writer.toString();
 					if (blockId.contains("mindtext")) {
-						
+						for(int j=0; j<pages.length; j++) {
+							mapMatrix[i, j] += StringUtils.CountMatches(blockcontent, pages[j]);
+						}
 					}
 				} catch (IOException | java.lang.NullPointerException ex) {
 					
