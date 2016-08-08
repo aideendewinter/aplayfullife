@@ -24,7 +24,7 @@ public class MindMap {
 		String[] pages = writer.toString().split("\\r?\\n");
 		IOUtils.closeQuietly(resourceContent);
 		
-		mapMatrix = new int[pages.length][pages.length]
+		mapMatrix = new int[pages.length][pages.length];
 		
 		for(int i=0; i<pages.length; i++) {
 			resourceContent = classLoader.getResourceAsStream("/content/identity-pages/" + pages[i]);
