@@ -10,6 +10,7 @@ import org.apache.commons.lang3.StringUtils;
 
 public class MindMap {
 	public int[][] mapMatrix;
+	public String[] pages;
 	
 	public MindMap(String directory, IdentityTemplate template) throws IOException{
 		// Content readers.
@@ -21,7 +22,7 @@ public class MindMap {
 		resourceContent = classLoader.getResourceAsStream("/content/identity-pages");
 		writer.getBuffer().setLength(0);
 		IOUtils.copy(resourceContent, writer, "UTF-8");
-		String[] pages = writer.toString().split("\\r?\\n");
+		pages = writer.toString().split("\\r?\\n");
 		IOUtils.closeQuietly(resourceContent);
 		
 		mapMatrix = new int[pages.length][pages.length];
