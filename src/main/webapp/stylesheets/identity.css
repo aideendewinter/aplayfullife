@@ -2,8 +2,10 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-size: 1.2em;
   font-family: Georgia;
+}
+html {
+  font-size: 1.1em;
 }
 body {
   background: #036;
@@ -111,15 +113,6 @@ li {
   content: "~Wikipedia";
   font-family: Georgia;
   font-size: 1.6em;
-}
-@media screen and (max-width: 53em) {
-  .wiki {
-    position: initial;
-    width: initial;
-  }
-  .left {
-    width: 0;
-  }
 }
 @media screen and (max-width: 53em) {
   .wiki {
