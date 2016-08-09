@@ -14,8 +14,10 @@ public class MindTextBlock implements ContentBlock {
 		this.text = text;
 	}
 	
-	public String GetHTML() throws IOException {
-		ArrayList<String> paragraphs = new ArrayList<String>(Arrays.asList(text.split("\\r?\\n\\r?\\n")));
+	public String GetHTML(MindMap mindMap) throws IOException {
+		String mapped = text;
+		
+		ArrayList<String> paragraphs = new ArrayList<String>(Arrays.asList(mapped.split("\\r?\\n\\r?\\n")));
 		String parsed = "";
 		for (String paragraph : paragraphs) {
 			parsed += "<p>" + paragraph + "</p>";
