@@ -29,6 +29,9 @@ header h1 {
    padding-bottom: 2.83em;
    display: flex;
 }
+.content::after {
+  clear: both;
+}
 .left {
   width: 20em;
 }
@@ -117,4 +120,16 @@ li {
   .left {
     width: 0;
   }
+}
+@media screen and (max-width: 53em) {
+  .wiki {
+    position: initial;
+    width: initial;
+  }
+  .left {
+    width: 0;
+  }
+}
+@media screen and (max-resolution: 2dppx) {
+  font-size: 28pt;
 }
