@@ -24,7 +24,7 @@ public class MindTextBlock {
 			if (i==pageIndex)
 				continue;
 			String linkWeight="normal-weight";
-			mapped = mapped.replaceFirst(mindMap.pages[i], "<a class=" + linkWeight + "href=\"/identity/" + mindMap.pages[i] + ".html\">" 
+			mapped = mapped.replaceFirst(mindMap.pages[i], "<a class=" + linkWeight + " href=\"/identity/" + mindMap.pages[i] + ".html\">" 
 				+ mindMap.pages[i] + "("+mindMap.mapMatrix[pageIndex][i]+" "+mindMap.mapMatrix[i][pageIndex]+")</a>");
 		}
 		
