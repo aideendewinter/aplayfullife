@@ -25,10 +25,20 @@ public class MindMap {
 		pages = writer.toString().split("\\r?\\n");
 		IOUtils.closeQuietly(resourceContent);
 		
+		String[] temp = new String[pages.length+1];
+		temp[0] = "identity";
+		
+		for(int i=0; i<pages.length; i++) {
+			temp[i+1] = pages[i];
+		}
+		pages = temp;
 		mapMatrix = new int[pages.length][pages.length];
 		
 		for(int i=0; i<pages.length; i++) {
-			resourceContent = classLoader.getResourceAsStream("/content/identity-pages/" + pages[i]);
+			if (i==0)
+				resourceContent = classLoader.getResourceAsStream("/content/identity");
+			else
+				resourceContent = classLoader.getResourceAsStream("/content/identity-pages/" + pages[i]);
 			writer.getBuffer().setLength(0);
 			IOUtils.copy(resourceContent, writer, "UTF-8");
 			ArrayList<String> blockIds = new ArrayList<String>(Arrays.asList(writer.toString().split(",")));
