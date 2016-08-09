@@ -39,7 +39,7 @@ public class MainServlet extends HttpServlet {
 		if (path.equals("/")) {
 			resourceContent = classLoader.getResourceAsStream("/content/identity_main");
 		} else
-			resourceContent = classLoader.getResourceAsStream("/content" + path);
+			resourceContent = classLoader.getResourceAsStream("/content/identity-pages" + path);
 		
 		writer.getBuffer().setLength(0);
 		IOUtils.copy(resourceContent, writer, "UTF-8");
@@ -47,9 +47,9 @@ public class MainServlet extends HttpServlet {
 		IOUtils.closeQuietly(resourceContent);
 		template.SetPageHeader(blockIds.remove(0));
 		if (path.equals("/")) {
-			parseBlocks("/identity", blockIds, template, mindMap);
+			parseBlocks("identity", blockIds, template, mindMap);
 		} else {
-			parseBlocks(path, blockIds, template, mindMap);
+			parseBlocks(path.replace("/", ""), blockIds, template, mindMap);
 		}
 		template.SetStyle("/stylesheets/identity.css");
 		
@@ -63,7 +63,7 @@ public class MainServlet extends HttpServlet {
 		for(String blockId : blockIds) {
 			blockId = blockId.trim();
 			ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-			InputStream resourceContent = classLoader.getResourceAsStream("/content"+page+"-blocks/" + blockId);
+			InputStream resourceContent = classLoader.getResourceAsStream("/content/identity-blocks/" + blockId);
 			StringWriter writer = new StringWriter();
 			
 			try {
@@ -72,7 +72,8 @@ public class MainServlet extends HttpServlet {
 				if (blockId.contains("mindtext")) {
 					try {
 						MindTextBlock mindTBlock = new MindTextBlock(blockContent);
-						content += "<div class=\"block mindtext\">" + mindTBlock.GetHTML() + "</div>";
+						content += "<div class=\"block mindtext\">" + mindTBlock.GetHTML(page, mindMap)
+							+ "</div>";
 					} catch (IOException e) {
 						content += "<h1>Bad Mind Text Block<h1>";
 					}
