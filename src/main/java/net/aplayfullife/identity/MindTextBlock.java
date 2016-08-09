@@ -20,12 +20,12 @@ public class MindTextBlock {
 		while (!page.equals(mindMap.pages[pageIndex]))
 			pageIndex++;
 		
-		for (int i=0; i<mapMatrix[pageIndex].length; i++) {
+		for (int i=0; i<mindMap.mapMatrix[pageIndex].length; i++) {
 			if (i==pageIndex)
 				continue;
 			string linkWeight="normal-weight";
-			mapped = mapped.replaceFirst(pages[i], "<a class=" + linkWeight + "href=\"/identity/" + pages[i] + ".html\">" 
-				+ pages[i] + "("+mapMatrix[pageIndex][i]+" "+mapMatrix[i][pageIndex]+")</a>");
+			mapped = mapped.replaceFirst(mindMap.pages[i], "<a class=" + linkWeight + "href=\"/identity/" + mindMap.pages[i] + ".html\">" 
+				+ mindMap.pages[i] + "("+mindMap.mapMatrix[pageIndex][i]+" "+mindMap.mapMatrix[i][pageIndex]+")</a>");
 		}
 		
 		ArrayList<String> paragraphs = new ArrayList<String>(Arrays.asList(mapped.split("\\r?\\n\\r?\\n")));
