@@ -136,6 +136,6 @@ li {
     only screen and (min-resolution: 2dppx),
     only screen and (min-resolution: 175dpi) {
   body {
-	font-size: 28pt;
+	font-size: 2em;
   }
 }
