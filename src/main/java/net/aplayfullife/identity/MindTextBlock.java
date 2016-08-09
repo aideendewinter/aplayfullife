@@ -7,15 +7,26 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import org.apache.commons.io.IOUtils;
 
-public class MindTextBlock implements ContentBlock {
+public class MindTextBlock {
 	String text;
 	
 	public MindTextBlock(String text) {
 		this.text = text;
 	}
 	
-	public String GetHTML(MindMap mindMap) throws IOException {
+	public String GetHTML(String page, MindMap mindMap) throws IOException {
 		String mapped = text;
+		int pageIndex = 0;
+		while (!page.equals(mindMap.pages[pageIndex]))
+			pageIndex++;
+		
+		for (int i=0; i<mapMatrix[pageIndex].length; i++) {
+			if (i==pageIndex)
+				continue;
+			string linkWeight="normal-weight";
+			mapped = mapped.replaceFirst(pages[i], "<a class=" + linkWeight + "href=\"/identity/" + pages[i] + ".html\">" 
+				+ pages[i] + "("+mapMatrix[pageIndex][i]+" "+mapMatrix[i][pageIndex]+")</a>");
+		}
 		
 		ArrayList<String> paragraphs = new ArrayList<String>(Arrays.asList(mapped.split("\\r?\\n\\r?\\n")));
 		String parsed = "";

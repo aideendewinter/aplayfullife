@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import org.apache.commons.io.IOUtils;
 import org.wikipedia.*;
 
-public class WikiBlock implements ContentBlock {
+public class WikiBlock {
   Wiki wiki;
   String title;
   public WikiBlock(String title) {

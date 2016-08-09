@@ -82,9 +82,9 @@ public class MainServlet extends HttpServlet {
 				} else if (blockId.contains("wiki")) {
 					try {
 						WikiBlock wBlock = new WikiBlock(blockContent);
-						left += "<p class=\"block wiki\">" + wBlock.GetHTML() + "</p>";
+						content += "<div class=\"block wiki\">" + wBlock.GetHTML() + "</div>";
 					} catch (IOException e) {
-						left += "<h1>Bad Wiki Block<h1>";
+						content += "<h1>Bad Wiki Block<h1>";
 					}
 				} else if (blockId.contains("html")) {
 					content += "<div class=\"block html\">" + blockContent + "</div>";

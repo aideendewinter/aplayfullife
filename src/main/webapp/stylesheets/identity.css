@@ -91,6 +91,8 @@ li {
   font-size: 1.2em;
 }
 .wiki {
+  position: absolute;
+  right: 100%;
   border: antiquewhite solid 2px;
   background: #165c91;
   color: white;
