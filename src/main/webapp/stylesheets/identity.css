@@ -8,7 +8,7 @@ html, body {
   font-family: Georgia;
 }
 body {
-  background: #036;
+  background: gray;
   color: white;
   line-height: 1.33;
 }
@@ -26,11 +26,13 @@ header h1 {
 .page {
   min-height:100%;
   position: relative;
+  background: #036;
 }
 .content {
   padding-bottom: 2.83rem;
 }
 .body {
+  position: relative;
   margin: 0 0 0 256px;
 }
 footer {
@@ -86,7 +88,7 @@ li {
 }
 .wiki {
   position: absolute;
-  left: 0;
+  left: -256px;
   margin: 0 6px;
   width: 250px;
   border: antiquewhite solid 2px;
@@ -113,7 +115,7 @@ li {
 .normal-weight:hover {
   text-decoration: underline;
 }
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 699px) {
   .body {
     margin: 0;
     width: 100%;
@@ -122,5 +124,11 @@ li {
     position: initial;
     margin: 6px;
     width: initial;
+  }
+}
+@media screen and (min-width: 900px) {
+  .content {
+    margin: auto;
+    width: 900px;
   }
 }
