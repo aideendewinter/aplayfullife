@@ -24,12 +24,8 @@ header {
 header h1 {
   display: inline-block;
 }
-.page {
-   position: relative;
-}
 .content {
-   position: relative;
-   padding-bottom: 2.83rem;
+  padding-bottom: 2.83rem;
 }
 .body {
   margin: 0 0 0 256px;
