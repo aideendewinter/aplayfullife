@@ -106,6 +106,14 @@ li {
   font-family: Georgia;
   font-size: 1.6em;
 }
+.normal-weight {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.normal-weight:hover {
+  text-decoration: underline;
+}
 @media screen and (max-width: 40em) {
   .body {
     margin: 0;
