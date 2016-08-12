@@ -27,12 +27,6 @@ public class IdentityTemplate {
   public void SetPageContent(String content) {
     pageContent = content;
   }
-  public void SetPageLeft(String content) {
-    pageLeft = content;
-  }
-  public void SetPageRight(String content) {
-    pageRight = content;
-  }
   public void SetStyle(String content) {
     stylesheet = content;
   }
@@ -65,8 +59,6 @@ public class IdentityTemplate {
     template = template.replace("{page_title}", pageHeader);
     template = template.replace("{page_header}", pageHeader);
     template = template.replace("{page_body}", pageContent);
-    template = template.replace("{page_left}", pageLeft);
-    template = template.replace("{page_right}", pageRight);
     template = template.replace("{debug}", debug);
     
     return template;
