@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>A Playful Life : Home</title>
-    <link rel="stylesheet" href="./stylesheets/reset.css">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>A Playful Life : {page_title}</title>
+		<link rel="stylesheet" href="/stylesheets/reset.css">
 		<link rel="stylesheet" href="{stylesheet}">
 		<link href="https://fonts.googleapis.com/css?family=Princess+Sofia" rel="stylesheet">
 	</head>
 	<body>
 		<div class=page>
-			<header>{site_header} ∞ {page_header}</header>
+			<header><img src="/images/APLLogo.svg"
+				alt="A Playful Life Logo">{site_header} ∞ {page_header}</header>
 			<div class=content>
-				<div class=left>{page_left}</div>
-				<div class=middle>{page_body}</div>
-				<div class=right>{page_right}</div>
+				<div class=body>{page_body}</div>
 			</div>
 			<footer>{site_navigation} ∪ {page_navigation}</footer>
 		</div>
 	</body>
+	<!--
+		{debug} 
+	-->
 </html>
