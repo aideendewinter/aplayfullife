@@ -9,7 +9,7 @@ import org.json.simple.*;
 public class Thesaurus { 
   final String endpoint = "http://thesaurus.altervista.org/thesaurus/v1"; 
 
-  public SendRequest(String word) { 
+  public JSONArray SendRequest(String word) { 
     String language = "en_US";
     String output = "json";
     String key = "VmMAF4xvnkWFt1IFwMBs";
@@ -25,11 +25,8 @@ public class Thesaurus {
         while ((line = br.readLine()) != null) 
           sb.append(line + '\n'); 
         JSONObject obj = (JSONObject) JSONValue.parse(sb.toString()); 
-        JSONArray array = (JSONArray)obj.get("response"); 
-        for (int i=0; i < array.size(); i++) { 
-          JSONObject list = (JSONObject) ((JSONObject)array.get(i)).get("list"); 
-          System.out.println(list.get("category")+":"+list.get("synonyms")); 
-        } 
+        JSONArray array = (JSONArray)obj.get("response");
+		return array;
       } else System.out.println("HTTP error:"+rc); 
       connection.disconnect(); 
     } catch (java.net.MalformedURLException e) { 
