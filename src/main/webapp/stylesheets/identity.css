@@ -20,8 +20,11 @@ header {
   font-family: 'Princess Sofia', cursive;
   font-size: 2em;
 }
-header h1 {
-  display: inline-block;
+header img {
+  float: left;
+  height: 90px;
+  margin-top: -28px;
+  margin-left: -16px;
 }
 .page {
   min-height:100%;
