@@ -35,6 +35,9 @@ public class Thesaurus {
       e.printStackTrace(); 
     } catch (java.io.IOException e) { 
       e.printStackTrace(); 
-    } 
+    }
+
+	return null;
+	
   } 
 }
