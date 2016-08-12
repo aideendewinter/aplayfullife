@@ -27,6 +27,9 @@ public class MindMap {
 		
 		mapMatrix = new int[pages.length][pages.length];
 		
+		for(int j=0; j<pages.length; j++) {
+			mapMatrix[i][j] = 0;
+		}
 		for(int i=0; i<pages.length; i++) {
 			resourceContent = classLoader.getResourceAsStream("/content/identity-pages/" + pages[i]);
 			writer.getBuffer().setLength(0);
@@ -34,10 +37,7 @@ public class MindMap {
 			ArrayList<String> blockIds = new ArrayList<String>(Arrays.asList(writer.toString().split(",")));
 			IOUtils.closeQuietly(resourceContent);
 			blockIds.remove(0);
-			
-			for(int j=0; j<pages.length; j++) {
-				mapMatrix[i][j] = 0;
-			}
+			int blockNumber=0;
 			for(String blockId : blockIds) {
 				blockId = blockId.trim();
 				resourceContent = classLoader.getResourceAsStream("/content/identity-blocks/" + blockId);
@@ -47,15 +47,19 @@ public class MindMap {
 					IOUtils.copy(resourceContent, writer, "UTF-8");
 					String blockContent = writer.toString();
 					if (blockId.contains("mindtext")) {
-						for(int j=0; j<pages.length; j++) {
-							mapMatrix[i][j] += StringUtils.countMatches(blockContent, pages[j]);
-						}
+						Parse(blockContent, i, blockNumber++);
 					}
 				} catch (IOException | java.lang.NullPointerException ex) {
 					
 				}
 				IOUtils.closeQuietly(resourceContent);
 			}
+		}
+	}
+	
+	public void Parse(String content, int i, int blockNumber) {
+		for(int j=0; j<pages.length; j++) {
+			mapMatrix[i][j] += StringUtils.countMatches(blockContent, pages[j]);
 		}
 	}
 }
