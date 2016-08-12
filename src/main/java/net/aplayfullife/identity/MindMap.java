@@ -27,9 +27,6 @@ public class MindMap {
 		
 		mapMatrix = new int[pages.length][pages.length];
 		
-		for(int j=0; j<pages.length; j++) {
-			mapMatrix[i][j] = 0;
-		}
 		for(int i=0; i<pages.length; i++) {
 			resourceContent = classLoader.getResourceAsStream("/content/identity-pages/" + pages[i]);
 			writer.getBuffer().setLength(0);
@@ -57,7 +54,7 @@ public class MindMap {
 		}
 	}
 	
-	public void Parse(String content, int i, int blockNumber) {
+	public void Parse(String blockContent, int i, int blockNumber) {
 		for(int j=0; j<pages.length; j++) {
 			mapMatrix[i][j] += StringUtils.countMatches(blockContent, pages[j]);
 		}
