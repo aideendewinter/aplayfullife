@@ -43,9 +43,9 @@ header img {
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 0.3;
+    opacity: 0.1;
     background-image: url("/images/APLLogo.svg");
-    background-size: 25px;
+    background-size: 275px;
   background-attachment: fixed;
 }
 .content {
