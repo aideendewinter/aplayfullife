@@ -7,7 +7,7 @@ import java.net.URLEncoder;
 import org.json.simple.*;
 
 public class Thesaurus { 
-  final String endpoint = "http://thesaurus.altervista.org/thesaurus/v1"; 
+	final String endpoint = "http://thesaurus.altervista.org/thesaurus/v1"; 
 
 	public JSONArray SendRequest(String word) { 
 		String language = "en_US";
