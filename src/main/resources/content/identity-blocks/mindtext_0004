@@ -2,4 +2,23 @@ Abstraction is such an interesting idea. It is itself what it claims to identify
 is really the core of self-identity. I could gush about this idea alone for hours, but I don't 
 think I could say it any better than Dr. Douglas Hofstadter did in his book "I Am a Strange Loop".
 Maybe it has something to do with my aphantasia, but the idea of concepts as their own entities
-appeals to me on an extremely deep level. 
+appeals to me on an extremely deep level.
+
+We all use abstract concepts everyday. Anytime we refer to a class of objects instead of any one
+particular object we are using abstraction. When I ask for a cup, you know that I mean any one of
+many hollow cylindrical objects that can contain fluid. Without abstraction we would be savages.
+
+Now, as a programmer I have another reason to love abstraction. In object-oriented programming
+abstraction allows for an intuitive way to organize code that allows for easy re-use. You can
+make classes. Classes define the abstract properties of some entity you want in your program.
+This can be anything from an entity that manages the windows on your desktop to a data structure
+that holds information about customers for your business. You then instantiate these classes.
+That is, you derive a single object with defined attributes for all the classes abstract
+properties. This is called an instance, or, sensibly enough, an object. Using a single class you
+can instantiate any number of derived objects. And since the logic for manipulating these objects
+is contained in the class, you only have to write the program logic once and then are able to
+re-use it over and over to manipulate similar but distinct objects.
+
+A lot of important discoveries have been when we find how to move a concept from one abstraction
+to another. Allowing us to use the tools we developed to understand the one idea to give insight
+into what we once thought was something completely different. Until we found the right abstraction.
