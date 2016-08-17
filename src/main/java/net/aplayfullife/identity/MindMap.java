@@ -59,9 +59,9 @@ public class MindMap {
 	public void Parse(String blockContent, int i, int blockNumber) {
 		String stripped = UNDESIRABLES.matcher(blockContent).replaceAll("");
 		for(int j=0; j<pages.length; j++) {
-			for (String words : expression.split(" ")) {
+			for (String words : stripped.split(" ")) {
 				
-        		}
+        	}
 			mapMatrix[i][j] += StringUtils.countMatches(blockContent, pages[j]);
 		}
 	}
