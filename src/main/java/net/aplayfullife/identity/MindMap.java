@@ -10,7 +10,7 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 
 public class MindMap {
-	private static final Pattern UNDESIRABLES = Pattern.compile("[][(){},.;!?<>%]");
+	private static final Pattern UNDESIRABLES = Pattern.compile("[(){},.;!?<>%]");
 	public int[][] mapMatrix;
 	public String[] pages;
 	
