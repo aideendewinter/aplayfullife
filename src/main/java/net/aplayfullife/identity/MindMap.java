@@ -2,6 +2,7 @@ package net.aplayfullife.identity;
 
 import java.io.*;
 import java.util.*;
+import java.util.regex.Pattern;
 import javax.servlet.http.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -9,6 +10,7 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 
 public class MindMap {
+	private static final Pattern UNDESIRABLES = Pattern.compile("[][(){},.;!?<>%]");
 	public int[][] mapMatrix;
 	public String[] pages;
 	
@@ -55,7 +57,11 @@ public class MindMap {
 	}
 	
 	public void Parse(String blockContent, int i, int blockNumber) {
+		String stripped UNDESIRABLES.matcher(blockContent).replaceAll("");
 		for(int j=0; j<pages.length; j++) {
+			for (String words : expression.split(" ")) {
+				
+        		}
 			mapMatrix[i][j] += StringUtils.countMatches(blockContent, pages[j]);
 		}
 	}
