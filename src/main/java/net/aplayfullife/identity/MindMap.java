@@ -59,7 +59,7 @@ public class MindMap {
 		}
 	}
 	
-	public void Parse(String blockContent, int i, int blockNumber) {
+	public void Parse(String blockContent, int i, int blockNumber) throws IOException {
 		String stripped = UNDESIRABLES.matcher(blockContent).replaceAll("");
 		stripped = stripped.toLowerCase();
 		for(int j=0; j<pages.length; j++) {
