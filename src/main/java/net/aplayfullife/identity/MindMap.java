@@ -14,8 +14,10 @@ public class MindMap {
 	private static final Pattern UNDESIRABLES = Pattern.compile("[(){},.;!?<>%]");
 	public int[][] mapMatrix;
 	public String[] pages;
+	private HttpServlet myServlet;
 	
 	public MindMap(String directory, HttpServlet myServlet) throws IOException{
+		this.myServlet = myServlet;
 		// Content readers.
 		InputStream resourceContent;
 		StringWriter writer = new StringWriter();
