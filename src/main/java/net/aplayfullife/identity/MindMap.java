@@ -15,7 +15,7 @@ public class MindMap {
 	public int[][] mapMatrix;
 	public String[] pages;
 	
-	public MindMap(String directory, IdentityTemplate template) throws IOException{
+	public MindMap(String directory, HttpServlet myServlet) throws IOException{
 		// Content readers.
 		InputStream resourceContent;
 		StringWriter writer = new StringWriter();
@@ -69,7 +69,7 @@ public class MindMap {
 			// 
 			ServletContext context = myServlet.getServletContext();
 			InputStream resourceContent =
-				context.getResourceAsStream("/words/" + page + ".json");
+				context.getResourceAsStream("/words/" + pages[j] + ".json");
 			IOUtils.copy(resourceContent, writer, "UTF-8");
 			String wordJSON = writer.toString();
 			IOUtils.closeQuietly(resourceContent);

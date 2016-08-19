@@ -12,7 +12,7 @@ public class MainServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		IdentityTemplate template = new IdentityTemplate("identity_main", this);
-		MindMap mindMap = new MindMap("/content/identity-pages", template);
+		MindMap mindMap = new MindMap("/content/identity-pages", this);
 		
 		// Content readers.
 		InputStream resourceContent;
