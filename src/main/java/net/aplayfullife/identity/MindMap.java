@@ -65,7 +65,6 @@ public class MindMap {
 				continue;
 			
 			// Content readers.
-			InputStream resourceContent;
 			StringWriter writer = new StringWriter();
 			// 
 			ServletContext context = myServlet.getServletContext();
@@ -79,7 +78,7 @@ public class MindMap {
 			
 			for (String words : stripped.split(" ")) {
 				
-        		}
+			}
 			mapMatrix[i][j] += StringUtils.countMatches(blockContent, pages[j]);
 		}
 	}
