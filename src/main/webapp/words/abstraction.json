@@ -1,5 +1,6 @@
 {
   "Word": "abstraction",
   "Variations": ["asbtractions"],
-  "Synonyms": ["concept", "idea", "notion", "thought"]
+  "Synonyms": ["concept", "idea", "notion", "thought"],
+  "SynonymVariations": ["concepts", "ideas", "notions", "thoughts"]
 }

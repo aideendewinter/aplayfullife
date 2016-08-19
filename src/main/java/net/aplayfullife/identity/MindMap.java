@@ -76,12 +76,13 @@ public class MindMap {
 			String wordJSON = writer.toString();
 			IOUtils.closeQuietly(resourceContent);
 			
-			JSONObject obj = (JSONObject) JSONValue.parse(wordJSON);
+			JSONObject target = (JSONObject) JSONValue.parse(wordJSON);
 			
-			for (String words : stripped.split(" ")) {
-				
+			for (String word : stripped.split(" ")) {
+				if (word.equals(target.get("Word"))) {
+					mapMatrix[i][j] += 10;
+				}
 			}
-			mapMatrix[i][j] += StringUtils.countMatches(blockContent, pages[j]);
 		}
 	}
 }
