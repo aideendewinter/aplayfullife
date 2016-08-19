@@ -3,11 +3,12 @@ package net.aplayfullife.identity;
 import java.io.*;
 import java.util.*;
 import java.util.regex.Pattern;
-import javax.servlet.http.*;
 import javax.servlet.*;
+import javax.servlet.http.*;
 import javax.servlet.annotation.WebServlet;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.json.simple.*;
 
 public class MindMap {
 	private static final Pattern UNDESIRABLES = Pattern.compile("[(){},.;!?<>%]");
@@ -58,10 +59,27 @@ public class MindMap {
 	
 	public void Parse(String blockContent, int i, int blockNumber) {
 		String stripped = UNDESIRABLES.matcher(blockContent).replaceAll("");
+		stripped = stripped.toLowerCase();
 		for(int j=0; j<pages.length; j++) {
+			if (j==i)
+				continue;
+			
+			// Content readers.
+			InputStream resourceContent;
+			StringWriter writer = new StringWriter();
+			// 
+			ServletContext context = myServlet.getServletContext();
+			InputStream resourceContent =
+				context.getResourceAsStream("/words/" + page + ".json");
+			IOUtils.copy(resourceContent, writer, "UTF-8");
+			String wordJSON = writer.toString();
+			IOUtils.closeQuietly(resourceContent);
+			
+			JSONObject obj = (JSONObject) JSONValue.parse(wordJSON);
+			
 			for (String words : stripped.split(" ")) {
 				
-        	}
+        		}
 			mapMatrix[i][j] += StringUtils.countMatches(blockContent, pages[j]);
 		}
 	}
