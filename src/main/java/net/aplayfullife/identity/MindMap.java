@@ -97,7 +97,8 @@ public class MindMap {
 						bestLinkWord[i][j] = word;
 					}
 				}
-				for (String targetWord : ((JSONArray)target.get("Variations"))) {
+				for (Object targetObj : ((JSONArray)target.get("Variations"))) {
+					String targetWord = (String)targetObj;
 					if(word.equals(targetWord)) {
 						mapMatrix[i][j] += 10;
 					}
@@ -107,7 +108,8 @@ public class MindMap {
 						bestLinkWord[i][j] = word;
 					}
 				}
-				for (String targetWord : ((JSONArray)target.get("Synonyms"))) {
+				for (Object targetObj : ((JSONArray)target.get("Synonyms"))) {
+					String targetWord = (String)targetObj;
 					if(word.equals(targetWord)) {
 						mapMatrix[i][j] += 5;
 					}
@@ -117,7 +119,8 @@ public class MindMap {
 						bestLinkWord[i][j] = word;
 					}
 				}
-				for (String targetWord : ((JSONArray)target.get("SynonymVariations"))) {
+				for (Object targetObj : ((JSONArray)target.get("SynonymVariations"))) {
+					String targetWord = (String)targetObj;
 					if(word.equals(targetWord)) {
 						mapMatrix[i][j] += 1;
 					}
