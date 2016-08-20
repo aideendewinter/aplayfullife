@@ -13,6 +13,9 @@ import org.json.simple.*;
 public class MindMap {
 	private static final Pattern UNDESIRABLES = Pattern.compile("[(){},.;!?<>%]");
 	public int[][] mapMatrix;
+	public String[][] bestLinkWord;
+	public int[][] bestLinkBlock;
+	public int[][] bestLinkRank;
 	public String[] pages;
 	private HttpServlet myServlet;
 	
@@ -31,6 +34,13 @@ public class MindMap {
 		IOUtils.closeQuietly(resourceContent);
 		
 		mapMatrix = new int[pages.length][pages.length];
+		bestLinkWord = new String[pages.length][pages.length];
+		bestLinkBlock = new int[pages.length][pages.length];
+		bestLinkRank = new int[pages.length][pages.length];
+		
+		for (int i=0, n=bestLinkRank.length; i < n; i++)
+			for(int j=0; j < n; j++)
+				bestLinkRank[i][j] = -1;
 		
 		for(int i=0; i<pages.length; i++) {
 			resourceContent = classLoader.getResourceAsStream("/content/identity-pages/" + pages[i]);
@@ -81,6 +91,41 @@ public class MindMap {
 			for (String word : stripped.split(" ")) {
 				if (word.equals(target.get("Word"))) {
 					mapMatrix[i][j] += 10;
+					if (bestLinkRank[i][j] < 3) {
+						bestLinkRank[i][j] = 3;
+						bestLinkBlock[i][j] = blockNumber;
+						bestLinkWord[i][j] = word;
+					}
+				}
+				for (String targetWord : target.get("Variations") {
+					if(word.equals(targetWord)) {
+						mapMatrix[i][j] += 10;
+					}
+					if (bestLinkRank[i][j] < 2) {
+						bestLinkRank[i][j] = 2;
+						bestLinkBlock[i][j] = blockNumber;
+						bestLinkWord[i][j] = word;
+					}
+				}
+				for (String targetWord : target.get("Synonyms") {
+					if(word.equals(targetWord)) {
+						mapMatrix[i][j] += 5;
+					}
+					if (bestLinkRank[i][j] < 1) {
+						bestLinkRank[i][j] = 1;
+						bestLinkBlock[i][j] = blockNumber;
+						bestLinkWord[i][j] = word;
+					}
+				}
+				for (String targetWord : target.get("SynonymVariations") {
+					if(word.equals(targetWord)) {
+						mapMatrix[i][j] += 1;
+					}
+					if (bestLinkRank[i][j] < 0) {
+						bestLinkRank[i][j] = 0;
+						bestLinkBlock[i][j] = blockNumber;
+						bestLinkWord[i][j] = word;
+					}
 				}
 			}
 		}
