@@ -1,6 +1,8 @@
 {
   "Word": "gender",
   "Variations": ["genders", "transgender", "gendered", "transgendered", "cis-gendered"],
+  "Synonyms": [],
+  "SynonymVariations": [],
   "Related": ["feminine", "masculine", "femininity", "masculinity", "woman", "man",
 	"womanly", "manly", "sex", "cis", "trans"]
 }
