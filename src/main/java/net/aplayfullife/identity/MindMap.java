@@ -93,7 +93,7 @@ public class MindMap {
 					if (bestLinkRank[i][j] < 3) {
 						bestLinkRank[i][j] = 3;
 						bestLinkBlock[i][j] = blockId;
-						bestLinkWord[i][j] = target.get("Word");
+						bestLinkWord[i][j] = (String)target.get("Word");
 					}
 				}
 				for (Object targetObj : ((JSONArray)target.get("Variations"))) {
