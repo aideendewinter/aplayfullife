@@ -1,7 +1,7 @@
 {
   "Word": "identity",
   "Variations": ["identities"],
-  "Synonyms": ["individuality", "self", "likeness", "uniqueness", "ego"],
+  "Synonyms": ["individuality", "self", "self-identity", "likeness", "uniqueness", "ego"],
   "SynonymVariations": ["self-image", "likenesses", "egos"],
   "Related": ["individual", "unique"]
 }

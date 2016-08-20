@@ -19,6 +19,7 @@ can instantiate any number of derived objects. And since the logic for manipulat
 is contained in the class, you only have to write the program logic once and then are able to
 re-use it over and over to manipulate similar but distinct objects.
 
-A lot of important discoveries have been when we find how to move a concept from one abstraction
-to another. Allowing us to use the tools we developed to understand the one idea to give insight
-into what we once thought was something completely different. Until we found the right abstraction.
+A lot of important discoveries have occured when we find we are able to move a concept from one
+abstraction to another. Allowing us to use the tools we developed to understand the concepts of one
+abstraction to give insight into what we once thought was something completely different. Until,
+that is, we found the right abstraction.
