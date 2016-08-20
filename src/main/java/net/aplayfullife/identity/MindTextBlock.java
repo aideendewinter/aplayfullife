@@ -29,7 +29,7 @@ public class MindTextBlock {
 				linkWeight="strong-weight";
 			
 			if (mindMap.bestLinkRank[pageIndex][i] >= 0) {
-				if (mindMap.bestLinkBlock[pageIndex][i].equals(blockId) {
+				if (mindMap.bestLinkBlock[pageIndex][i].equals(blockId)) {
 					mapped = mapped.replaceFirst(mindMap.bestLinkWord[pageIndex][i],
 						"<a class=" + linkWeight + " href=\"/identity/"
 						+ mindMap.pages[i] + ".html\">" 
