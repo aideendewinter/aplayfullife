@@ -30,7 +30,7 @@ public class MindTextBlock {
 			
 			if (mindMap.bestLinkRank[pageIndex][i] >= 0) {
 				if (mindMap.bestLinkBlock[pageIndex][i].equals(blockId)) {
-					mapped = mapped.replaceFirst(mindMap.bestLinkWord[pageIndex][i],
+					mapped = mapped.replaceFirst("\\b" + mindMap.bestLinkWord[pageIndex][i] + "\\b",
 						"<a class=" + linkWeight + " href=\"/identity/"
 						+ mindMap.pages[i] + ".html\">" 
 						+ mindMap.bestLinkWord[pageIndex][i] + "</a>");
