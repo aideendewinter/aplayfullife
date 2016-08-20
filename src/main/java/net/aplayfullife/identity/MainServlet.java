@@ -72,7 +72,7 @@ public class MainServlet extends HttpServlet {
 				if (blockId.contains("mindtext")) {
 					try {
 						MindTextBlock mindTBlock = new MindTextBlock(blockContent);
-						content += "<div class=\"block mindtext\">" + mindTBlock.GetHTML(page, mindMap)
+						content += "<div class=\"block mindtext\">" + mindTBlock.GetHTML(page, blockId, mindMap)
 							+ "</div>";
 					} catch (IOException e) {
 						content += "<h1>Bad Mind Text Block<h1>";
