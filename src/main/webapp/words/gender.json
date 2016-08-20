@@ -1,5 +1,6 @@
 {
-  "Word": "abstraction",
-  "Variations": ["asbtractions"],
-  "Synonyms": ["concept", "idea", "notion", "thought"]
+  "Word": "gender",
+  "Variations": ["genders", "gendered", "trans-gendered", "cis-gendered"],
+  "Related": ["feminine", "masculine", "femininity", "masculinity", "woman", "man",
+	"womanly", "manly", "sex", "cis", "trans"]
 }

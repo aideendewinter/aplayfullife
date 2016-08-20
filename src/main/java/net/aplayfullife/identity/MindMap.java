@@ -121,12 +121,18 @@ public class MindMap {
 				for (Object targetObj : ((JSONArray)target.get("SynonymVariations"))) {
 					String targetWord = (String)targetObj;
 					if(word.equals(targetWord)) {
-						mapMatrix[i][j] += 1;
+						mapMatrix[i][j] += 5;
 						if (bestLinkRank[i][j] < 0) {
 							bestLinkRank[i][j] = 0;
 							bestLinkBlock[i][j] = blockId;
 							bestLinkWord[i][j] = targetWord;
 						}
+					}
+				}
+				for (Object targetObj : ((JSONArray)target.get("Related"))) {
+					String targetWord = (String)targetObj;
+					if(word.equals(targetWord)) {
+						mapMatrix[i][j] += 1;
 					}
 				}
 			}

@@ -1,5 +1,7 @@
 {
-  "Word": "abstraction",
-  "Variations": ["asbtractions"],
-  "Synonyms": ["concept", "idea", "notion", "thought"]
+  "Word": "identity",
+  "Variations": ["identities"],
+  "Synonyms": ["individuality", "self", "likeness", "uniqueness", "ego"],
+  "SynonymVariations": ["self-image", "likenesses", "egos"],
+  "Related": ["individual", "unique"]
 }
