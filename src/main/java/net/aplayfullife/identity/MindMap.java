@@ -93,40 +93,40 @@ public class MindMap {
 					if (bestLinkRank[i][j] < 3) {
 						bestLinkRank[i][j] = 3;
 						bestLinkBlock[i][j] = blockId;
-						bestLinkWord[i][j] = word;
+						bestLinkWord[i][j] = target.get("Word");
 					}
 				}
 				for (Object targetObj : ((JSONArray)target.get("Variations"))) {
 					String targetWord = (String)targetObj;
 					if(word.equals(targetWord)) {
 						mapMatrix[i][j] += 10;
-					}
-					if (bestLinkRank[i][j] < 2) {
-						bestLinkRank[i][j] = 2;
-						bestLinkBlock[i][j] = blockId;
-						bestLinkWord[i][j] = word;
+						if (bestLinkRank[i][j] < 2) {
+							bestLinkRank[i][j] = 2;
+							bestLinkBlock[i][j] = blockId;
+							bestLinkWord[i][j] = targetWord;
+						}
 					}
 				}
 				for (Object targetObj : ((JSONArray)target.get("Synonyms"))) {
 					String targetWord = (String)targetObj;
 					if(word.equals(targetWord)) {
 						mapMatrix[i][j] += 5;
-					}
-					if (bestLinkRank[i][j] < 1) {
-						bestLinkRank[i][j] = 1;
-						bestLinkBlock[i][j] = blockId;
-						bestLinkWord[i][j] = word;
+						if (bestLinkRank[i][j] < 1) {
+							bestLinkRank[i][j] = 1;
+							bestLinkBlock[i][j] = blockId;
+							bestLinkWord[i][j] = targetWord;
+						}
 					}
 				}
 				for (Object targetObj : ((JSONArray)target.get("SynonymVariations"))) {
 					String targetWord = (String)targetObj;
 					if(word.equals(targetWord)) {
 						mapMatrix[i][j] += 1;
-					}
-					if (bestLinkRank[i][j] < 0) {
-						bestLinkRank[i][j] = 0;
-						bestLinkBlock[i][j] = blockId;
-						bestLinkWord[i][j] = word;
+						if (bestLinkRank[i][j] < 0) {
+							bestLinkRank[i][j] = 0;
+							bestLinkBlock[i][j] = blockId;
+							bestLinkWord[i][j] = targetWord;
+						}
 					}
 				}
 			}
