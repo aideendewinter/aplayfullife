@@ -33,7 +33,7 @@ public class MindTextBlock {
 					mapped = mapped.replaceFirst(mindMap.bestLinkWord[pageIndex][i],
 						"<a class=" + linkWeight + " href=\"/identity/"
 						+ mindMap.pages[i] + ".html\">" 
-						+ mindMap.pages[i] + "</a>");
+						+ mindMap.bestLinkWord[pageIndex][i] + "</a>");
 				}
 			}
 		}
