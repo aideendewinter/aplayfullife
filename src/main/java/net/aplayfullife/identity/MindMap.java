@@ -35,7 +35,7 @@ public class MindMap {
 		
 		mapMatrix = new int[pages.length][pages.length];
 		bestLinkWord = new String[pages.length][pages.length];
-		bestLinkBlock = new int[pages.length][pages.length];
+		bestLinkBlock = new String[pages.length][pages.length];
 		bestLinkRank = new int[pages.length][pages.length];
 		
 		for (int i=0, n=bestLinkRank.length; i < n; i++)
