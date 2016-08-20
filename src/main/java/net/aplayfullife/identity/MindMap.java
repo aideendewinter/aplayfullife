@@ -14,7 +14,7 @@ public class MindMap {
 	private static final Pattern UNDESIRABLES = Pattern.compile("[(){},.;!?<>%]");
 	public int[][] mapMatrix;
 	public String[][] bestLinkWord;
-	public int[][] bestLinkBlock;
+	public String[][] bestLinkBlock;
 	public int[][] bestLinkRank;
 	public String[] pages;
 	private HttpServlet myServlet;
@@ -49,7 +49,6 @@ public class MindMap {
 			ArrayList<String> blockIds = new ArrayList<String>(Arrays.asList(writer.toString().split(",")));
 			IOUtils.closeQuietly(resourceContent);
 			blockIds.remove(0);
-			int blockNumber=0;
 			for(String blockId : blockIds) {
 				blockId = blockId.trim();
 				resourceContent = classLoader.getResourceAsStream("/content/identity-blocks/" + blockId);
@@ -59,7 +58,7 @@ public class MindMap {
 					IOUtils.copy(resourceContent, writer, "UTF-8");
 					String blockContent = writer.toString();
 					if (blockId.contains("mindtext")) {
-						Parse(blockContent, i, blockNumber++);
+						Parse(blockContent, i, blockId);
 					}
 				} catch (IOException | java.lang.NullPointerException ex) {
 					
@@ -69,7 +68,7 @@ public class MindMap {
 		}
 	}
 	
-	public void Parse(String blockContent, int i, int blockNumber) throws IOException {
+	public void Parse(String blockContent, int i, String blockId) throws IOException {
 		String stripped = UNDESIRABLES.matcher(blockContent).replaceAll("");
 		stripped = stripped.toLowerCase();
 		for(int j=0; j<pages.length; j++) {
@@ -93,7 +92,7 @@ public class MindMap {
 					mapMatrix[i][j] += 10;
 					if (bestLinkRank[i][j] < 3) {
 						bestLinkRank[i][j] = 3;
-						bestLinkBlock[i][j] = blockNumber;
+						bestLinkBlock[i][j] = blockId;
 						bestLinkWord[i][j] = word;
 					}
 				}
@@ -104,7 +103,7 @@ public class MindMap {
 					}
 					if (bestLinkRank[i][j] < 2) {
 						bestLinkRank[i][j] = 2;
-						bestLinkBlock[i][j] = blockNumber;
+						bestLinkBlock[i][j] = blockId;
 						bestLinkWord[i][j] = word;
 					}
 				}
@@ -115,7 +114,7 @@ public class MindMap {
 					}
 					if (bestLinkRank[i][j] < 1) {
 						bestLinkRank[i][j] = 1;
-						bestLinkBlock[i][j] = blockNumber;
+						bestLinkBlock[i][j] = blockId;
 						bestLinkWord[i][j] = word;
 					}
 				}
@@ -126,7 +125,7 @@ public class MindMap {
 					}
 					if (bestLinkRank[i][j] < 0) {
 						bestLinkRank[i][j] = 0;
-						bestLinkBlock[i][j] = blockNumber;
+						bestLinkBlock[i][j] = blockId;
 						bestLinkWord[i][j] = word;
 					}
 				}

@@ -14,7 +14,7 @@ public class MindTextBlock {
 		this.text = text;
 	}
 	
-	public String GetHTML(String page, MindMap mindMap) throws IOException {
+	public String GetHTML(String page, String blockId, MindMap mindMap) throws IOException {
 		String mapped = text;
 		int pageIndex = 0;
 		while (!page.equals(mindMap.pages[pageIndex]))
@@ -25,11 +25,17 @@ public class MindTextBlock {
 				continue;
 			int weight = (mindMap.mapMatrix[pageIndex][i]+mindMap.mapMatrix[i][pageIndex]);
 			String linkWeight="normal-weight";
-			if (weight > 5)
+			if (weight > 50)
 				linkWeight="strong-weight";
 			
-			mapped = mapped.replaceFirst(mindMap.pages[i], "<a class=" + linkWeight + " href=\"/identity/" + mindMap.pages[i] + ".html\">" 
-				+ mindMap.pages[i] + "</a>");
+			if (mindMap.bestLinkRank[pageIndex][i] >= 0) {
+				if (mindMap.bestLinkBlock[pageIndex][i].equals(blockId) {
+					mapped = mapped.replaceFirst(mindMap.bestLinkWord[pageIndex][i],
+						"<a class=" + linkWeight + " href=\"/identity/"
+						+ mindMap.pages[i] + ".html\">" 
+						+ mindMap.pages[i] + "</a>");
+				}
+			}
 		}
 		
 		ArrayList<String> paragraphs = new ArrayList<String>(Arrays.asList(mapped.split("\\r?\\n\\r?\\n")));
