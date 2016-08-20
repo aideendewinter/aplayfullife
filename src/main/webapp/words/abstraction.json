@@ -2,5 +2,6 @@
   "Word": "abstraction",
   "Variations": ["abstractions"],
   "Synonyms": ["concept", "idea", "notion", "thought"],
-  "SynonymVariations": ["concepts", "ideas", "notions", "thoughts"]
+  "SynonymVariations": ["concepts", "ideas", "notions", "thoughts"],
+  "Related": []
 }
