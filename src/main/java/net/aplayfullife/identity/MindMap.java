@@ -11,7 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.json.simple.*;
 
 public class MindMap {
-	private static final Pattern UNDESIRABLES = Pattern.compile("[(){},.;!?<>%]");
+	private static final Pattern UNDESIRABLES = Pattern.compile("[(){},.;!?<>%\"\']");
 	public int[][] mapMatrix;
 	public String[][] bestLinkWord;
 	public String[][] bestLinkBlock;
