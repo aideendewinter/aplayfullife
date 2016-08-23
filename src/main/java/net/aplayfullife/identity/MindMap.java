@@ -66,6 +66,7 @@ public class MindMap {
 				IOUtils.closeQuietly(resourceContent);
 			}
 		}
+		// Collapse matrix, normalize vectors.
 	}
 	
 	public void Parse(String blockContent, int i, String blockId) throws IOException {
