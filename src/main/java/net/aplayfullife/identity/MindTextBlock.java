@@ -20,13 +20,15 @@ public class MindTextBlock {
 		while (!page.equals(mindMap.pages[pageIndex]))
 			pageIndex++;
 		
-		for (int i=0; i<mindMap.mapMatrix[pageIndex].length; i++) {
+		for (int i=0; i<mindMap.pages.length; i++) {
 			if (i==pageIndex)
 				continue;
-			int weight = (mindMap.mapMatrix[pageIndex][i]+mindMap.mapMatrix[i][pageIndex]);
+			float weight = (mindMap.pageRanks[mindMap.RankIndex(pageIndex, i)];
 			String linkWeight="normal-weight";
-			if (weight > 50)
+			if (weight > .5)
 				linkWeight="strong-weight";
+			else if (weight < -.5)
+				linkWeight="weak-weight";
 			
 			if (mindMap.bestLinkRank[pageIndex][i] >= 0) {
 				if (mindMap.bestLinkBlock[pageIndex][i].equals(blockId)) {
