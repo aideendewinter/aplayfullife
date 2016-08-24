@@ -27,7 +27,6 @@ public class MindMap {
 		// 
 		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 		resourceContent = classLoader.getResourceAsStream(directory);
-		writer.getBuffer().setLength(0);
 		IOUtils.copy(resourceContent, writer, "UTF-8");
 		pages = writer.toString().split("\\r?\\n");
 		IOUtils.closeQuietly(resourceContent);
@@ -64,10 +63,10 @@ public class MindMap {
 								continue;
 			
 							// Content readers.
-							StringWriter writer = new StringWriter();
+							writer.getBuffer().setLength(0);
 							// 
 							ServletContext context = myServlet.getServletContext();
-							InputStream resourceContent =
+							resourceContent =
 								context.getResourceAsStream("/words/" + pages[j] + ".json");
 							IOUtils.copy(resourceContent, writer, "UTF-8");
 							String wordJSON = writer.toString();
@@ -132,8 +131,8 @@ public class MindMap {
 				IOUtils.closeQuietly(resourceContent);
 			}
 		}
-		t = pages.length-1.5;
-		pageRanks = new float[pages.length * (t+.5) * .5];
+		t = pages.length-1.5f;
+		pageRanks = new float[(int)(pages.length * (t+.5) * .5)];
 		int x=0;
 		int u = (int)((t * x) - (.5 * x * x) - 1);
 		for(int z=0; z<pageRanks.length; z++) {
@@ -145,10 +144,18 @@ public class MindMap {
 			}
 			pageRanks[z] = mapMatrix[x][y] + mapMatrix[y][x];
 		}
-		int average = IntStream.of(pageRanks).parallel().sum() / pageRanks.length;
+		int average = IntArraySum(pageRanks) / pageRanks.length;
 		for(int i=0; i<pageRanks.length; i++) {
 			pageRanks[i] -= average;
 		}
+	}
+	
+	public int IntArraySum(int[] arr) {
+		int sum = 0;
+		for(int i : arr) {
+			sum += i;
+		}
+		return sum;
 	}
 	
 	public int RankIndex(int x, int y) {

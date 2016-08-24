@@ -6,6 +6,7 @@ import javax.servlet.http.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
 
 public class MindTextBlock {
 	String text;
@@ -25,12 +26,12 @@ public class MindTextBlock {
 				continue;
 			float weight = mindMap.pageRanks[mindMap.RankIndex(pageIndex, i)];
 			String linkWeight="normal-weight";
-			if (weight > .5)
+			if (weight > 10)
 				linkWeight="strong-weight";
-			else if (weight < -.5)
+			else if (weight < -10)
 				linkWeight="weak-weight";
 			
-			if (mindMap.bestLinkRank[pageIndex][i] >= 0) {
+			if (!StringUtils.IsEmpty(mindMap.bestLinkWord[pageIndex][i])) {
 				if (mindMap.bestLinkBlock[pageIndex][i].equals(blockId)) {
 					mapped = mapped.replaceFirst("\\b" + mindMap.bestLinkWord[pageIndex][i] + "\\b",
 						"<a class=" + linkWeight + " href=\"/identity/"
