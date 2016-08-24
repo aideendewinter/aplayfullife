@@ -23,7 +23,7 @@ public class MindTextBlock {
 		for (int i=0; i<mindMap.pages.length; i++) {
 			if (i==pageIndex)
 				continue;
-			float weight = (mindMap.pageRanks[mindMap.RankIndex(pageIndex, i)];
+			float weight = mindMap.pageRanks[mindMap.RankIndex(pageIndex, i)];
 			String linkWeight="normal-weight";
 			if (weight > .5)
 				linkWeight="strong-weight";
