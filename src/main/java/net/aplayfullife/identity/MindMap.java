@@ -15,7 +15,7 @@ public class MindMap {
 	private float t;
 	
 	public String[] pages;
-	public float[] pageRanks;
+	public int[] pageRanks;
 	public String[][] bestLinkBlock;
 	public String[][] bestLinkWord;
 	
@@ -132,7 +132,7 @@ public class MindMap {
 			}
 		}
 		t = pages.length-1.5f;
-		pageRanks = new float[(int)(pages.length * (t+.5) * .5)];
+		pageRanks = new int[(int)(pages.length * (t+.5) * .5)];
 		int x=0;
 		int u = (int)((t * x) - (.5 * x * x) - 1);
 		for(int z=0; z<pageRanks.length; z++) {

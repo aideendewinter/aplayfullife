@@ -31,7 +31,7 @@ public class MindTextBlock {
 			else if (weight < -10)
 				linkWeight="weak-weight";
 			
-			if (!StringUtils.IsEmpty(mindMap.bestLinkWord[pageIndex][i])) {
+			if (!StringUtils.isEmpty(mindMap.bestLinkWord[pageIndex][i])) {
 				if (mindMap.bestLinkBlock[pageIndex][i].equals(blockId)) {
 					mapped = mapped.replaceFirst("\\b" + mindMap.bestLinkWord[pageIndex][i] + "\\b",
 						"<a class=" + linkWeight + " href=\"/identity/"
