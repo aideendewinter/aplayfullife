@@ -127,13 +127,19 @@ li {
   font-family: Georgia;
   font-size: 1.6em;
 }
-.normal-weight {
+p a {
   text-decoration: none;
   color: white;
   font-weight: bold;
 }
-.normal-weight:hover {
+p a:hover {
   text-decoration: underline;
+}
+.strong-weight {
+  color: #AAFCB8;
+}
+.weak-weight {
+  color: #D7263D;
 }
 @media screen and (max-width: 699px) {
   .body {
