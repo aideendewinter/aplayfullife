@@ -171,10 +171,10 @@ public class MindMap {
 		LinkedList<String> tokens = new LinkedList<String>();
 		String currentToken;
 		for (int i=0; i< inp.length(); i++) {
-			Character ch = new Character(inp.charAt(i));
+			char ch = inp.charAt(i);
 			switch(state) {
 				case -1:
-					if (ch.isLetter()) {
+					if (Character.isLetter(ch)) {
 						currentToken = ch;
 						state = 0;
 					} else if (ch == '[') {
@@ -183,7 +183,7 @@ public class MindMap {
 					}
 					break;
 				case 0:
-					if (ch.isLetter()) {
+					if (Character.isLetter(ch)) {
 						currentToken += ch;
 					} else {
 						tokens.add(currentToken.toLowerCase());
@@ -191,7 +191,7 @@ public class MindMap {
 					}
 					break;
 				case 1:
-					if (ch.isLetter() || ch.isWhitespace() || ch.isDigit()) {
+					if (Character.isLetter(ch) || Character.isDigit(ch) || Character.isWhitespace(ch)) {
 						currentToken += ch;
 					} else if (ch == ']') {
 						tokens.add(currentToken.toLowerCase());
