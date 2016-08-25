@@ -167,16 +167,28 @@ public class MindMap {
 		return (int)((t * x) - (.5 * x * x) - 1 + y);
 	}
 	
-	private String[] Parse(String inp) {
+	private LinkedList<String> Parse(String inp) {
 		int state=-1;
-		List<String> tokens = new List<String>();
+		LinkedList<String> tokens = new LinkedList<String>();
 		String currentToken;
 		for (int i=0; i< inp.length(); i++) {
 			Character ch = new Character(inp.charAt(i));
 			switch(state) {
 				case -1:
 					if (ch.isLetter()) {
-						
+						currentToken = ch;
+						state = 0;
+					} else if (ch == '[') {
+						currentToken = ch;
+						state = 1;
+					}
+					break;
+				case 0:
+					if (ch.isLetter()) {
+						currentToken += ch;
+					} else {
+						tokens.add(currentToken);
+						state = -1;
 					}
 					break;
 				default:
