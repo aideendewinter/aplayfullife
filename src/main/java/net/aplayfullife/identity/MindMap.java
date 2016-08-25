@@ -56,7 +56,7 @@ public class MindMap {
 					IOUtils.copy(resourceContent, writer, "UTF-8");
 					String blockContent = writer.toString();
 					if (blockId.contains("mindtext")) {
-						String stripped = UNDESIRABLES.matcher(blockContent).replaceAll("");
+						String[] tokens = Parse(blockContent);
 						stripped = stripped.toLowerCase();
 						for(int j=0; j<pages.length; j++) {
 							if (j==i)
@@ -165,5 +165,23 @@ public class MindMap {
 			x=temp;
 		}
 		return (int)((t * x) - (.5 * x * x) - 1 + y);
+	}
+	
+	private String[] Parse(String inp) {
+		int state=-1;
+		List<String> tokens = new List<String>();
+		String currentToken;
+		for (int i=0; i< inp.length(); i++) {
+			Character ch = new Character(inp.charAt(i));
+			switch(state) {
+				case -1:
+					if (ch.isLetter()) {
+						
+					}
+					break;
+				default:
+					break;
+			}
+		}
 	}
 }
