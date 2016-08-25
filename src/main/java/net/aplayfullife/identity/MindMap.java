@@ -56,8 +56,7 @@ public class MindMap {
 					IOUtils.copy(resourceContent, writer, "UTF-8");
 					String blockContent = writer.toString();
 					if (blockId.contains("mindtext")) {
-						String[] tokens = Parse(blockContent);
-						stripped = stripped.toLowerCase();
+						LinkedList<String> tokens = Parse(blockContent);
 						for(int j=0; j<pages.length; j++) {
 							if (j==i)
 								continue;
@@ -74,7 +73,7 @@ public class MindMap {
 			
 							JSONObject target = (JSONObject) JSONValue.parse(wordJSON);
 			
-							for (String word : stripped.split(" ")) {
+							for (String word : tokens) {
 								if (word.equals(target.get("Word"))) {
 									mapMatrix[i][j] += 10;
 									if (bestLinkRank[i][j] < 3) {
@@ -179,7 +178,7 @@ public class MindMap {
 						currentToken = ch;
 						state = 0;
 					} else if (ch == '[') {
-						currentToken = ch;
+						currentToken = "";
 						state = 1;
 					}
 					break;
@@ -187,7 +186,15 @@ public class MindMap {
 					if (ch.isLetter()) {
 						currentToken += ch;
 					} else {
-						tokens.add(currentToken);
+						tokens.add(currentToken.toLowerCase());
+						state = -1;
+					}
+					break;
+				case 1:
+					if (ch.isLetter() || ch.isWhitespace() || ch.isDigit()) {
+						currentToken += ch;
+					} else if (ch == ']') {
+						tokens.add(currentToken.toLowerCase());
 						state = -1;
 					}
 					break;
@@ -195,5 +202,6 @@ public class MindMap {
 					break;
 			}
 		}
+		return tokens;
 	}
 }
