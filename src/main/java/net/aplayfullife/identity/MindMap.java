@@ -175,7 +175,7 @@ public class MindMap {
 			switch(state) {
 				case -1:
 					if (Character.isLetter(ch)) {
-						currentToken = ch;
+						currentToken = Character.toString(ch);
 						state = 0;
 					} else if (ch == '[') {
 						currentToken = "";
@@ -184,7 +184,7 @@ public class MindMap {
 					break;
 				case 0:
 					if (Character.isLetter(ch)) {
-						currentToken += ch;
+						currentToken += Character.toString(ch);
 					} else {
 						tokens.add(currentToken.toLowerCase());
 						state = -1;
@@ -192,7 +192,7 @@ public class MindMap {
 					break;
 				case 1:
 					if (Character.isLetter(ch) || Character.isDigit(ch) || Character.isWhitespace(ch)) {
-						currentToken += ch;
+						currentToken += Character.toString(ch);
 					} else if (ch == ']') {
 						tokens.add(currentToken.toLowerCase());
 						state = -1;
