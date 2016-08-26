@@ -74,7 +74,7 @@ public class MindMap {
 							JSONObject target = (JSONObject) JSONValue.parse(wordJSON);
 			
 							for (String word : tokens) {
-								if (word.equalsIgnoreCase(target.get("Word"))) {
+								if (word.equalsIgnoreCase((String)target.get("Word"))) {
 									mapMatrix[i][j] += 10;
 									if (bestLinkRank[i][j] < 3) {
 										bestLinkRank[i][j] = 3;
