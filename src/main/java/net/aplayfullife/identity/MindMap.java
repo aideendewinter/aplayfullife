@@ -74,44 +74,44 @@ public class MindMap {
 							JSONObject target = (JSONObject) JSONValue.parse(wordJSON);
 			
 							for (String word : tokens) {
-								if (word.equals(target.get("Word"))) {
+								if (word.equalsIgnoreCase(target.get("Word"))) {
 									mapMatrix[i][j] += 10;
 									if (bestLinkRank[i][j] < 3) {
 										bestLinkRank[i][j] = 3;
 										bestLinkBlock[i][j] = blockId;
-										bestLinkWord[i][j] = (String)target.get("Word");
+										bestLinkWord[i][j] = word;
 									}
 								}
 								for (Object targetObj : ((JSONArray)target.get("Variations"))) {
 									String targetWord = (String)targetObj;
-									if(word.equals(targetWord)) {
+									if(word.equalsIgnoreCase(targetWord)) {
 										mapMatrix[i][j] += 10;
 										if (bestLinkRank[i][j] < 2) {
 											bestLinkRank[i][j] = 2;
 											bestLinkBlock[i][j] = blockId;
-											bestLinkWord[i][j] = targetWord;
+											bestLinkWord[i][j] = word;
 										}
 									}
 								}
 								for (Object targetObj : ((JSONArray)target.get("Synonyms"))) {
 									String targetWord = (String)targetObj;
-									if(word.equals(targetWord)) {
+									if(word.equalsIgnoreCase(targetWord)) {
 										mapMatrix[i][j] += 5;
 										if (bestLinkRank[i][j] < 1) {
 											bestLinkRank[i][j] = 1;
 											bestLinkBlock[i][j] = blockId;
-											bestLinkWord[i][j] = targetWord;
+											bestLinkWord[i][j] = word;
 										}
 									}
 								}
 								for (Object targetObj : ((JSONArray)target.get("SynonymVariations"))) {
 									String targetWord = (String)targetObj;
-									if(word.equals(targetWord)) {
+									if(word.equalsIgnoreCase(targetWord)) {
 										mapMatrix[i][j] += 5;
 										if (bestLinkRank[i][j] < 0) {
 											bestLinkRank[i][j] = 0;
 											bestLinkBlock[i][j] = blockId;
-											bestLinkWord[i][j] = targetWord;
+											bestLinkWord[i][j] = word;
 										}
 									}
 								}
