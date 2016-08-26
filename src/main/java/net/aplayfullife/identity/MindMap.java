@@ -169,7 +169,7 @@ public class MindMap {
 	private LinkedList<String> Parse(String inp) {
 		int state=-1;
 		LinkedList<String> tokens = new LinkedList<String>();
-		String currentToken;
+		String currentToken="";
 		for (int i=0; i< inp.length(); i++) {
 			char ch = inp.charAt(i);
 			switch(state) {
