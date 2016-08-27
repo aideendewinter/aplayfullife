@@ -183,7 +183,7 @@ public class MindMap {
 					}
 					break;
 				case 0:
-					if (Character.isLetter(ch)) {
+					if (Character.isLetter(ch) || (ch == '-') || (ch == '\'')) {
 						currentToken += Character.toString(ch);
 					} else {
 						tokens.add(currentToken);
