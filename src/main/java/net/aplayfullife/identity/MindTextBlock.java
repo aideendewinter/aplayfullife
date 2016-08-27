@@ -39,7 +39,7 @@ public class MindTextBlock {
 				}
 			}
 		}
-		mapped.replaceAll("[\[\]]", "")
+		mapped.replaceAll("[\\[\\]]", "")
 		ArrayList<String> paragraphs = new ArrayList<String>(Arrays.asList(mapped.split("\\r?\\n\\r?\\n")));
 		String parsed = "";
 		for (String paragraph : paragraphs) {
