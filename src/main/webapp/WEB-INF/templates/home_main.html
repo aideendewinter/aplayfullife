@@ -17,8 +17,10 @@
   ga('send', 'pageview');
 
 </script>
+    <script src="/webgl/fish/TemplateData/UnityProgress.js"></script>
 	</head>
 	<body>
+	<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
 		<div class=page>
 			<header><img src="/images/APLLogo.svg"
 				alt="A Playful Life Logo">{site_header} ∞ {page_header}</header>
@@ -27,6 +29,18 @@
 			</div>
 			<footer>{site_navigation} ∪ {page_navigation}</footer>
 		</div>
+		<script type='text/javascript'>
+			var Module = {
+				TOTAL_MEMORY: 268435456,
+				errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+				compatibilitycheck: null,
+				dataUrl: "/webgl/fish/Release/fish.data",
+				codeUrl: "/webgl/fish/Release/fish.js",
+				memUrl: "/webgl/fish/Release/fish.mem",
+    
+			};
+		</script>
+		<script src="/webgl/fish/Release/UnityLoader.js"></script>
 	</body>
 	<!--
 		{debug} 
