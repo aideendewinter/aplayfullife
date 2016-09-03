@@ -36,8 +36,10 @@ public class MainServlet extends HttpServlet {
 		template.SetPageNavigation(pageNav);
 		
 		// Page Content
+		if (StringUtils.isBlank(path))
+			path = "/"
 		String path = request.getPathInfo().replace(".html", "");
-		if (path.equals("/") || StringUtils.isBlank(path)) {
+		if (path.equals("/")) {
 			resourceContent = classLoader.getResourceAsStream("/content/identity_main");
 		} else
 			resourceContent = classLoader.getResourceAsStream("/content/identity-pages" + path);
@@ -47,7 +49,7 @@ public class MainServlet extends HttpServlet {
 		ArrayList<String> blockIds = new ArrayList<String>(Arrays.asList(writer.toString().split(",")));
 		IOUtils.closeQuietly(resourceContent);
 		template.SetPageHeader(blockIds.remove(0));
-		if (path.equals("/") || StringUtils.isBlank(path)) {
+		if (path.equals("/")) {
 			parseBlocks("identity", blockIds, template, mindMap);
 		} else {
 			parseBlocks(path.replace("/", ""), blockIds, template, mindMap);
