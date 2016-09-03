@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import net.aplayfullife.identity.*;
 import org.apache.commons.io.IOUtils;
 
-@WebServlet(urlPatterns = {"", "*.html"})
+@WebServlet(urlPatterns = {"/", "*.html"})
 public class MainServlet extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
@@ -36,21 +36,24 @@ public class MainServlet extends HttpServlet {
     else
       resourceContent = classLoader.getResourceAsStream("/content" + path);
     writer.getBuffer().setLength(0);
-    IOUtils.copy(resourceContent, writer, "UTF-8");
-    ArrayList<String> blockIds = new ArrayList<String>(Arrays.asList(writer.toString().split(",")));
-    IOUtils.closeQuietly(resourceContent);
-    template.SetPageHeader(blockIds.remove(0));
-    String content;
-    if (path == "") {
-      parseBlocks("/home", blockIds, template);
-    }
-    else {
-      parseBlocks(path, blockIds, template);
-    }
-    template.SetStyle("/stylesheets/identity.css");
-    // Output
-    response.setContentType("text/html; charset=UTF-8");
-    response.getWriter().print(template.GetPage());
+	try {
+		IOUtils.copy(resourceContent, writer, "UTF-8");
+		ArrayList<String> blockIds = new ArrayList<String>(Arrays.asList(writer.toString().split(",")));
+		IOUtils.closeQuietly(resourceContent);
+		template.SetPageHeader(blockIds.remove(0));
+		if (path == "") {
+		parseBlocks("/home", blockIds, template);
+		}
+		else {
+		parseBlocks(path, blockIds, template);
+		}
+		template.SetStyle("/stylesheets/identity.css");
+		// Output
+		response.setContentType("text/html; charset=UTF-8");
+		response.getWriter().print(template.GetPage());
+	} catch (NullPointerException e) {
+		response.sendError(404, "Home servlet is confused.");
+	}
   }
 	
 	protected void parseBlocks(String page, List<String> blockIds, IdentityTemplate template) {
