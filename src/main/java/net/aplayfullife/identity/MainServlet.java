@@ -36,9 +36,10 @@ public class MainServlet extends HttpServlet {
 		template.SetPageNavigation(pageNav);
 		
 		// Page Content
+		String path = request.getPathInfo();
 		if (StringUtils.isBlank(path))
 			path = "/";
-		String path = request.getPathInfo().replace(".html", "");
+		String path = path.replace(".html", "");
 		if (path.equals("/")) {
 			resourceContent = classLoader.getResourceAsStream("/content/identity_main");
 		} else
