@@ -6,7 +6,7 @@ import javax.servlet.http.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 @WebServlet("/identity/*")
 public class MainServlet extends HttpServlet {
