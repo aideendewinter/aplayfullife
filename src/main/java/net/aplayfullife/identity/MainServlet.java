@@ -6,6 +6,7 @@ import javax.servlet.http.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang.StringUtils;
 
 @WebServlet("/identity/*")
 public class MainServlet extends HttpServlet {
@@ -36,7 +37,7 @@ public class MainServlet extends HttpServlet {
 		
 		// Page Content
 		String path = request.getPathInfo().replace(".html", "");
-		if (path.equals("/") || path.equals("")) {
+		if (path.equals("/") || StringUtils.isBlank(path)) {
 			resourceContent = classLoader.getResourceAsStream("/content/identity_main");
 		} else
 			resourceContent = classLoader.getResourceAsStream("/content/identity-pages" + path);
@@ -46,7 +47,7 @@ public class MainServlet extends HttpServlet {
 		ArrayList<String> blockIds = new ArrayList<String>(Arrays.asList(writer.toString().split(",")));
 		IOUtils.closeQuietly(resourceContent);
 		template.SetPageHeader(blockIds.remove(0));
-		if (path.equals("/") || path.equals("")) {
+		if (path.equals("/") || StringUtils.isBlank(path)) {
 			parseBlocks("identity", blockIds, template, mindMap);
 		} else {
 			parseBlocks(path.replace("/", ""), blockIds, template, mindMap);
