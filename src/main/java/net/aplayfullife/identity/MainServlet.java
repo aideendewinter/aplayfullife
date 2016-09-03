@@ -37,7 +37,7 @@ public class MainServlet extends HttpServlet {
 		
 		// Page Content
 		if (StringUtils.isBlank(path))
-			path = "/"
+			path = "/";
 		String path = request.getPathInfo().replace(".html", "");
 		if (path.equals("/")) {
 			resourceContent = classLoader.getResourceAsStream("/content/identity_main");
