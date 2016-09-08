@@ -3,7 +3,7 @@ function UnityProgress (dom) {
 	this.message = "";
 	this.dom = dom;
 
-	var parent = dom.parentNode;
+	var parent = document.getElementById("canvas");;
 
 	var background = document.createElement("div");
 	background.style.background = "#4D4D4D";
