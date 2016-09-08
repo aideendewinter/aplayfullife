@@ -4,7 +4,7 @@ chance to play myself. Or accidently breaking the Atari with a penny. Mario
 Bros., Duck Hunt. I loved duck hunt. At some point I remember getting a Power
 Glove. I don't really remember using it to play games, though I remember using
 the function that beeps when the glove wasn't pointing at the Nintendo to make
-a makeshift door alarm. I loved Link to the Past, but mostly watching my
+a makeshift door alarm. I loved A Link to the Past, but mostly watching my
 brother play. I didn't get the chance to play it myself until much later, when
 I learned about emulators.
 
@@ -47,15 +47,15 @@ security clearance. In between I moved to North Carolina and stayed with him in 
 house he was subletting with a group of Duke University students. I played a lot of
 Jedi Outcast that summer.
 
-Eventually I bought my own PC, an alienware. I used the money from my first paid
-web design gig. Many hours were spent on Elder Scrolls. Morrowind, but more so
-Oblivion. With the ease of using Elder Scrolls Creation Kit, I began working again
-on ideas for mods that would never see the light of day. I had also been programming
-in C++ and Java since my senior year. So I began fooling around in 3D engines.
-Crystal Space, jMonkey Engine, AGS, and eventually Unity. This move from mods to
-full blown engines has more to do with being a control freak than any desire to
-build a game from scratch. Modding tools just forced me to use systems in the games
-that didn't do everything I wanted them to. Or did them in ways I didn't like.
+Eventually I bought my own PC, an alienware. I used the money from my first paid web
+design gig. Many hours were spent on Elder Scrolls. Morrowind, but more so Oblivion.
+With the ease of using Elder Scrolls Creation Kit, I began working again on ideas for
+mods that would never see the light of day. I had also been programming in C++ and
+Java since my senior year. So I began fooling around in 3D engines. Crystal Space,
+jMonkey Engine(jME), Adventure Game Studio (AGS), and eventually Unity. This move
+from mods to full blown engines has more to do with being a control freak than any
+desire to build a game from scratch. Modding tools just forced me to use systems in
+the games that didn't do everything I wanted them to. Or did them in ways I didn't like.
 
 I was also playing Lineage 2 on a F2P server. This was in the days were very few big
 developers had F2P games, and in fact the Lineage server I played on was a third party
@@ -71,4 +71,11 @@ Mike, TJ, and I moved from fighting games towards playing MMOS together, and con
 gaming moved toward games like Guitar Hero 2 for awhile. When I later moved to Utah
 I spent most of my free time playing Guitar Hero, and some time playing Tale of Pirates
 and other online games with Mike. My Guitar Hero obsession got to the point of posting
-gameplay videos to my Youtube.
+gameplay videos to my Youtube. Later, I used my Youtube to host tutorial videos on
+using Unity.
+
+In Utah I also began work on my first game project that made serious progress. It was
+called Hard Boil'd. It involves a world of anthropomorphic eggs, and the protaganist
+was named Egward. I tried porting that game from jME2 to jME3. Much later I started a
+port to Unity as well. I still have it in the back of my mind as a project to eventually
+tackle.
