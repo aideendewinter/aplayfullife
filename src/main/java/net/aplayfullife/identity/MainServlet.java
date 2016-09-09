@@ -73,25 +73,32 @@ public class MainServlet extends HttpServlet {
 			try {
 				IOUtils.copy(resourceContent, writer, "UTF-8");
 				String blockContent = writer.toString();
+				String tab="";
+				if (blockId.contains("history")) {
+					tab = " historyTab";
+				} else {
+					tab = " mainTab";
+				}
 				if (blockId.contains("mindtext")) {
 					try {
 						MindTextBlock mindTBlock = new MindTextBlock(blockContent);
-						content += "<div class=\"block mindtext\">" + mindTBlock.GetHTML(page, blockId, mindMap)
-							+ "</div>";
+						content += "<div class=\"block mindtext" + tab
+						+ "\">" + mindTBlock.GetHTML(page, blockId, mindMap) + "</div>";
 					} catch (IOException e) {
 						content += "<h1>Bad Mind Text Block<h1>";
 					}
 				} else if (blockId.contains("text")) {
-					content += "<p class=\"block text\">" + blockContent + "</p>";
+					content += "<p class=\"block text" + tab + "\">" + blockContent + "</p>";
 				} else if (blockId.contains("wiki")) {
 					try {
 						WikiBlock wBlock = new WikiBlock(blockContent);
-						content += "<div class=\"block wiki\">" + wBlock.GetHTML() + "</div>";
+						content += "<div class=\"block wiki" + tab
+						+ "\">" + wBlock.GetHTML() + "</div>";
 					} catch (IOException e) {
 						content += "<h1>Bad Wiki Block<h1>";
 					}
 				} else if (blockId.contains("html")) {
-					content += "<div class=\"block html\">" + blockContent + "</div>";
+					content += "<div class=\"block html" + tab + "\">" + blockContent + "</div>";
 				}
 			} catch (IOException | java.lang.NullPointerException ex) {
 				content += "Bad Block : " + blockId + ".";
