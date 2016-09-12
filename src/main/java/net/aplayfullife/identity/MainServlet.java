@@ -75,9 +75,9 @@ public class MainServlet extends HttpServlet {
 				String blockContent = writer.toString();
 				String tab="";
 				if (blockId.contains("history")) {
-					tab = " historyTab";
+					tab = " tab historyTab";
 				} else {
-					tab = " mainTab";
+					tab = " tab mainTab";
 				}
 				if (blockId.contains("mindtext")) {
 					try {
