@@ -16,19 +16,27 @@
   ga('create', 'UA-7468254-4', 'auto');
   ga('send', 'pageview');
   
-  switchTab("mainTab");
+	
+	var execute = function () {
+		switchTab("mainTab");
+	};
+	
+	if ( !!(window.addEventListener) )
+		window.addEventListener("DOMContentLoaded", execute);
+	else
+		window.attachEvent("onload", execute)
 
-function switchTab(tabName) {
-    var i;
-    var x = document.getElementsByClassName("tab");
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none"; 
-    }
-    x = document.getElementsByClassName(tabName); 
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "block";
-    }
-}
+	function switchTab(tabName) {
+		var i;
+		var x = document.getElementsByClassName("tab");
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none"; 
+		}
+		x = document.getElementsByClassName(tabName); 
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "block";
+		}
+	}
 
 </script>
 	</head>
