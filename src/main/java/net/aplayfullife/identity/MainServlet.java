@@ -89,6 +89,10 @@ public class MainServlet extends HttpServlet {
 					}
 				} else if (blockId.contains("text")) {
 					content += "<p class=\"block text" + tab + "\">" + blockContent + "</p>";
+				} else if (blockId.contains("list")) {
+					
+					content += "<div class=\"block list" + tab
+						+ "\">" + blockContent + "</div>";
 				} else if (blockId.contains("wiki")) {
 					try {
 						WikiBlock wBlock = new WikiBlock(blockContent);
