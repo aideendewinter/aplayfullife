@@ -134,12 +134,20 @@ li {
   position: absolute;
   left: -256px;
   margin: 0 6px;
+  padding: 0;
   width: 250px;
   border: #693668 solid 2px;
-  background: #F26DF9;
-  color: white;
+  background: #333333;
+  color: #F26DF9;
   text-align: center;
   font-family: Helvetica;
+  font-size: .8em;
+}
+.list h1 {
+  font-size: 1.25em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
 }
 .wiki {
   position: absolute;
