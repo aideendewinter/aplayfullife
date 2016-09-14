@@ -130,6 +130,17 @@ li {
   color: inherit;
   height: 100%;
 }
+.list {
+  position: absolute;
+  left: -256px;
+  margin: 0 6px;
+  width: 250px;
+  border: #693668 solid 2px;
+  background: #F26DF9;
+  color: white;
+  text-align: center;
+  font-family: Helvetica;
+}
 .wiki {
   position: absolute;
   left: -256px;

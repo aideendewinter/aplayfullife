@@ -90,9 +90,13 @@ public class MainServlet extends HttpServlet {
 				} else if (blockId.contains("text")) {
 					content += "<p class=\"block text" + tab + "\">" + blockContent + "</p>";
 				} else if (blockId.contains("list")) {
-					
+					String[] lines = blockContent.split("\\r?\\n");
 					content += "<div class=\"block list" + tab
-						+ "\">" + blockContent + "</div>";
+						+ "\"><h1>" + lines[0] + "</h1><ul>";
+					for (int i=1; i<lines.length; i++) {
+						content += "<li>" + lines[i] + "</li>";
+					}
+					content += "</ul></div>";
 				} else if (blockId.contains("wiki")) {
 					try {
 						WikiBlock wBlock = new WikiBlock(blockContent);
