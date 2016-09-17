@@ -194,6 +194,11 @@ p a:hover {
     margin: 6px;
     width: initial;
   }
+  .list {
+    position: initial;
+    margin: 6px;
+    width: initial;
+  }
 }
 @media screen and (min-width: 900px) {
   .content {
