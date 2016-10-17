@@ -1,0 +1,37 @@
+			<div class="options list">
+				<form name="optionsForm">
+					<ul>
+						<li>
+							<input type="radio" name="method" value="line">Line</input>
+						</li>
+						<li>
+							<input type="radio" name="method" value="sentence">Sentence</input>
+						</li>
+						<li>
+							<input type="radio" name="method" value="nthWord">Nth Word</input>
+						</li>
+					</ul>
+					<input type="text" name="seqN" id="sequence">
+					<ul>
+						<li>
+							<input type="radio" name="seqType" value="constant">Constant</input>
+						</li>
+						<li>
+							<input type="radio" name="seqType" value="sDigit">Single Digit</input>
+						</li>
+						<li>
+							<input type="radio" name="seqType" value="csDigit">Comma Seperated Digits</input>
+						</li>
+					</ul>
+				</form>
+				<div id="output"></div>
+				</div>
+				<div class="text">
+					<form name="textForm">
+						Cleartext:
+						<textarea name="clear" id="clearText" oninput="processAcrostic()"></textarea>
+						Acrostic:
+						<textarea name="acrostic" id="acrosticText" oninput="processAcrostic()"></textarea>
+					</form>
+				</div>
+			</div>
