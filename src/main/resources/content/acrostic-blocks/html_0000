@@ -394,13 +394,12 @@ function radioValue(radioName) {
 		</ul>
 	</form>
 	<div id="output"></div>
-	</div>
-	<div class="text">
-		<form name="textForm">
-			Cleartext:
-			<textarea name="clear" id="clearText" oninput="processAcrostic()"></textarea>
-			Acrostic:
-			<textarea name="acrostic" id="acrosticText" oninput="processAcrostic()"></textarea>
-		</form>
-	</div>
+</div>
+<div class="text">
+	<form name="textForm">
+		Cleartext:
+		<textarea name="clear" id="clearText" oninput="processAcrostic()"></textarea>
+		Acrostic:
+		<textarea name="acrostic" id="acrosticText" oninput="processAcrostic()"></textarea>
+	</form>
 </div>
