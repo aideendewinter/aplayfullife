@@ -1,37 +1,72 @@
-			<div class="options list">
-				<form name="optionsForm">
-					<ul>
-						<li>
-							<input type="radio" name="method" value="line">Line</input>
-						</li>
-						<li>
-							<input type="radio" name="method" value="sentence">Sentence</input>
-						</li>
-						<li>
-							<input type="radio" name="method" value="nthWord">Nth Word</input>
-						</li>
-					</ul>
-					<input type="text" name="seqN" id="sequence">
-					<ul>
-						<li>
-							<input type="radio" name="seqType" value="constant">Constant</input>
-						</li>
-						<li>
-							<input type="radio" name="seqType" value="sDigit">Single Digit</input>
-						</li>
-						<li>
-							<input type="radio" name="seqType" value="csDigit">Comma Seperated Digits</input>
-						</li>
-					</ul>
-				</form>
-				<div id="output"></div>
-				</div>
-				<div class="text">
-					<form name="textForm">
-						Cleartext:
-						<textarea name="clear" id="clearText" oninput="processAcrostic()"></textarea>
-						Acrostic:
-						<textarea name="acrostic" id="acrosticText" oninput="processAcrostic()"></textarea>
-					</form>
-				</div>
-			</div>
+<style scoped>
+.text, .options {
+	margin: 8px;
+}
+textarea {
+	display: block;
+	margin: 8px;
+	width: 100%;
+	height: 200px;
+	resize: none;
+}
+.options ul{
+  list-style: none;
+	text-align: left;
+	margin: 6px;
+	padding: 0;
+}
+#output {
+	margin: 8px;
+	padding: 6px;
+	color: white;
+	background: black;
+	border: 1px solid white;
+	min-height: 50px;
+}
+.green {
+	color: #65FF65;
+}
+.red {
+	color: #FF6565;
+}
+.orange {
+	color: #FFB265;
+}
+</style>
+<div class="options list">
+	<form name="optionsForm">
+		<ul>
+			<li>
+				<input type="radio" name="method" value="line">Line</input>
+			</li>
+			<li>
+				<input type="radio" name="method" value="sentence">Sentence</input>
+			</li>
+			<li>
+				<input type="radio" name="method" value="nthWord">Nth Word</input>
+			</li>
+		</ul>
+		<input type="text" name="seqN" id="sequence">
+		<ul>
+			<li>
+				<input type="radio" name="seqType" value="constant">Constant</input>
+			</li>
+			<li>
+				<input type="radio" name="seqType" value="sDigit">Single Digit</input>
+			</li>
+			<li>
+				<input type="radio" name="seqType" value="csDigit">Comma Seperated Digits</input>
+			</li>
+		</ul>
+	</form>
+	<div id="output"></div>
+	</div>
+	<div class="text">
+		<form name="textForm">
+			Cleartext:
+			<textarea name="clear" id="clearText" oninput="processAcrostic()"></textarea>
+			Acrostic:
+			<textarea name="acrostic" id="acrosticText" oninput="processAcrostic()"></textarea>
+		</form>
+	</div>
+</div>
