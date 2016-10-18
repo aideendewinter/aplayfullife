@@ -18,7 +18,8 @@ textarea {
 	color: white;
 	background: black;
 	border: 1px solid white;
-	min-height: 50px;
+	height: 200px;
+	overflow-y:auto;
 }
 .green {
 	color: #65FF65;
