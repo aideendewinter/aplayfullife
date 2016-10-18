@@ -33,6 +33,340 @@ textarea {
 	color: #FFB265;
 }
 </style>
+<script>
+function processAcrostic() {
+	var clearText = document.getElementById("clearText").value;
+	var acrosticText = document.getElementById("acrosticText").value;
+	var method = radioValue("method");
+	var seqType = radioValue("seqType");
+	var seq = document.getElementById("sequence").value;
+	var seqArray;
+	if (seqType == "constant") {
+		seqArray = [parseInt(seq)];
+	}
+	if (seqType == "sDigit") {
+		seqArray = seq.split("").map(function(t){return parseInt(t);});
+	}
+	if (seqType == "csDigit") {
+		seqArray = seq.split(",").map(function(t){return parseInt(t);});
+	}
+	var clearTextStream = clearText.split("");
+	var acrosticTextStream = acrosticText.split("");
+	for (var i=0; i<20; i++) {
+		acrosticTextStream.push(" ");
+		acrosticTextStream.push("x");
+		acrosticTextStream.push(" ");
+	}
+	var displayText = "";
+	switch(method) {
+		case ("nthWord"):
+			displayText += "<p>";
+			var seqLength = seqArray.length;
+			var ctsLength = clearTextStream.length;
+			var atsLength = acrosticTextStream.length;
+			var seqPlace=0, ctPlace=0, atPlace=0;
+			var shouldEnd = false;
+			
+			while (!shouldEnd) {
+				if (seqPlace >= seqLength) {
+					seqPlace=0;
+				}
+				var n=seqArray[seqPlace];
+				var oldPlace=atPlace;
+				atPlace = getNthWordLoc(acrosticTextStream, atPlace, n);
+				ctPlace = getNextLetter(clearTextStream, ctPlace);
+				if (atPlace==-1 || ctPlace==-1) {
+					atPlace=atsLength;
+				}
+				displayText += '<span class="white">';
+				for (var i=oldPlace; i<atPlace; i++) {
+					displayText += acrosticTextStream[i];
+				}
+				displayText += '</span>';
+				if (shouldEnd) {
+					break;
+				}
+				if (makeLower(acrosticTextStream[atPlace]) == makeLower(clearTextStream[ctPlace])) {
+					oldPlace = atPlace;
+					atPlace = getNthWordLoc(acrosticTextStream, atPlace, 2);
+					if (atPlace==-1) {
+						atPlace=atsLength;
+						shouldEnd=true;
+					}
+					displayText += '<span class="green">';
+					for (i=oldPlace; i<atPlace; i++) {
+						if (!isWordCharacter(acrosticTextStream[i])) {
+							displayText += '</span><span class="white">'
+						}
+						displayText += acrosticTextStream[i];
+					}
+					displayText += '</span>';
+					ctPlace++;
+					seqPlace++;
+					continue;
+				} else {
+					oldPlace = atPlace;
+					atPlace = getNthWordLoc(acrosticTextStream, atPlace, 2);
+					if (atPlace==-1) {
+						atPlace=atsLength;
+						shouldEnd=true;
+					}
+					displayText += '<span class="red">' + clearTextStream[ctPlace] + '_</span><span class="orange">';
+					for (i=oldPlace; i<atPlace; i++) {
+						if (!isWordCharacter(acrosticTextStream[i])) {
+							displayText += '</span><span class="white">'
+						}
+						displayText += acrosticTextStream[i];
+					}
+					displayText += '</span>';
+					ctPlace++;
+					seqPlace++;
+					continue;
+				}
+				displayText += "</p>";
+				shouldEnd = true;
+			}
+			break;
+		case ("line"):
+			displayText += "<p>";
+			var seqLength = seqArray.length;
+			var ctsLength = clearTextStream.length;
+			var atsLength = acrosticTextStream.length;
+			var seqPlace=0, ctPlace=0, atPlace=0;
+			var shouldEnd = false;
+			
+			while (!shouldEnd) {
+				if (seqPlace >= seqLength) {
+					seqPlace=0;
+				}
+				var n=seqArray[seqPlace];
+				var oldPlace=atPlace;
+				atPlace = getNthLineLoc(acrosticTextStream, atPlace, n);
+				ctPlace = getNextLetter(clearTextStream, ctPlace);
+				if (atPlace==-1 || ctPlace==-1) {
+					atPlace=atsLength;
+				}
+				displayText += '<span class="white">';
+				for (var i=oldPlace; i<atPlace; i++) {
+					displayText += acrosticTextStream[i];
+				}
+				displayText += '</span>';
+				if (shouldEnd) {
+					break;
+				}
+				if (makeLower(acrosticTextStream[atPlace]) == makeLower(clearTextStream[ctPlace])) {
+					oldPlace = atPlace;
+					atPlace = getNthLineLoc(acrosticTextStream, atPlace, 2);
+					if (atPlace==-1) {
+						atPlace=atsLength;
+						shouldEnd=true;
+					}
+					displayText += '<span class="green">';
+					for (i=oldPlace; i<atPlace; i++) {
+						if (!isWordCharacter(acrosticTextStream[i])) {
+							displayText += '</span><span class="white">'
+						}
+						displayText += acrosticTextStream[i];
+					}
+					displayText += '</span>';
+					ctPlace++;
+					seqPlace++;
+					continue;
+				} else {
+					oldPlace = atPlace;
+					atPlace = getNthLineLoc(acrosticTextStream, atPlace, 2);
+					if (atPlace==-1) {
+						atPlace=atsLength;
+						shouldEnd=true;
+					}
+					displayText += '<span class="red">' + clearTextStream[ctPlace] + '_</span><span class="orange">';
+					for (i=oldPlace; i<atPlace; i++) {
+						if (!isWordCharacter(acrosticTextStream[i])) {
+							displayText += '</span><span class="white">'
+						}
+						displayText += acrosticTextStream[i];
+					}
+					displayText += '</span>';
+					ctPlace++;
+					seqPlace++;
+					continue;
+				}
+				displayText += "</p>";
+				shouldEnd = true;
+			}
+			break;
+		case ("sentence"):
+			displayText += "<p>";
+			var seqLength = seqArray.length;
+			var ctsLength = clearTextStream.length;
+			var atsLength = acrosticTextStream.length;
+			var seqPlace=0, ctPlace=0, atPlace=0;
+			var shouldEnd = false;
+			
+			while (!shouldEnd) {
+				if (seqPlace >= seqLength) {
+					seqPlace=0;
+				}
+				var n=seqArray[seqPlace];
+				var oldPlace=atPlace;
+				atPlace = getNthSentenceLoc(acrosticTextStream, atPlace, n);
+				ctPlace = getNextLetter(clearTextStream, ctPlace);
+				if (atPlace==-1 || ctPlace==-1) {
+					atPlace=atsLength;
+				}
+				displayText += '<span class="white">';
+				for (var i=oldPlace; i<atPlace; i++) {
+					displayText += acrosticTextStream[i];
+				}
+				displayText += '</span>';
+				if (shouldEnd) {
+					break;
+				}
+				if (makeLower(acrosticTextStream[atPlace]) == makeLower(clearTextStream[ctPlace])) {
+					oldPlace = atPlace;
+					atPlace = getNthSentenceLoc(acrosticTextStream, atPlace, 2);
+					if (atPlace==-1) {
+						atPlace=atsLength;
+						shouldEnd=true;
+					}
+					displayText += '<span class="green">';
+					for (i=oldPlace; i<atPlace; i++) {
+						if (!isWordCharacter(acrosticTextStream[i])) {
+							displayText += '</span><span class="white">'
+						}
+						displayText += acrosticTextStream[i];
+					}
+					displayText += '</span>';
+					ctPlace++;
+					seqPlace++;
+					continue;
+				} else {
+					oldPlace = atPlace;
+					atPlace = getNthSentenceLoc(acrosticTextStream, atPlace, 2);
+					if (atPlace==-1) {
+						atPlace=atsLength;
+						shouldEnd=true;
+					}
+					displayText += '<span class="red">' + clearTextStream[ctPlace] + '_</span><span class="orange">';
+					for (i=oldPlace; i<atPlace; i++) {
+						if (!isWordCharacter(acrosticTextStream[i])) {
+							displayText += '</span><span class="white">'
+						}
+						displayText += acrosticTextStream[i];
+					}
+					displayText += '</span>';
+					ctPlace++;
+					seqPlace++;
+					continue;
+				}
+				displayText += "</p>";
+				shouldEnd = true;
+			}
+			break;
+	}
+	var div = document.getElementById('output');
+	div.innerHTML = displayText;
+}
+
+function getNthLineLoc(seq, place, n) {
+	var seqLength = seq.length;
+	var m=0, state=0;
+	for(var i=place; i<seqLength; i++) {
+		switch (state) {
+			case 0:
+				if (seq[i] != '\n') {
+					m++;
+					if (m == n) {
+						return i;
+					}
+					state = 1;
+				}
+				break;
+			case 1:
+				if (seq[i] == '\n') {
+					state = 0;
+				}
+				break;
+		}
+	}
+	return -1;
+}
+function getNthSentenceLoc(seq, place, n) {
+	var seqLength = seq.length;
+	var m=0, state=0;
+	for(var i=place; i<seqLength; i++) {
+		switch (state) {
+			case 0:
+				if (isLetter(seq[i])) {
+					m++;
+					if (m == n) {
+						return i;
+					}
+					state = 1;
+				}
+				break;
+			case 1:
+				if (seq[i] == '.' || seq[i] == '!' || seq[i] == '?') {
+					state = 0;
+				}
+				break;
+		}
+	}
+	return -1;
+}
+function getNthWordLoc(seq, place, n) {
+	var seqLength = seq.length;
+	var m=0, state=0;
+	for(var i=place; i<seqLength; i++) {
+		switch (state) {
+			case 0:
+				if (isLetter(seq[i])) {
+					m++;
+					if (m == n) {
+						return i;
+					}
+					state = 1;
+				}
+				break;
+			case 1:
+				if (!isWordCharacter(seq[i])) {
+					state = 0;
+				}
+				break;
+		}
+	}
+	return -1;
+}
+
+function isWordCharacter(c) {
+	return (isLetter(c) || c=='-' || c=="'");
+}
+function isLetter(c) {
+  return (c+'').toLowerCase() != (c+'').toUpperCase();
+}
+
+function getNextLetter(seq, place) {
+	var seqLength = seq.length;
+	for(var i=place; i<seqLength; i++) {
+		if (isLetter(seq[i])) {
+			return i;
+		}
+	}
+	return -1;
+}
+function makeLower(c) {
+  return (c+'').toLowerCase();
+}
+function radioValue(radioName) {
+	var radios = document.getElementsByName(radioName);
+
+	for (var i = 0, length = radios.length; i < length; i++){
+    if (radios[i].checked) {
+        return (radios[i].value);
+    }
+	}
+}
+</script>
 <div class="options list">
 	<form name="optionsForm">
 		<ul>
