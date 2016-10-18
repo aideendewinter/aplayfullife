@@ -53,7 +53,11 @@ header img {
 }
 .body {
   position: relative;
-  margin: 0 0 0 256px;
+  margin: 6 6 6 262px;
+  border: orange solid 2px;
+  padding: 8px 16px;
+  background: rgba(40, 40, 40, .93);
+  color: orange;
 }
 footer {
   position:absolute;
@@ -78,11 +82,6 @@ footer a:hover {
 }
 .block {
   box-sizing: border-box;
-  border: orange solid 2px;
-  padding: 8px 16px;
-  margin: 6px;
-  background: rgba(40, 40, 40, .93);
-  color: orange;
 }
 .block h1 {
   text-align: center;
