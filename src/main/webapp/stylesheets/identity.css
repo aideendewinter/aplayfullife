@@ -53,7 +53,7 @@ header img {
 }
 .body {
   position: relative;
-  margin: 6px 6px 6px 268px;
+  margin: 6px 6px 6px 262px;
   border: orange solid 2px;
   padding: 8px 16px;
   background: rgba(40, 40, 40, .93);
@@ -131,7 +131,8 @@ li {
 }
 .list {
   position: absolute;
-  left: -256px;
+  top: -10px;
+  left: -262px;
   margin: 0 6px;
   padding: 0;
   width: 250px;
@@ -150,7 +151,8 @@ li {
 }
 .wiki {
   position: absolute;
-  left: -256px;
+  top: -10px;
+  left: -262px;
   margin: 0 6px;
   width: 250px;
   border: antiquewhite solid 2px;
