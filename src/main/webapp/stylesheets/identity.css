@@ -133,7 +133,7 @@ li {
   position: absolute;
   top: -10px;
   left: -262px;
-  margin: 0 6px;
+  margin: -10px 6px 0 6px;
   padding: 0;
   width: 250px;
   border: #693668 solid 2px;
@@ -151,9 +151,8 @@ li {
 }
 .wiki {
   position: absolute;
-  top: -10px;
   left: -262px;
-  margin: 0 6px;
+  margin: -10px 6px 0 6px;
   width: 250px;
   border: antiquewhite solid 2px;
   background: #165c91;
