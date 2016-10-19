@@ -1,5 +1,5 @@
 <style scoped>
-.options, textarea {
+textarea {
 	margin: 4px;
 }
 textarea {
