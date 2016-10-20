@@ -75,17 +75,16 @@ public class MainServlet extends HttpServlet {
 				IOUtils.copy(resourceContent, writer, "UTF-8");
 				String blockContent = writer.toString();
 				if (blockId.contains("text")) {
-					content += "<p class=\"block text" + tab + "\">" + blockContent + "</p>";
+					content += "<p class=\"block text\">" + blockContent + "</p>";
 				} else if (blockId.contains("list")) {
 					String[] lines = blockContent.split("\\r?\\n");
-					content += "<div class=\"block list" + tab
-						+ "\"><h1>" + lines[0] + "</h1><ul>";
+					content += "<div class=\"block list\"><h1>" + lines[0] + "</h1><ul>";
 					for (int i=1; i<lines.length; i++) {
 						content += "<li>" + lines[i] + "</li>";
 					}
 					content += "</ul></div>";
 				} else if (blockId.contains("html")) {
-					content += "<div class=\"block html" + tab + "\">" + blockContent + "</div>";
+					content += "<div class=\"block html\">" + blockContent + "</div>";
 				}
 			} catch (IOException | java.lang.NullPointerException ex) {
 				content += "Bad Block : " + blockId + ".";
