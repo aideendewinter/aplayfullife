@@ -56,7 +56,7 @@ public class MainServlet extends HttpServlet {
 		} else {
 			parseBlocks(path.replace("/", ""), blockIds, template);
 		}
-		template.SetStyle("/stylesheets/identity.css");
+		template.SetStyle("/stylesheets/angrea.css");
 		
 		// Output
 		response.setContentType("text/html; charset=UTF-8");
