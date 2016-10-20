@@ -42,9 +42,9 @@ public class MainServlet extends HttpServlet {
 			path = "/";
 		path = path.replace(".html", "");
 		if (path.equals("/")) {
-			resourceContent = classLoader.getResourceAsStream("/content/identity_main");
+			resourceContent = classLoader.getResourceAsStream("/content/angrea_main");
 		} else
-			resourceContent = classLoader.getResourceAsStream("/content/identity-pages" + path);
+			resourceContent = classLoader.getResourceAsStream("/content/angrea-pages" + path);
 		
 		writer.getBuffer().setLength(0);
 		IOUtils.copy(resourceContent, writer, "UTF-8");
@@ -52,9 +52,9 @@ public class MainServlet extends HttpServlet {
 		IOUtils.closeQuietly(resourceContent);
 		template.SetPageHeader(blockIds.remove(0));
 		if (path.equals("/")) {
-			parseBlocks("identity", blockIds, template, mindMap);
+			parseBlocks("angrea", blockIds, template);
 		} else {
-			parseBlocks(path.replace("/", ""), blockIds, template, mindMap);
+			parseBlocks(path.replace("/", ""), blockIds, template);
 		}
 		template.SetStyle("/stylesheets/identity.css");
 		
@@ -63,12 +63,12 @@ public class MainServlet extends HttpServlet {
 		response.getWriter().print(template.GetPage());
 	}
 	
-	protected void parseBlocks(String page, List<String> blockIds, IdentityTemplate template, MindMap mindMap) {
+	protected void parseBlocks(String page, List<String> blockIds, IdentityTemplate template) {
 		String content = "";
 		for(String blockId : blockIds) {
 			blockId = blockId.trim();
 			ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-			InputStream resourceContent = classLoader.getResourceAsStream("/content/identity-blocks/" + blockId);
+			InputStream resourceContent = classLoader.getResourceAsStream("/content/angrea-blocks/" + blockId);
 			StringWriter writer = new StringWriter();
 			
 			try {
