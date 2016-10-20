@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Georgia;
+}
+body {
+  color: white;
+  line-height: 1.33;
+  background: #036;
+}
+header {
+  padding: 16px 32px;
+  background: white;
+  color: black;
+  text-align: right;
+  font-family: 'Princess Sofia', cursive;
+  font-size: 2em;
+}
+header img {
+  float: left;
+  height: 90px;
+  margin-top: -28px;
+  margin-left: -16px;
+}
+.page {
+  min-height:100%;
+  position: relative;
+  background: url("/images/APLLogo.svg") bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+.page:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    background-image: url("/images/APLLogo.svg");
+    background-size: 275px;
+  background-attachment: fixed;
+}
+.content {
+  padding-bottom: 2.83rem;
+}
+.body {
+  position: relative;
+  margin: 6px 6px 6px 262px;
+  border: orange solid 2px;
+  padding: 8px 16px;
+  background: rgba(40, 40, 40, .93);
+  color: orange;
+}
+footer {
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  height: 2.83rem;
+  width: 100%;
+  text-align: center;
+  background: black;
+}
+footer a {
+  box-sizing: border-box;
+  padding: .75rem .4rem;
+  height: 2.83rem;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  background: white;
+  color: black;
+}
+.block {
+  box-sizing: border-box;
+}
+.block h1 {
+  text-align: center;
+  font-size: 1.5em;
+}
+.html h2 {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+p::first-letter {
+  font-family: 'Princess Sofia', cursive;
+  font-size: 1.5em;
+}
+ul {
+  text-align: center;
+}
+li {
+  margin: 4px;
+  font-size: 1.2em;
+}
+.tabNav {
+  background: gray;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+
+}
+.tabNav li {
+  display: inline-block;
+  box-sizing: border-box;
+  color: white;
+  margin: 0;
+  padding: 6px;
+  height: 100%;
+}
+.tabNav li:hover {
+  background: white;
+  color: black;
+}
+.tabNav a {
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+.list {
+  position: absolute;
+  left: -262px;
+  margin: -10px 6px 0 6px;
+  padding: 0;
+  width: 250px;
+  border: #693668 solid 2px;
+  background: #333333;
+  color: #F26DF9;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: .8em;
+}
+.list h1 {
+  font-size: 1.25em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+.wiki {
+  position: absolute;
+  left: -262px;
+  margin: -10px 6px 0 6px;
+  padding: 4px;
+  width: 250px;
+  border: antiquewhite solid 2px;
+  background: #165c91;
+  color: white;
+  text-align: justify;
+  text-align-last: left;
+  font-family: Helvetica;
+  text-indent: 3em;
+  font-size: .8em;
+}
+.wiki::after {
+  display: block;
+  text-align-last: right;
+  content: "~Wikipedia";
+  font-family: Georgia;
+  font-size: 1.6em;
+}
+p a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+p a:hover {
+  text-decoration: underline;
+}
+.strong-weight {
+  color: #AAFCB8;
+}
+.weak-weight {
+  color: #D7263D;
+}
+@media screen and (max-width: 699px) {
+  .body {
+    margin: 0;
+    width: 100%;
+  }
+  .wiki {
+    position: initial;
+    margin: 6px;
+    width: initial;
+  }
+  .list {
+    position: initial;
+    margin: 6px;
+    width: initial;
+  }
+}
+@media screen and (min-width: 900px) {
+  .content {
+    margin: auto;
+    width: 900px;
+  }
+}
