@@ -108,6 +108,9 @@ li {
 .nav {
   background: gray;
   border: white solid 2px;
+  position: fixed;
+  top: 100px;
+  left: 10px;
   width: 200px;
   padding: 0;
   margin: 8px;
