@@ -83,16 +83,18 @@ footer a:hover {
 .block {
   box-sizing: border-box;
 }
-.block h1 {
+h1 {
+  margin: 12px;
+  font-family: 'Princess Sofia', cursive;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2em;
 }
-.html h2 {
+h2 {
+  margin: 12px;
   text-align: center;
   text-transform: uppercase;
-  text-decoration: underline;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.1em;
 }
 p::first-letter {
   font-family: 'Princess Sofia', cursive;
