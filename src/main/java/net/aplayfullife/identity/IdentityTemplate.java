@@ -56,7 +56,6 @@ public class IdentityTemplate {
     // Page
     template = template.replace("{stylesheet}", stylesheet);
     template = template.replace("{page_navigation}", pageNav);
-    template = template.replace("{page_title}", pageHeader);
     template = template.replace("{page_header}", pageHeader);
     template = template.replace("{page_body}", pageContent);
     template = template.replace("{debug}", debug);
