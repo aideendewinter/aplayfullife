@@ -50,10 +50,11 @@ header img {
 }
 .content {
   padding-bottom: 2.83rem;
+  padding-left: 226px;
 }
 .body {
   position: relative;
-  margin: 6px 6px 6px 262px;
+  margin: 6px 6px 6px 6px;
   border: orange solid 2px;
   padding: 8px 16px;
   background: rgba(40, 40, 40, .93);
@@ -111,11 +112,10 @@ li {
   background: gray;
   border: white solid 2px;
   position: fixed;
-  top: 100px;
-  left: 10px;
+  top: 90px;
+  left: 16px;
   width: 200px;
   padding: 0;
-  margin: 8px;
 
 }
 .nav a {
@@ -187,17 +187,13 @@ p a:hover {
   color: #D7263D;
 }
 @media screen and (max-width: 699px) {
-  .body {
-    margin: 0;
-    width: 100%;
+  .content {
+    padding: 0;
   }
-  .wiki {
-    position: initial;
-    margin: 6px;
-    width: initial;
-  }
-  .list {
-    position: initial;
+  .nav {
+    position: relative;
+    top:0;
+    left:0;
     margin: 6px;
     width: initial;
   }
