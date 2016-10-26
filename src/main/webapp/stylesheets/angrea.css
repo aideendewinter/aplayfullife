@@ -188,7 +188,7 @@ p a:hover {
 }
 @media screen and (max-width: 699px) {
   .content {
-    padding: 0;
+    padding-left: 0;
   }
   .nav {
     position: relative;
@@ -196,6 +196,9 @@ p a:hover {
     left:0;
     margin: 6px;
     width: initial;
+  }
+  .nav a {
+	  display: inline-block;
   }
 }
 @media screen and (min-width: 900px) {
