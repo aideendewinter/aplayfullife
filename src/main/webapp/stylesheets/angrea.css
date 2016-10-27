@@ -180,6 +180,23 @@ p a {
 p a:hover {
   text-decoration: underline;
 }
+.note {
+  display: block;
+  margin-top: 12px;
+  margin-left: -100px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  padding: 6px;
+  float: left;
+  width: 300px;
+  border: #F26DF9 solid 1px;
+  background: #693668;
+  color: white;
+}
+.note h1 {
+  font-size: 1.5em;
+  margin: 6px;
+}
 .strong-weight {
   color: #AAFCB8;
 }
@@ -199,6 +216,11 @@ p a:hover {
   }
   .nav a {
 	  display: inline-block;
+  }
+  .note {
+    float: none;
+    margin: 6px;
+    width: inherit;
   }
 }
 @media screen and (min-width: 900px) {
