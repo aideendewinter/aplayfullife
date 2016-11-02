@@ -60,6 +60,10 @@ header img {
   background: rgba(40, 40, 40, .93);
   color: orange;
 }
+.body img {
+  margin: 16px 0;
+  width: 100%;
+}
 footer {
   position:absolute;
   bottom: 0;
