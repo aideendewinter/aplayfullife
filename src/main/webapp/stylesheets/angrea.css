@@ -153,6 +153,10 @@ li p {
   background: white;
   color: black;
 }
+.nav .nav_level1 {
+  background: #666;
+  padding-left: 16px;
+}
 .list {
   position: absolute;
   left: -262px;
