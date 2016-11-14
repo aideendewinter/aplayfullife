@@ -32,7 +32,12 @@ public class MainServlet extends HttpServlet {
 			String[] pageInfo = page.split(",");
 			if (pageInfo.length < 2)
 				continue;
-			pageNav += "<a href=\"./" + pageInfo[1] + ".html\">" + pageInfo[0] + "</a>";
+			int tabCount=0;
+			while (pageInfo[0].startsWith("/t")) {
+				tabCount++;
+				pageInfo[0] = pageInfo[0].substring(1);
+			}
+			pageNav += "<a class=\"nav_level"+ tabCount +"\" href=\"./" + pageInfo[1] + ".html\">" + pageInfo[0] + "</a>";
 		}
 		template.SetPageNavigation(pageNav);
 		
