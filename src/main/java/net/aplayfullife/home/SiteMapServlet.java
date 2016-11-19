@@ -21,9 +21,9 @@ public class SiteMapServlet extends HttpServlet {
       resourceContent = classLoader.getResourceAsStream("/content/home_pages");
       IOUtils.copy(resourceContent, writer, "UTF-8");
       
-      output += "<a href="/">A Playful Life : Home</a>";
-      output += "<a href="/angrea/">Angrea RPG</a>";
-      output += "<a href="/identity/">Identity</a>";
+      output += "<a href=\"/\">A Playful Life : Home</a>";
+      output += "<a href=\"/angrea/\">Angrea RPG</a>";
+      output += "<a href=\"/identity/\">Identity</a>";
       
       response.setContentType("text/html; charset=UTF-8");
       response.getWriter().print(output);
