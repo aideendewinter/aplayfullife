@@ -1,7 +1,7 @@
 <p>In order to adventure within Angrea, you must first create a persona to serve as your avatar within this new world. You can create a heroic fighter, a stealthy rogue, or a spell-wielding wizard. Or you can combine these tropes and others to create interesting new hybrids. You can even attempt to create a completely original character, unlike anything anyone has ever seen (but it’s not easy). At its simplest, your character is defined by a series of attributes and skills. However, after that you can also decide where your character came from, what e’s good at, what eir goals are, and then get to guide eir growth as e becomes more powerful and clever as eir story unfolds.</p>
 <h1>Races Of Angrea</h1>
 <p>During the Flood, all the nations of Angrea were wiped out with one fell swoop. Countless perished, races were wiped out, pantheons fell. But here and there, through magic or other means, the clever and the strong survived. As the waters receded the remaining races emerged to find a new and deadly world awaited them. It was either adapt or die, and so they adapted.</p>
-<p>Choosing a race can affect starting values for attributes and skills, as well as granting additional perks. Bonuses and penalties to attributes are adjustments to the maximum starting dice pools, all characters still start with 18D total. All characters can be assumed to have 1D in the history and customs of their race and region. It’s best to have at least a rough idea of what race you want your character to be before continuing with character creation. More about the culture and politics of the races may be found under the About The Setting section.</p>
+<p>Choosing a race can affect starting values for attributes and skills, as well as granting additional perks. Bonuses and penalties to attributes are adjustments to the maximum starting dice pools, all characters still start with 18D total. All characters can be assumed to have 1D in the history and customs of their race and region. It’s best to have at least a rough idea of what race you want your character to be before continuing with character creation. More about the culture and politics of the races may be found on the site under the The World section.</p>
 <h2>Humans</h2>
 <p>Humans are the most prevalent race in Angrea, and though their lives burn swift, they burn bright. Some of the greatest accomplishments of ages past have been at the hands of Humans. However, so have some of the greatest atrocities. The Humans’ ambition and pride make them capable of great things, but whether great good or great evil is in their hands. In the Neuranian Empire, Humans hold the highest levels of power, the ruling House, House Neuros, is entirely Human and has strict rules of ancestral descent in order to join.</p>
 <ul>
@@ -127,14 +127,14 @@ It is rare to see Tetharius past the age of 400. It is around that time they oft
 <p>You have the opportunity to choose a home region for your character that will help further define and set your character apart from the other heroes that wander the Isles. Character region can influence perk and flaw selection, spell choice, and other aspects of character creation. It can also serve as a great foundation for a unique character history.</p>
 <h2>The Regions</h2>
 <img src="/images/angrea/RegionMap.png" alt="A color-coded map of the fifteen regions of the Neuranian Empire.">
-<p>The following are brief descriptions of the regions and how they affect character creation. For more detailed information on the peoples and customs of each region check under the About The Setting section.</p>
+<p>The following are brief descriptions of the regions and how they affect character creation. For more detailed information on the peoples and customs of each region check under The Setting section.</p>
 <h3>Badger Isles</h3>
 <p>People living in the Badger Isles tend to prefer a quiet life of farming and solitude. Families are often small, and not much heed is paid to extended familial ties. However, they are ferocious when that solitude is intruded on. The people in the Badger isles have taken on physical traits of their namesake, most are shorter than others of their race, and are fond of working in the earth. A few have developed a distinctive white streak down the center of their hair. They get +2D on skill checks involving burrowing and earth based creatures. They also receive +4D on attack rolls when fighting anything 2 or more size categories larger than themselves.</p>
 <h3>Bear Isles</h3>
 <p>The Bear Isles are mostly home to fisher-folk. They live in modest cottages along the shores and rivers. In the winter they tend to withdaw into their tight-knit communities and not reappear until the fish breeding season begins. They tend to be larger and bulkier than others in their race, and grow a considerable amount of body hair, even the elves, who due to their aquatic heritage tend to be on the smoother side. While fishing poles and nets are common, the focus for young Bear Islanders is on the spear, which they train with religiously almost as early as they can hold it aloft. Those raised here gain +2D on fishing checks. Their Strength may start +1D higher than they would normally be allowed, and they recieve +1 on attack rolls when wielding a spear.</P>
 <h3>Chrysanthia</h3>
 <h3>Dolphin Isles</h3>
-<p></P>
+<p></p>
 <h3>Dragon Isles</h3>
 <h3>Fey Isles</h3>
 <h3>Horse Isles</h3>
@@ -218,4 +218,8 @@ It is rare to see Tetharius past the age of 400. It is around that time they oft
 <p>With two points in Ally, the character gains the aid of a small organization. This can be anything from a local guild to another adventuring group. The group is willing to aid the character with information, and occasionally for a handful of members to join the character on adventures. They will act in the characters best interest whenever possible. How far reaching this aid can go is up to the GM's discretion.</p>
 <h3>Ally (3)</h3>
 <p>With three points in Ally, the character gains a small following. Followers will do their best to fulfill any of the character's requests. They will adventure with the character, or handle business or personal affairs on their behalf. They are significantly weaker than the character, and if they are put in danger or a number of them are killed, the character may lose all eir followers.</p>
+<h2>House Scion</h2>
+The benefits of joining a house are many. But most memberships come at a cost. Each House is unique, and the benefits and drawbacks of each are listed under The Houses section on this site. 
 <h1>Flaws</h1>
+<h2>Owed Favor</h2>
+The character has fallen into the debt of someone who does not take repayment lightly. In some circumstances the character may be able to buy off the favor with simple wealth. More often than not, however, they must complete some task, or some ongoing role, in order to earn their freedom.
