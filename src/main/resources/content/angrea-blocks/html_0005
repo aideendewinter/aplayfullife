@@ -74,54 +74,52 @@
 <li>Legendary: "Scathing Wit”</li>
 <li>Domains: Trickery, Evil, Mind, Water, Healing</li>
 </ul>
-
-
-Caemeer
-Alignment:		Chaotic Neutral
-Favored Weapon:	Bastard Sword
-Legendary:		Poet’s Tongue
-Domains:		Chaos, Luck, Protection, Travel, Math
-
-
-Batus
-Alignment:		Lawful Neutral
-Favored Weapon:	Quarterstaff
-Legendary:		Trees
-Domains:		Plant, Law, War, Strength, Domination
-
-
-
-
-Torris Fortis
-Alignment:		Chaotic Good
-Favored Weapon:	Claymore
-Legendary:		Chaos
-Domains:		Strength, Sex, War, Chaos, Good
-
-
-Zollo
-Alignment:		Neutral Evil
-Favored Weapon:	Hand Crossbow
-Legendary:		Death’s Embrace
-Domains:		Fire, Death, War, Craft, Evil
-
-
-Jahiel
-Alignment:		Chaotic Evil
-Favored Weapon:	Blowgun
-Legendary:		Pipe Dream
-Domains:		Travel, Luck, Evil, Illusion, Darkness
-
-
-Patrikia
-Alignment:		Neutral Good
-Favored Weapon:	Club
-Legendary:		Horn Spoon
-Domains:		Family, Animal, Plant, Earth, Water, Sun
-
-
-Coverias
-Alignment:		Lawful Neutral
-Favored Weapon:	Scimitar
-Legendary:		Rumrusher
-Domains: 		Water, Travel, Luck, Trickery, Craft
+<h2>Caemeer</h2>
+<ul>
+<li>Alignment: Chaotic Neutral</li>
+<li>Favored Weapon: Bastard Sword</li>
+<li>Legendary: Poet’s Tongue</li>
+<li>Domains: Chaos, Luck, Protection, Travel, Math</li>
+</ul>
+<h2>Batus</h2>
+<ul>
+<li>Alignment: Lawful Neutral</li>
+<li>Favored Weapon: Quarterstaff</li>
+<li>Legendary: Trees</li>
+<li>Domains: Plant, Law, War, Strength, Domination</li>
+</ul>
+<h2>Torris Fortis</h2>
+<ul>
+<li>Alignment: Chaotic Good</li>
+<li>Favored Weapon: Claymore</li>
+<li>Legendary: Chaos</li>
+<li>Domains: Strength, Sex, War, Chaos, Good</li>
+</ul>
+<h2>Zollo</h2>
+<ul>
+<li>Alignment: Neutral Evil</li>
+<li>Favored Weapon: Hand Crossbow</li>
+<li>Legendary: Death’s Embrace</li>
+<li>Domains: Fire, Death, War, Craft, Evil</li>
+</ul>
+<h2>Jahiel</h2>
+<ul>
+<li>Alignment: Chaotic Evil</li>
+<li>Favored Weapon: Blowgun</li>
+<li>Legendary: Pipe Dream</li>
+<li>Domains: Travel, Luck, Evil, Illusion, Darkness</li>
+</ul>
+<h2>Patrikia</h2>
+<ul>
+<li>Alignment: Neutral Good</li>
+<li>Favored Weapon: Club</li>
+<li>Legendary: Horn Spoon</li>
+<li>Domains: Family, Animal, Plant, Earth, Water, Sun</li>
+</ul>
+<h2>Coverias</h2>
+<ul>
+<li>Alignment: Lawful Neutral</li>
+<li>Favored Weapon: Scimitar</li>
+<li>Legendary: Rumrusher</li>
+<li>Domains: Water, Travel, Luck, Trickery, Craft</li>
+</ul>
