@@ -1,82 +1,79 @@
-Angrean Gods
-
-Iliana 
-Alignment:		Neutral Good
-Favored Weapon:	Ranseur
-Domains:		Good, Healing, Luck, Protection, Trickery
-
-
-Korin
-Alignment:		Neutral Evil
-Favored Weapon:	Guisarme
-Domains:		Death, Destruction, Evil, Trickery, Luck
-
-
-Balance
-Alignment:		Neutral
-Favored Weapon:	Whip
-Domains:		Protection, Destruction, Trickery, Luck
-
-
-Neuranian Gods
-
-
-Ilithor
-Alignment:		Lawful Good
-Favored Weapon:	Warhammer
-Legendary:		Purity
-Domains:		Law, Good, Strength, War, Nobility
-
-
-Bria
-Alignment:		Chaotic Good
-Favored Weapon:	Longbow
-Legendary:		Whisper
-Domains:		Chaos, Luck, Animal, Plant, Madness, Emotion, Sex
-
-
-Karria
-Alignment:		Neutral
-Favored Weapon:	Dagger
-Legendary		Fool’s Pride
-Domains:		Trickery, Charm, Mind, Fire, Madness, Sex
-
-
-
-
-Aetherias
-Alignment:		Neutral Evil
-Favored Weapon:	Whip
-Legendary:		Comforting Lie
-Domains:		Death, Destruction, Mind, Madness, Emotion
-
-
-Canaedus
-Alignment:		Lawful Good
-Favored Weapon:	Longsword
-Legendary:		Bitter Truth
-Domains:		Knowledge, Magic, Law, Sex, Water, Air
-
-
-Leonas
-Alignment:		Chaotic Evil
-Favored Weapon:	Unarmed
-Legendary:		Stone Strike
-Domains:		Chaos, War, Destruction, Fire, Earth, Sex
-
-
-Ferallia
-Alignment:		Neutral
-Favored Weapon:	Claw Bracer
-Legendary:		Kitten’s Claw
-Domains:		Plant, Animal, Earth, Air, Fire, Water, Sex
-
-
-Katarina
-Alignment:		Lawful Evil
-Favored Weapon:	Flail
-Legendary:		“Scathing Wit”
-Domains:		Trickery, Evil, Mind, Water, Healing
+<h1>Angrean Gods</h1>
+<h2>Iliana</h2>
+<ul>
+<li>Alignment: Neutral Good</li>
+<li>Favored Weapon: Ranseur</li>
+<li>Domains: Good, Healing, Luck, Protection, Trickery</li>
+</ul>
+<h2>Korin</h2>
+<ul>
+<li>Alignment: Neutral Evil</li>
+<li>Favored Weapon: Guisarme</li>
+<li>Domains: Death, Destruction, Evil, Trickery, Luck</li>
+</ul>
+<h1>Balance</h1>
+<ul>
+<li>Alignment: Neutral</li>
+<li>Favored Weapon: Whip</li>
+<li>Domains: Protection, Destruction, Trickery, Luck</li>
+</ul>
+<h1>Neuranian Gods</h1>
+<h2>Ilithor</h2>
+<ul>
+<li>Alignment: Lawful Good</li>
+<li>Favored Weapon: Warhammer</li>
+<li>Legendary: Purity</li>
+<li>Domains: Law, Good, Strength, War, Nobility</li>
+</ul>
+<h2>Bria</h2>
+<ul>
+<li>Alignment: Chaotic Good</li>
+<li>Favored Weapon: Longbow</li>
+<li>Legendary: Whisper</li>
+<li>Domains: Chaos, Luck, Animal, Plant, Madness, Emotion, Sex</li>
+</ul>
+<h2>Karria</h2>
+<ul>
+<li>Alignment: Neutral</li>
+<li>Favored Weapon: Dagger</li>
+<li>Legendary: Fool’s Pride</li>
+<li>Domains: Trickery, Charm, Mind, Fire, Madness, Sex</li>
+</ul>
+<h2>Aetherias</h2>
+<ul>
+<li>Alignment: Neutral Evil</li>
+<li>Favored Weapon: Whip</li>
+<li>Legendary: Comforting Lie</li>
+<li>Domains: Death, Destruction, Mind, Madness, Emotion</li>
+</ul>
+<h2>Canaedus</h2>
+<ul>
+<li>Alignment: Lawful Good</li>
+<li>Favored Weapon: Longsword</li>
+<li>Legendary: Bitter Truth</li>
+<li>Domains: Knowledge, Magic, Law, Sex, Water, Air</li>
+</ul>
+<h2>Leonas</h2>
+<ul>
+<li>Alignment: Chaotic Evil</li>
+<li>Favored Weapon: Unarmed</li>
+<li>Legendary: Stone Strike</li>
+<li>Domains: Chaos, War, Destruction, Fire, Earth, Sex</li>
+</ul>
+<h2>Ferallia</h2>
+<ul>
+<li>Alignment: Neutral</li>
+<li>Favored Weapon: Claw Bracer</li>
+<li>Legendary: Kitten’s Claw</li>
+<li>Domains: Plant, Animal, Earth, Air, Fire, Water, Sex</li>
+</ul>
+<h2>Katarina</h2>
+<ul>
+<li>Alignment: Lawful Evil</li>
+<li>Favored Weapon: Flail</li>
+<li>Legendary: "Scathing Wit”</li>
+<li>Domains: Trickery, Evil, Mind, Water, Healing</li>
+</ul>
 
 
 Caemeer
