@@ -30,7 +30,7 @@
 <li>Alignment: Lawful Good</li>
 <li>Favored Weapon: Warhammer</li>
 <li>Legendary: Purity</li>
-<li>Domains: Law, Good, Strength, War, Nobility</li>
+<li>Domains: Law, Good, Strength, War, Nobility, Luck</li>
 </ul>
 <h2>Bria</h2>
 <p>Known as Brius during her mortal years, Bria recently realized her true gender is that of a woman. She is pledged to Iliana. As well as becoming the celestial face of the Empire's gender revolution, Bria is also the one of the three Goddesses of untamed nature. Her particular domain is coastline, and is associated with coastline dwelling ravens in particular. Long ago she had a short but ardent affair with Karria, before either's ascension. More recently she has been known to spend time with Ferallia.</p>
@@ -38,7 +38,7 @@
 <li>Alignment: Chaotic Good</li>
 <li>Favored Weapon: Longbow</li>
 <li>Legendary: Whisper</li>
-<li>Domains: Chaos, Luck, Animal, Plant, Madness, Emotion, Sex</li>
+<li>Domains: Chaos, Luck, Animal, Plant, Madness, Emotion</li>
 </ul>
 <h2>Karria</h2>
 <p>Karria is the goddess of art. She is the favored patron of musicians, actors, painters, sculptors, and writers. Nominally a follower of the Balance, Karria associates mostly with those Gods pledged to Korin. However, her short lived affair with Bria, during the middle of her courtship by Aetherias, instigated a rivalry that arguably led to the eventual ascension of the original Chrysanthian Pantheon. A rivalry that contributed to the current ongoing feud between the Gods. Since the ascension she has had short daliances with Leonas, Ferallia, Jahiel, and Coverias.</p>
@@ -54,7 +54,7 @@
 <li>Alignment: Neutral Evil</li>
 <li>Favored Weapon: Whip</li>
 <li>Legendary: Comforting Lie</li>
-<li>Domains: Death, Destruction, Mind, Madness, Emotion</li>
+<li>Domains: Death, Destruction, Mind, Madness, Emotion, Sex</li>
 </ul>
 <h2>Canaedus</h2>
 <p>Canaedus is the patron god of Arcane magic, and is pledged to Iliana. His temples often more resemble libraries and universities than places of religious worship. During his travels with Ilithor, Bria, Leonas and Ferrallia, he was one of the first people to accurately map the five spheres of magic. He had a short fling with Leonas, and later with Caemeer. He adores Coverias, but the attraction is unrequited.</p>
@@ -78,7 +78,7 @@
 <li>Alignment: Neutral</li>
 <li>Favored Weapon: Claw Bracer</li>
 <li>Legendary: Kitten’s Claw</li>
-<li>Domains: Plant, Animal, Earth, Air, Fire, Water, Sex</li>
+<li>Domains: Plant, Animal, Earth, Air, Fire, Water</li>
 </ul>
 <h2>Katarina</h2>
 <p>Katarina is a more recent addition to the Chrysanthian pantheon. She ascended with the help of Aetherias, their relationship having started while she was mortal. Katarina was once a priestess of Aetherias, and her divine domain overlaps his. She is responsible for ensuring that people reach their destined deaths, and is known to intervene when someone with a greater destiny is about to die prematurely. As well as her relationship with Aetherias, she has also been known to spend time with Zollo and Coverias. The latter she has grown particularly fond of, and is known to aid Coverias' followers almost as often as her own.</p>
@@ -86,24 +86,26 @@
 <li>Alignment: Lawful Evil</li>
 <li>Favored Weapon: Flail</li>
 <li>Legendary: "Scathing Wit”</li>
-<li>Domains: Trickery, Evil, Mind, Water, Healing</li>
+<li>Domains: Trickery, Evil, Mind, Water, Healing, Death</li>
 </ul>
 <h2>Caemeer</h2>
-<p>Caemeer is the patron God of poets, madmen, and mathematicians. As a mortal, he travelled often with Batus and Coverias. They grew in power, and ascended with the help of Bria. Caemeer is known to aid those who seek truth no matter how great the cost to their sanity. He has been known to spend time with Canaedus, and shares many interests with Karria, though both say it doesn't go beyond a deep friendship.</p>
+<p>Caemeer is the patron God of poets, madmen, and mathematicians. As a mortal, he travelled often with Batus and Coverias. They grew in power, and ascended with the help of Bria. Bledged to Balance, Caemeer is known to aid those who seek truth no matter how great the cost to their sanity. He occasionally spends time with Canaedus. He shares many interests with Karria, though both say it doesn't go beyond a deep friendship. Along with Batus and Coverias, he is known as one of the few Gods to have frequent relationships with mortals.</p>
 <ul>
 <li>Alignment: Chaotic Neutral</li>
 <li>Favored Weapon: Bastard Sword</li>
 <li>Legendary: Poet’s Tongue</li>
-<li>Domains: Chaos, Luck, Protection, Travel, Math</li>
+<li>Domains: Chaos, Luck, Protection, Travel, Math, Craft</li>
 </ul>
 <h2>Batus</h2>
+<p>Batus is the God of the harvest. Bledged to Balance, he is looked to by farmers and gardeners of all ilks. His temples often take the form of grandiose greenhouses. As a mortal traveller with Caemeer and Coverias, his role was often as mediator between their lawful and chaotic natures. He spends a lot of time with Ferallia, and orchards are often dedicated to the pair's relationship. He also has a habit of falling in love with mortals, and many families of farmers lay claim to his divine ancestry, occasionally accurately.</p>
 <ul>
-<li>Alignment: Lawful Neutral</li>
+<li>Alignment: Neutral</li>
 <li>Favored Weapon: Quarterstaff</li>
 <li>Legendary: Trees</li>
-<li>Domains: Plant, Law, War, Strength, Domination</li>
+<li>Domains: Plant, War, Strength, Domination, Craft, Earth</li>
 </ul>
 <h2>Torris Fortis</h2>
+<p>Torris Fortis is the God of just war. His name is invoked by soldiers and, to a lesser extent, guards whenever combat becomes unavoidable.</p>
 <ul>
 <li>Alignment: Chaotic Good</li>
 <li>Favored Weapon: Claymore</li>
