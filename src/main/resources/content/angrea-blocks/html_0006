@@ -4,8 +4,13 @@
 <h3>Card Naming</h3>
 <p>The number and basic ordering of the Trium is identical to modern day Tarot cards, and so games designed for one may be played with the other. However, the suit names, court cards, and Trumps all have vastly different names and artstyles reflecting the culture in which they developed.<p>
 <table>
-<tr><td>Cups</td></tr>
-<tr><td>Coins</td></tr>
-<tr><td>Clubs</td></tr>
-<tr><td>Swords</td></tr>
+<tr><th>Tarot</th><th>Trium</th></tr>
+<tr><td>Cups</td><td>Ravens</td></tr>
+<tr><td>Coins</td><td>Dragons</td></tr>
+<tr><td>Clubs</td><td>Whips</td></tr>
+<tr><td>Swords</td><td>Bows</td></tr>
+<tr><td>Knave</td><td>Magician</td></tr>
+<tr><td>Knight</td><td>Legionnaire</td></tr>
+<tr><td>Queen</td><td>Apostle</td></tr>
+<tr><td>King</td><td>Emprix</td></tr>
 </table>
