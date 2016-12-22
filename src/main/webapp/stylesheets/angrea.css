@@ -227,6 +227,24 @@ p a:hover {
   font-size: 1.5em;
   margin: 6px;
 }
+table {
+  width: 100%;
+ border: white solid 1px;
+ margin-top: 12px;
+  background: #036;
+}
+th {
+    background-color: Orange;
+    color: black;
+    font-weight: bold;
+}
+th, td {
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #013;
+}
+tr:hover {background-color: grey}
 .strong-weight {
   color: #AAFCB8;
 }
