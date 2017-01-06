@@ -5,7 +5,12 @@
 <p>A predefined gender spell changes all sex characteristics to a predefined set of characteristics. Typically those reflecting a traditional male or female gender. Although with some searching, spellcasters who have devised their own set of predefined genders can be found. This is the least expensive form of gender spell, and can even be permanently enchanted into an object, to allow the the user to switch between two or more genders basically at will.</p>
 <div class="spell">
 <h1>Transmute Gender</h1>
-<p>When learning this spell, the caster learns a single version that changes all sex charactersics of the target to a single set of characteristics. The two most common versions are Transmute Gender(Male) and Transmute Gender(Female). No matter what the current targets sex characteristics are, they are all set to those defined by the spell.</p>
+<p>When learning this spell, the caster learns a single version that changes all sex charactersics of the target to a single set of characteristics. The two most common versions are Transmute Gender(Male) and Transmute Gender(Female). No matter what the current target's sex characteristics are, they are all set to those defined by the spell.</p>
+<table>
+<tr><th>Requirements</th></tr>
+<tr><td>Arcane Engineering</td><td>6D</td></tr>
+<tr><td>Successes</td><td>3</td></tr>
+</table>
 </div>
 <p></p>
 </div>
