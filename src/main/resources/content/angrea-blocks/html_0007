@@ -4,12 +4,24 @@
 <h2>Predefined Gender</h2>
 <p>A predefined gender spell changes all sex characteristics to a predefined set of characteristics. Typically those reflecting a traditional male or female gender. Although with some searching, spellcasters who have devised their own set of predefined genders can be found. This is the least expensive form of gender spell, and can even be permanently enchanted into an object, to allow the the user to switch between two or more genders basically at will.</p>
 <div class="spell">
-<h1>Transmute Gender</h1>
+<h3>Transmute Gender</h3>
 <p>When learning this spell, the caster learns a single version that changes all sex charactersics of the target to a single set of characteristics. The two most common versions are Transmute Gender(Male) and Transmute Gender(Female). No matter what the current target's sex characteristics are, they are all set to those defined by the spell.</p>
 <table>
 <tr><th>Requirements</th></tr>
 <tr><td>Arcane Engineering</td><td>6D</td></tr>
 <tr><td>Successes</td><td>3</td></tr>
+</table>
+</div>
+<h2>Illusion</h2>
+<p>As well as physically altering the target, illusion spells are also available. Cheaper and easier to learn and cast, almost everyone who has bothered to learn Arcane Engineering can learn and cast Gender Glamour. While not able to withstand a physical inspection, illusion are widely used as an arcane replacement for makeup, or to hide the fact that the caster was too lazy to shave. They can also used to do the opposite, making body and facial hair seem more full and with wider coverage, or hiding breasts for those attempting to go for a more masculine look.</p>
+<div class="spell">
+<h1>Gender Glamour</h1>
+<p></p>
+<table>
+<tr><th>Requirements</th></tr>
+<tr><td>Arcane Engineering</td><td>2D</td></tr>
+<tr><td>Successes</td><td>1*</td></tr>
+<p>*One success per physical trait changed.</p>
 </table>
 </div>
 <p></p>
