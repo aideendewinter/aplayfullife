@@ -15,8 +15,8 @@
 <h2>Illusion</h2>
 <p>As well as physically altering the target, illusion spells are also available. Cheaper and easier to learn and cast, almost everyone who has bothered to learn Arcane Engineering can learn and cast Gender Glamour. While not able to withstand a physical inspection, illusion are widely used as an arcane replacement for makeup, or to hide the fact that the caster was too lazy to shave. They can also used to do the opposite, making body and facial hair seem more full and with wider coverage, or hiding breasts for those attempting to go for a more masculine look.</p>
 <div class="spell">
-<h1>Gender Glamour</h1>
-<p></p>
+<h3>Gender Glamour</h3>
+<p>This spell can change the characteristic of any number of physical traits. It is unable to alter the shape of a physical trait, only the superficial appearance.</p>
 <table>
 <tr><th>Requirements</th></tr>
 <tr><td>Arcane Engineering</td><td>2D</td></tr>
