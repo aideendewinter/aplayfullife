@@ -11,6 +11,14 @@
 <h1>Arcane Mastery</h1>
 <p>An arcane engineer's mastery is the measure of how powerful an effect their spells can produce. It is directly tied to their dice pool in the Arcane Engineering skill.</p>
 <h2>Modification</h2>
-<p>The simplest form of spell, modification is an ability that is gained with 1D in Arcane Engineering.</p>
+<p>The simplest form of spell, modification mastery is gained with 1D in Arcane Engineering.</p>
+<h2>Combination</h2>
+<p>Combination mastery is gained with 3D in Arcane Engineering.</p>
+<h2>Augmenation</h2>
+<p>Augmenation mastery is gained with 5D in Arcane Engineering.</p>
+<h2>Creation</h2>
+<p>Creation mastery is gained with 7D in Arcane Engineering.</p>
+<h2>Nullification</h2>
+<p>Nullification mastery is gained with 9D in Arcane Engineering.</p>
 <h1>Impovised Spells</h1>
 <p>Improvised spellcasting involves any spellcasting where the caster has not memorized the mechanics of the spell beforehand. Impovised casting can lead up to the next type of magic, spell-crafting.</p>
