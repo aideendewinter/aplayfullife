@@ -1,3 +1,13 @@
+<h1>The Houses</h1>
+<p></p>
+<h2>Perk Bonuses</h2>
+<p>There are certain benefits that all Houses bestow upon those who join them. Wherever {House} appears, replace it with the house chosen when the perk was taken.</p>
+<h3>House Scion(1)</h3>
+<p>Contacts({House} 1)</p>
+<h3>House Scion(2)</h3>
+<p>Contacts({House} 2)</p>
+<h3>House Scion(3)</h3>
+<p>Contacts({House} 3)</p>
 <h1>Neuros</h1>
 <p>Imperial House Neuros overthrew House Corvanimus for power in 741 CR. Since then it has played a dangerous game of "balancing the pawns." It has fueled enmity among the other houses, trying to insure that with all the infighting no other House could grow strong enough to rival Neuros. However, the houses are beginning to get wise to Neuros' tricks. These days Neuros walks a thin line of control indeed.</p>
 <h2>Ranks</h2>
@@ -9,11 +19,11 @@
 <h2>Perk Bonuses</h2>
 <p>Only humans who have chosen Chrysanthia as their home region may choose this House. Selecting this house is only available at character creation. However, characters who select House Scion(Neuros 1) at creation can take further ranks at any time.</p>
 <h3>House Scion(1)</h3>
-<p>Your character is one of the lucky few to have been born into the family also known as House Neuros. Everyone in Chrysanthia knows the character is a member of House Neuros. They are treated with respect, though sometimes grudgingly, and few are willing to cross them. However, with the power of high birth comes the responsibilities of position. They gain the benefits of Reputation(1) with anyone that has ever spent at least a week on Chrysanthia. They also gain the benefits of Contacts(House Neuros 1). Once every month they are susceptible to the flaw Owed Favor(1).</p>
+<p>Your character is one of the lucky few to have been born into the family also known as House Neuros. Everyone in Chrysanthia knows the character is a member of House Neuros. They are treated with respect, though sometimes grudgingly, and few are willing to cross them. However, with the power of high birth comes the responsibilities of position. They gain the benefits of Reputation(1) with anyone that has ever spent at least a week on Chrysanthia. Once every month they are susceptible to the flaw Owed Favor(1).</p>
 <h3>House Scion(2)</h3>
-<p>Your character has risin within House Neuros to the rank of Suzerain. Everyone in the Empire knows the character is a member of House Neuros. They are treated with respect, though sometimes grudgingly, and few are willing to cross them. However, with this greater power comes even further responsibilities. They gain the benefits of Reputation(1) with anyone raised within the Empire. They gain the benefits of Contacts(House Neuros 2). Once every two weeks they are susceptible to the flaw Owed Favor(1).</p>
+<p>Your character has risin within House Neuros to the rank of Suzerain. Everyone in the Empire knows the character is a member of House Neuros. They are treated with respect, though sometimes grudgingly, and few are willing to cross them. However, with this greater power comes even further responsibilities. They gain the benefits of Reputation(1) with anyone raised within the Empire. Once every two weeks they are susceptible to the flaw Owed Favor(1).</p>
 <h3>House Scion(3)</h3>
-<p>Your character has become a Capriarch of House Neuros. Everyone in the Empire knows the character is a high ranking member of House Neuros. They are treated with respect, almost noone is willing to cross them. However, with this greater power comes even further responsibilities. They gain the benefits of Reputation(2) with anyone raised within the Empire. They gain the benefits of Contacts(House Neuros 2). They permanently gain the effects of Owed Favor(2). They have been given management of House Neuros' affairs in some city or territory of the Empire, and must work constantly to further their Houses objectives there.</p>
+<p>Your character has become a Capriarch of House Neuros. Everyone in the Empire knows the character is a high ranking member of House Neuros. They are treated with respect, almost noone is willing to cross them. However, with this greater power comes even further responsibilities. They gain the benefits of Reputation(2) with anyone raised within the Empire. They permanently gain the effects of Owed Favor(2). They have been given management of House Neuros' affairs in some city or territory of the Empire, and must work constantly to further their Houses objectives there.</p>
 <h1>Silvos</h1>
 <p>The Tetharius tend to be a very pragmatic race. Their long lives lend themselves to viewing things from a broad perspective. When they first founded House Silvos they were staunch allies of House Corvanimus, but after the armed coup that put House Neuros into power they were swift to adjust their allegiances. Although House Silvos places no racial requirements on who may join, only Elves, Half-elves, and Halflings have ever applied. Members of House Silvos are known as expert influencers, and are relied on by House Neuros to serve as diplomats to each of the regions of the Empire. On top of their official duties, they also project a far reaching influence over the growing industry of the public press. Young members have begun taking jobs as staff reporters, as well as putting out their own papers. Although most have a pro-Neuros slant, not all of House Silvos is happy with the status quo, especially the new generation.</p>
 <h2>Ranks</h2>
@@ -25,11 +35,11 @@
 <h2>Perk Bonuses</h2>
 <p>As mentioned, Silvos places no racial restrictions on membership. They do, however, have alignment restrictions. Chaotically and/or evil aligned characters are not permitted to take this House.</p>
 <h3>House Scion(1)</h3>
-<p>Your character has been made an initiate of House Silvos. They have been given access to the embassies and safe-houses that Silvos maintains throughout the empire. They gain Repuation(House Silvos 1) and Contacts(House Silvos 1). They may occasionally be asked to provide information or guidance for another member of House Silvos who visits their home region.</p>
+<p>Your character has been made an initiate of House Silvos. They have been given access to the embassies and safe-houses that Silvos maintains throughout the empire. They gain Repuation(House Silvos 1). They may occasionally be asked to provide information or guidance for another member of House Silvos who visits their home region.</p>
 <h3>House Scion(2)</h3>
-<p>Your character's hard work and diplomacy has been recognized by the leadership of House Silvos, and they have been granted the title of Member within the House. They are entrusted as diplomatic couriers, and may be called on to carry important political correspondance whenever they are travelling. They gain Contacts(House Silvos 2).</p>
+<p>Your character's hard work and diplomacy has been recognized by the leadership of House Silvos, and they have been granted the title of Member within the House. They are entrusted as diplomatic couriers, and may be called on to carry important political correspondance whenever they are travelling. They gain Contacts(1) with every person in the Empire that has the House Scion(1) perk, no matter what house.</p>
 <h3>House Scion(3)</h3>
-<p>Your character has risen to Elder of House Silvos. They are now a valuable member of the Empire's diplomatic corps. They gain Contacts(House Silvos 3) and Contacts(1) with every person in the Empire that has the House Scion(3) perk, no matter what house.</p>
+<p>Your character has risen to Elder of House Silvos. They are now a valuable member of the Empire's diplomatic corps. They gain Contacts(1) with every person in the Empire that has the House Scion(2) perk, no matter what house.</p>
 <h1>Argentus</h1>
 <p></p>
 <h2>Ranks</h2>
