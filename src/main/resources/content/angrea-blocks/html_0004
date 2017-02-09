@@ -41,12 +41,12 @@
 <h3>House Scion(3)</h3>
 <p>Your character has risen to Elder of House Silvos. They are now a valuable member of the Empire's diplomatic corps. They gain Contacts(1) with every person in the Empire that has the House Scion(2) perk, no matter what house.</p>
 <h1>Argentus</h1>
-<p>House Argentus runs 90% of the breweries and distilleries in the Empire. They make ales, spirits, and more esoteric imbibements as well. The House is 40% Dwarves, 20% Humans, and 10% Halflings. The remaining 30% is a fluctuating pool of every other race in the Empire. As the chief supplier of strength enhancing, protective and healing potions to the Empire's legions, they hold great power with the military. Many of the members are former legionnaires.</p>
+<p>House Argentus runs 90% of the breweries and distilleries in the Empire. They make ales, spirits, and more esoteric imbibements as well. The House is 40% Dwarves, 20% Humans, and 10% Gnomes. The remaining 30% is a fluctuating pool of every other race in the Empire. As the chief supplier of strength enhancing, protective and healing potions to the Empire's legions, they hold great power with the military. Many of the members are former legionnaires.</p>
 <h2>Ranks</h2>
 <ul>
 <li>Apprentice</li>
 <li>Journeyperson</li>
-<li>Master Brewer</li>
+<li>Mistre Brewer</li>
 </ul>
 <h2>Perk Bonuses</h2>
 <p></p>
@@ -56,10 +56,12 @@
 <p></p>
 <h3>House Scion(3)</h3>
 <h1>Carthas</h1>
-<p>House Carthas' members include all the major merchants in the Empire. Composed mostly of Sea Dwarves, Humans, and Halflings, Carthas controls nearly all the flow of goods within the Empire. They negotiate contracts with farmers, craftsmen, and other Houses, constantly attempting to use the collective power of their members to keep the prices low on numerous goods. While House Carthas' power is great, it is somewhat offset by the power of the Houses with which they are forced to negotiate. House Argentus will only allow the prices of their alcohol and magical potions to be driven down so much.</p>
+<p>House Carthas' members include all the major merchants in the Empire. Composed mostly of Sea Dwarves, Humans, and Halflings, Carthas controls nearly all the flow of goods within the Empire. They negotiate contracts with farmers, craftsmen, and other Houses, constantly attempting to use the collective power of their members to keep the prices low on numerous goods. While House Carthas' power is great, it is somewhat offset by the power of the Houses with which they are forced to negotiate. House Argentus, Ilmath, and Brios will only allowed the cost of their labors to be driven so low.</p>
 <h2>Ranks</h2>
 <ul>
-<li></li>
+<li>Peddler</li>
+<li>Salesperson</li>
+<li>Mistre Merchant</li>
 </ul>
 <h2>Perk Bonuses</h2>
 <p></p>
@@ -69,7 +71,7 @@
 <p></p>
 <h3>House Scion(3)</h3>
 <h1>Ilmath</h1>
-<p></p>
+<p>The House of crafters, Ilmath is the combined will of smiths, carpenters, weavers, and more, all throughout the Empire. Another House that is composed mostly of Humans and Dwarves, Ilmath also has what some may find to be a surprising number of Orcs and Half-Orcs, mostly representing the metal-smithing crafts. A number of succesful weavers come from Gnomish stock, and Halflings and Goblins are both known for intricate wood-work. Dwarves and Goblins dominate the jewelry industry. Humans tend to fill in the more average, everyday products, though a few human crafters do rise to artisan level.</p>
 <h2>Ranks</h2>
 <ul>
 <li></li>
